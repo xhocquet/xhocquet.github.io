@@ -146,3 +146,8 @@ div p {
 td {
 	margin: 0 20px 0 20px;
 }
+
+a.quote-link {
+	color: #333;
+	cursor: pointer;
+}
