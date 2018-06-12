@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wildstar's Find that Boss!</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="auto-complete.css" rel="stylesheet" >
+  <link href="wildstar-monster-search.css" rel="stylesheet" >
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="auto-complete.js"></script>
+</head>
+<body>
+  <a href="../index.html" class="back-to-site-link">Back to Site</a>
+  <div class="site-wrapper">
+    <div class="site-wrapper-inner">
+      <h1>Wildstar's Find that Boss!</h1>
+      <div class="cover-container">
+        <div class="inner cover">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon3">Search: </span>
+            <input type="text" class="form-control" id="monster_search">
+          </div>
+        </div>
+        <div class="results-container hidden">
+          <div class="results-container-section results-container-details">
+            <div class="result-name"></div>
+            <div class="result-location"></div>
+            <div class="result-directions"></div>
+          </div>
+          <div class="results-container-section">
+            <img class="result-map-img" src="" />
+          </div>
+        </div>
+        <div class="mastfoot">
+          <div class="inner">
+            <p>Made by <a href="https://github.com/xhocquet/">Xavier Hocquet</a>.</p>
+            <p>Submit suggestions via GitHub issues <a href="https://github.com/xhocquet/xhocquet.info/issues/new">here</a> or by <a href="mailto:xhocquet@gmail.com?Subject=Wildstar%20Monster%20Search%20Suggestion">email</a>.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="wildstar-monster-search.js"></script>
+</body>
+</html>

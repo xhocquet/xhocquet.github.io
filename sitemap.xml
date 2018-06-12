@@ -3,12 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://xhocquet.info/wildstar/</loc>
+    <lastmod>2018-06-11T22:00:14-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://xhocquet.info/recipes/quick-n-dirty-crusty-bread/</loc>
+    <lastmod>2018-06-11T20:21:37-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://xhocquet.info/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://xhocquet.info/recipes/</loc>
+    <lastmod>2018-06-11T20:21:37-06:00</lastmod>
   </url>
   
   <url>
@@ -22,6 +33,7 @@
   
   <url>
     <loc>http://xhocquet.info/</loc>
+    <lastmod>2018-06-11T22:00:14-06:00</lastmod>
     <priority>0</priority>
   </url>
   
