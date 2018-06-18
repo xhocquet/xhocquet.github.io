@@ -43,6 +43,10 @@ h1,h2,h3,h4,h5,h6 {
 	font-family: 'Concert One', cursive;
 }
 
+h1 > a:hover {
+	text-decoration: none;
+}
+
 #user-name {
 	font-size: 5em;
 	text-transform: uppercase;
@@ -76,6 +80,19 @@ i {
 
 .post-link {
 	float: left;
+	margin: 0;
+	line-height: 40px;
+	height: inherit;
+}
+
+.post-link > a {
+	height: 40px;
+	display: block;
+	line-height: 40px;
+}
+
+.post-link > a:hover {
+	text-decoration: none;
 }
 
 .post-date {
@@ -86,6 +103,8 @@ i {
 	background-color: #F5F5F5;
 	overflow: hidden;
 	padding: 0 5px 0 5px;
+	height: 40px;
+	line-height: 32px;
 }
 
 .post-summary, .post-content{
@@ -108,7 +127,7 @@ i {
 .post-list-item {
 	margin-top: 20px;
 	border-style: solid;
-	border-width: 0 0 3px 0;
+	border-width: 0;
 	border-color: #292929;
 }
 
