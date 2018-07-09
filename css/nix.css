@@ -97,6 +97,11 @@ i {
 
 .post-date {
 	float: right;
+	line-height: 48px;
+}
+
+.float-right {
+	float: right;
 }
 
 .post-header {
@@ -169,4 +174,26 @@ td {
 a.quote-link {
 	color: #333;
 	cursor: pointer;
+}
+
+figure {
+	text-align: center;
+	padding: 8px;
+	background-color: #eee;
+}
+
+figure p {
+	text-align: center;
+	margin: 10px 0 2px;
+}
+
+@media (min-width: 1200px) {
+	.container {
+		width: 820px;
+	}
+}
+
+span.post-title {
+	font-family: 'Concert One', cursive;
+	font-size: 36px;
 }

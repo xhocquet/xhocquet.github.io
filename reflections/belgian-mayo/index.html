@@ -103,7 +103,7 @@ ga('create', 'your_google_analytics_id', 'auto');
 </header>
 
         <div class="container wrapper">
-            <h1><a href="http://xhocquet.info/reflections/belgian-mayo/">Belgian Mayo: Seriously</a></h1>
+            <span class="post-title">Belgian Mayo: Seriously</span>
             <span class="post-date">Jun 17, 2018 </span>
             <div class="post-content">
                 
@@ -162,7 +162,26 @@ ga('create', 'your_google_analytics_id', 'auto');
             </div>
             
             <div class="post-comments">
-                
+                <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "xhocquetinfo" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
             </div>
             
             <div class="push"></div>
