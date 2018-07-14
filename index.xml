@@ -6,10 +6,19 @@
     <description>Recent content on xhocquet.info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Jul 2018 15:45:44 -0600</lastBuildDate>
+    <lastBuildDate>Thu, 12 Jul 2018 21:40:53 -0600</lastBuildDate>
     
 	<atom:link href="http://xhocquet.info/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JLPT1</title>
+      <link>http://xhocquet.info/japanese/</link>
+      <pubDate>Thu, 12 Jul 2018 21:40:53 -0600</pubDate>
+      
+      <guid>http://xhocquet.info/japanese/</guid>
+      <description>Hiragana あ い う え お  か き く け こ  さ し す せ そ  た ち つ て と  な に ぬ ね の  は ひ ふ へ ほ  ま み む め も  や ゆ よ  ら り る れ ろ  わ を  ん      Katakana ア イ ウ エ オ  カ キ ク ケ コ  サ シ ス セ ソ  タ チ ツ テ ト  ナ 二 二|に|two</description>
+    </item>
     
     <item>
       <title>Megalo Box</title>
@@ -96,7 +105,7 @@ As a proud Belgian, it&amp;rsquo;s only natural to speak the gospel of mayonnais
       
       <guid>http://xhocquet.info/wildstar/</guid>
       <description>Back to Site Wildstar&#39;s Find that Boss! Search:          Made by Xavier Hocquet.
-Submit suggestions via GitHub issues here or by email.            </description>
+Submit suggestions via GitHub issues here or by email.          </description>
     </item>
     
     <item>

@@ -1,0 +1,188 @@
+/*OVERRIDES*/
+
+.wf-sawarabimincho {
+  font-family: "Rounded Mplus 1c";
+  font-size: 56px;
+}
+
+.container.wrapper {
+  width: 1400px;
+}
+
+span.post-title {
+  width: 100%;
+  text-align: center;
+  font-size: 52px;
+  display: block;
+}
+
+.post-date {
+  display: none;
+}
+
+
+/*CONTAINER STYLES*/
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 4000px;
+}
+
+.content-container > .column {
+  display: flex;
+  flex-direction: column;
+  height: 4000px;
+}
+
+.character-column, .grammar-column {
+  width: 48%;
+}
+
+.divider-column {
+  width: 4px;
+  border-radius: 3px;
+  background-color: #a6cde2;
+  position: absolute;
+  height: 3840px !important;
+  margin: 88px 0;
+  left: 50%
+}
+
+/*LEFT SIDE STYLES*/
+
+.hiragana-container, .katakana-container, .kanji-container {
+  display: flex;
+  flex: 1;
+  margin-bottom: 24px;
+}
+
+.progress-line {
+  background-color: #87e49c;
+  left: 17px;
+  position: relative;
+  width: 4px;
+}
+
+.progress-line.middle {
+  bottom: -30px;
+  height: 100%;
+}
+
+.progress-line.top {
+  top: 50%;
+  height: 60%
+}
+
+.progress-line.bottom {
+  bottom: 50%;
+  top: 0;
+  height: 50%
+}
+
+.progress-line.in-progress {
+  background-color: #e3e029;
+}
+
+.characters-progress {
+  flex-shrink: 1;
+}
+
+.characters-progress::before {
+  background: white;
+  border-radius: 100%;
+  border: 3px solid #a6cde2;
+  color: #70afd0;
+  content: " ";
+  cursor: pointer;
+  display: block;
+  font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 12px;
+  pointer-events: none;
+  position: relative;
+  top: 50%;
+  transition: all .4s;
+  width: 30px;
+}
+
+
+
+.characters-container {
+  display: block;
+  flex: 1;
+}
+
+.characters-container > .row {
+  margin: 0;
+  width: 100%;
+}
+
+.character {
+  border: 1px solid black;
+  float: left;
+  height: 80px;
+  border-radius: 4px;
+  line-height: 75px;
+  cursor: default;
+  padding: 2px 6px;
+  text-align: center;
+  margin: 5px;
+}
+
+.character.yay {
+  border: 3px solid #87e49c;
+}
+
+.character > .tooltip {
+  display: none;
+  opacity: unset;
+  font-family: inherit;
+  background-color: white;
+  border: 3px solid #a6cde2;
+}
+
+.character:hover > .tooltip {
+  display: block;
+  position: absolute;
+}
+
+p {
+  margin: 0;
+}
+
+/*RIGHT STYLES*/
+
+.dropdown-container {
+  border-radius: 4px;
+  border: 2px solid black;
+  display: inline-block;
+  margin-top: 48px;
+  padding: 12px;
+  position: relative;
+}
+
+.dropdown-container.in-progress {
+  border-color: #e3e029;
+}
+
+.dropdown-container > .dropdown-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: 'Concert One', cursive;
+  font-size: 24px;
+  height: 156px;
+  line-height: 36px;
+  width: 100%;
+}
+
+.dropdown-container > .dropdown-content {
+  display: none;
+}
+
+.dropdown-container > .dropdown-content > table {
+  font-size: 18px;
+}
