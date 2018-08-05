@@ -6,19 +6,10 @@
     <description>Recent content on xhocquet.info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Jul 2018 21:40:53 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 08 Jul 2018 15:45:44 -0600</lastBuildDate>
     
 	<atom:link href="http://xhocquet.info/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>JLPT1</title>
-      <link>http://xhocquet.info/japanese/</link>
-      <pubDate>Thu, 12 Jul 2018 21:40:53 -0600</pubDate>
-      
-      <guid>http://xhocquet.info/japanese/</guid>
-      <description>Hiragana あ い う え お  か き く け こ  さ し す せ そ  た ち つ て と  な に ぬ ね の  は ひ ふ へ ほ  ま み む め も  や ゆ よ  ら り る れ ろ  わ を  ん      Katakana ア イ ウ エ オ  カ キ ク ケ コ  サ シ ス セ ソ  タ チ ツ テ ト  ナ 二 二|に|two</description>
-    </item>
     
     <item>
       <title>Megalo Box</title>
@@ -122,6 +113,15 @@ Submit suggestions via GitHub issues here or by email.          </description>
   Recipe  Combine all of the ingredients in a large mixing bowl
  Mix by hand to make a very sticky, rough dough.
  Cover the bowl, and let the dough rise at room temperature for 2 hours.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xhocquet.info/bookmarks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://xhocquet.info/bookmarks/</guid>
+      <description> https://eng.lyft.com/  https://engineering.linkedin.com/blog https://engineering.foursquare.com/ https://99u.adobe.com/articles https://githubengineering.com/ https://blogs.dropbox.com/tech/ https://medium.com/groupon-eng https://engineering.coinbase.com/ https://tech.instacart.com/ https://alistapart.com/articles https://product.hubspot.com/blog/topic/engineering https://redditblog.com/topic/technology/ http://highscalability.com/ https://medium.com/@Pinterest_Engineering https://developers.googleblog.com/ https://blog.doordash.com/tagged/engineering http://www.qwantz.com/ https://code.facebook.com/posts/ https://blog.postmates.com/tagged/engineering https://medium.com/airbnb-engineering https://hyperallergic.com/reviews/music/ https://hacks.mozilla.org/ https://www.smashingmagazine.com/articles/ Thoughtbot http://randsinrepose.com/blog/ https://www.tofugu.com/ http://nedroid.com/ https://robinhood.engineering/ https://slack.engineering/ https://overflow.buffer.com/ https://informationisbeautiful.net/blog/ https://medium.com/netflix-techblog https://instagram-engineering.com/ https://xkcd.com/ https://www.joelonsoftware.com/ https://engineering.intercom.com/ https://blog.asana.com/category/eng/ https://tech.flipkart.com/ https://blog.heroku.com/engineering http://www.rubyflow.com/ https://blog.discordapp.com/tagged/engineering https://www.reallygoodux.io/ https://sidebar.io/   </description>
     </item>
     
   </channel>
