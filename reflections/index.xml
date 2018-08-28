@@ -6,10 +6,20 @@
     <description>Recent content in Reflections on xhocquet.info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Jul 2018 15:45:44 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 26 Aug 2018 14:06:44 -0600</lastBuildDate>
     
 	<atom:link href="http://xhocquet.info/reflections/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AWS Lambda</title>
+      <link>http://xhocquet.info/reflections/aws-lambda/</link>
+      <pubDate>Sun, 26 Aug 2018 14:06:44 -0600</pubDate>
+      
+      <guid>http://xhocquet.info/reflections/aws-lambda/</guid>
+      <description>It feels like every day, it gets harder to put a simple website online. Between defending against spam, vulnerabilities in your dependencies, system maintenance, scaling, and a million others, the sheer amount of knowledge needed can be overwhelming. Even though most sites share the same base, you can be sure you&amp;rsquo;ll spend a significant amount of time patching it together again from past experiences and scattered blog posts.
+Services like Heroku, Digital Ocean, and AWS attempt to make all of this more accessible by abstracting it all away in a variety of tools.</description>
+    </item>
     
     <item>
       <title>Megalo Box</title>
