@@ -6,10 +6,20 @@
     <description>Recent content in Reflections on xhocquet.info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Aug 2018 14:06:44 -0600</lastBuildDate>
+    <lastBuildDate>Sat, 17 Nov 2018 11:52:06 -0700</lastBuildDate>
     
 	<atom:link href="http://xhocquet.info/reflections/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Optimizing Code Style for Developer Happiness</title>
+      <link>http://xhocquet.info/reflections/optimizing-code-style-for-dev-happiness/</link>
+      <pubDate>Sat, 17 Nov 2018 11:52:06 -0700</pubDate>
+      
+      <guid>http://xhocquet.info/reflections/optimizing-code-style-for-dev-happiness/</guid>
+      <description>While I started my programming career closer to the hardware with C, I&amp;rsquo;ve come to be comfortable as web dev using Ruby and Javascript as my main languages. Ruby will be my focus in this post, but believe the two languages share more similarities than most realize.
+These days, it feels like more and more time passes between each time I write code. Everyone on my career path goes through it, but as you graduate past a junior role you start to offer more and more of your time to others instead of strictly writing code.</description>
+    </item>
     
     <item>
       <title>AWS Lambda</title>

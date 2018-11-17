@@ -6,10 +6,20 @@
     <description>Recent content on xhocquet.info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 26 Aug 2018 14:06:44 -0600</lastBuildDate>
+    <lastBuildDate>Sat, 17 Nov 2018 11:52:06 -0700</lastBuildDate>
     
 	<atom:link href="http://xhocquet.info/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Optimizing Code Style for Developer Happiness</title>
+      <link>http://xhocquet.info/reflections/optimizing-code-style-for-dev-happiness/</link>
+      <pubDate>Sat, 17 Nov 2018 11:52:06 -0700</pubDate>
+      
+      <guid>http://xhocquet.info/reflections/optimizing-code-style-for-dev-happiness/</guid>
+      <description>While I started my programming career closer to the hardware with C, I&amp;rsquo;ve come to be comfortable as web dev using Ruby and Javascript as my main languages. Ruby will be my focus in this post, but believe the two languages share more similarities than most realize.
+These days, it feels like more and more time passes between each time I write code. Everyone on my career path goes through it, but as you graduate past a junior role you start to offer more and more of your time to others instead of strictly writing code.</description>
+    </item>
     
     <item>
       <title>AWS Lambda</title>
@@ -37,19 +47,7 @@ Lately, I&amp;rsquo;ve been craving it. Somewhere in the realm of Cowboy Bebop a
       <pubDate>Sat, 07 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>http://xhocquet.info/reading-list/</guid>
-      <description>In Progress  Hero of the Empire  Planned  Leonardo da Vinci
- Steve Jobs
- Enstein
- Thinking, Fast and Slow
- Sources of Power: How People Make Decisions
- The Shadow of the Torturer (The Book of the New Sun)
- Dune Messiah
- Sheepfarmer&amp;rsquo;s Daughter (Paksennarion)
-  Completed  The Belgariad
- October Sky
- Kokoro
- The Wheel of Time
- Benjamin Franklin: An American Life</description>
+      <description>.gr_grid_container { /* customize grid container div here. eg: width: 500px; */ } .gr_grid_book_container { /* customize book cover container div here */ float: left; width: 39px; height: 60px; padding: 0px 0px; overflow: hidden; }  Reading     Planned                       Completed                        </description>
     </item>
     
     <item>
