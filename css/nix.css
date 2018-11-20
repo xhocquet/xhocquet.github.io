@@ -62,6 +62,41 @@ h1 > a:hover {
 	font-size: initial;
 }
 
+.project-description {
+	border-style: solid;
+	border-width: 5px;
+	border-color: #292929;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 15px;
+	font-size: initial;
+}
+
+.project-description.first {
+	margin-top: 24px;
+}
+
+.project-description.in-progress {
+	border-color: #d7f100;
+}
+
+.connector {
+	height: 50px;
+	width: 2px;
+	margin: 0 auto;
+	background-color: black;
+}
+
+table.tech-table {
+	border: 1px solid black;
+	margin: 0 auto;
+}
+
+table.tech-table > tbody > tr > td {
+	border: 1px solid black;
+	padding: 4px 12px;
+}
+
 .user-profile {
 	padding: 0;
 }

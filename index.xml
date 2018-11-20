@@ -6,10 +6,19 @@
     <description>Recent content on xhocquet.info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 17 Nov 2018 11:52:06 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 19 Nov 2018 22:00:14 -0600</lastBuildDate>
     
 	<atom:link href="http://xhocquet.info/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2018 Year of the Javascript HyperHackathon Solo Edition! Featuring All Of The Techs</title>
+      <link>http://xhocquet.info/javerscropt/</link>
+      <pubDate>Mon, 19 Nov 2018 22:00:14 -0600</pubDate>
+      
+      <guid>http://xhocquet.info/javerscropt/</guid>
+      <description> xhocquet@::1 ~ $     1) Some Enterprisey MeteorAngular tutorial     2) Get my hands on GraphQL GraphQLApollo NextJS tutorial     3) Ember, looks fun Ember tutorial     4) A couple hot names HyperappTypescript Parcel some kind of git-command/regex explainer     5) Double-down on functional JS Purescript tutorial     5) A simple app for a break VueVueX tutorial     6) Aurelia, another new framework Aurelia      </description>
+    </item>
     
     <item>
       <title>Optimizing Code Style for Developer Happiness</title>
