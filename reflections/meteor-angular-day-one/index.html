@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> 2018 Javascript Hack-o-thon Project 1 &middot; xhocquet.info </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.44" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="http://xhocquet.info/css/nix.css">
+
+
+<link href="https://fonts.googleapis.com/css?family=Inconsolata%7COpen+Sans%7CConcert+One" rel="stylesheet">
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'your_google_analytics_id', 'auto');
+	  ga('send', 'pageview');
+
+</script>
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="green-terminal" href=http://xhocquet.info/>xhocquet@::1 ~ $</a>
+		</div>
+
+		
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				
+				
+				<li class="dropdown">
+                    
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">misc <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        
+                    		<li>
+                    		<a href="http://diyrss.info/">~/diyrss</a>
+				    		</li>
+                		
+                    		<li>
+                    		<a href="/reading-list">~/reading list</a>
+				    		</li>
+                		
+                    		<li>
+                    		<a href="/wildstar">~/wildstar</a>
+				    		</li>
+                		
+            		</ul>
+            		
+        		</li>
+        		
+				
+				<li class="dropdown">
+                    
+            		<a href="/recipes">~/recipes</a>
+            		
+        		</li>
+        		
+				
+				<li class="dropdown">
+                    
+            		<a href="/reflections">~/reflections</a>
+            		
+        		</li>
+        		
+
+			</ul>
+		</div>
+	</div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            <span class="post-title">2018 Javascript Hack-o-thon Project 1</span>
+            <span class="post-date">Nov 20, 2018 </span>
+            <div class="post-content">
+                
+
+<h2 id="meteor-exploration-and-friend-angular">Meteor Exploration (and friend, Angular)</h2>
+
+<p>I decided to look into Meteor because of it&rsquo;s general popularity in enterprise. I was curious what made it attractive versus a typical app with Angular or React backed by some data store.</p>
+
+<p>Meteor offers generous documentation and <a href="https://www.meteor.com/tutorials">tutorials</a>, one of which I decided to follow. I wasn&rsquo;t too interested in diving into mobile at this time, so I stuck with their simple to-do app. I promised myself I would add some kind of extra feature after the tutorial ended to prove I understood a basic amount of the framework</p>
+
+<h2 id="collections">Collections</h2>
+
+<p>Templates are pretty standard to any set of JS tools, but a Collection is my first encounter with a Meteor concept. To me, it seems like a database query is bound to the client via a socket or something. So that if that query returns different results, the view receives new data. From there, Angular takes over. It&rsquo;s worth mentioning this is only my second or third time using Angular, and it&rsquo;s still very new to me. Coming from a heavy Rails background, the concept of markup with template helpers is not entirely foreign.</p>
+
+<p>I&rsquo;m impressed with how quick I have a todo app where I can add things, in real-time without page reloads. I can&rsquo;t confidently say Rails would be quicker. I think Mongo deserves a fair share of the credit, though, since it removes quite a bit of complexity around models in relational DBs. Simply inserting an object looks like Rails, but I didn&rsquo;t have to declare a model. This is basically all you need, and you aren&rsquo;t yet defining typed fields of any sort:</p>
+
+<pre><code class="language-js">export const Tasks = new Mongo.Collection('tasks');
+</code></pre>
+
+<h2 id="code-separation">Code Separation</h2>
+
+<p>One of the things I&rsquo;m starting to dislike is the at times complex Javascript you end up writing in the angular tags.</p>
+
+<p>React solves this by redefining HTML tags in Javascript. The React component files you end up with are all Javascript, including the classes you toggle in the same way you do in Angular. The difference is pretty large:</p>
+
+<pre><code class="language-js"># Angular
+&lt;span ng-class=&quot;{'active': item.isActive}&quot;
+</code></pre>
+
+<p>vs.</p>
+
+<pre><code class="language-js"># React
+const classes = classnames('generic-class', {'active': item.isActive})
+return(
+  &lt;span classNames={classes} /&gt;
+)
+</code></pre>
+
+<p>There&rsquo;s definitely a bunch more code behind both of these examples, but I think I would objectively say the React code takes up more room. But, I still think it&rsquo;s better because of the consistency of the language. The big advantage is you can focus on a single type of developer for more of your coding, and as a developer you can stay in Javascript in your mind without switching back and forth. In fact, that&rsquo;s one of the huge selling points of all these new JS servers.</p>
+
+<p>Second, imagine scaling this. There&rsquo;s probably a solution to this I don&rsquo;t know yet, because I can&rsquo;t imagine big corporations running Angular apps with a half-dozen conditional classes on a piece of text or an input. It basically looks like in-line CSS, which we&rsquo;ve long since abandoned for better tools.</p>
+
+<h2 id="data-binding">Data Binding</h2>
+
+<p>I just reached my first usage of <code>getReactively()</code>, a major data-binding component of Angular/Meteor.</p>
+
+<blockquote>
+<p>To make Meteor understand Angular bindings and the other way around, we use <a href="https://angular-meteor.com/api/angular-meteor/1.3.11/get-reactively">$scope.getReactively</a> function that turns Angular scope variables into <a href="http://docs.meteor.com/#/full/reactivevar_pkg">Meteor reactive variables</a>.</p>
+</blockquote>
+
+<p>It lives in the controller, more specifically in the <code>tasks()</code> action where it makes the DB call. My closest approximation would be a Redux selector (<a href="https://github.com/reduxjs/reselect">brand spankin&rsquo; new!</a>), filtering data in the connection to the store.</p>
+
+<p>There&rsquo;s a lot of &lsquo;magic&rsquo; going on for data-binding to work without a lot of extra boiler-plate:
+- Putting controller methods in your view creates a data-bind for that method. What triggers it?
+- Selector-like methods in the actions create data-bindings for the property you hook into.
+- Just updating the DB triggers a re-render (for example, checking an item). Thanks to the collection (<code>Mongo.Collection('tasks')</code>)</p>
+
+<p>My general experience thus far is definitely one I shared with Rails when I started. Lots of things I don&rsquo;t yet understand are helping me, and it feels good! I&rsquo;ve written very little code overall to create a functional CRUD app with a user-auth library and scoped records.</p>
+
+<p><strong>IN PROGRESS</strong></p>
+
+<p>I&rsquo;m <sup>2</sup>&frasl;<sub>3</sub> through, I&rsquo;ll be updating my progress tomorrow</p>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "xhocquetinfo" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2018 Xavier Hocquet -
+<span class="credit">
+	Powered by
+	<a target="_blank" href="https://gohugo.io">Hugo</a>
+	and
+	<a target="_blank" href="https://github.com/LordMathis/hugo-theme-nix/">Nix</a> theme.
+</span>
+</p>
+</footer>
+
+    </body>

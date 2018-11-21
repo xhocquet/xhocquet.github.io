@@ -6,10 +6,20 @@
     <description>Recent content on xhocquet.info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Nov 2018 22:00:14 -0600</lastBuildDate>
+    <lastBuildDate>Tue, 20 Nov 2018 21:20:41 -0700</lastBuildDate>
     
 	<atom:link href="http://xhocquet.info/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>2018 Javascript Hack-o-thon Project 1</title>
+      <link>http://xhocquet.info/reflections/meteor-angular-day-one/</link>
+      <pubDate>Tue, 20 Nov 2018 21:20:41 -0700</pubDate>
+      
+      <guid>http://xhocquet.info/reflections/meteor-angular-day-one/</guid>
+      <description>Meteor Exploration (and friend, Angular) I decided to look into Meteor because of it&amp;rsquo;s general popularity in enterprise. I was curious what made it attractive versus a typical app with Angular or React backed by some data store.
+Meteor offers generous documentation and tutorials, one of which I decided to follow. I wasn&amp;rsquo;t too interested in diving into mobile at this time, so I stuck with their simple to-do app.</description>
+    </item>
     
     <item>
       <title>2018 Year of the Javascript HyperHackathon Solo Edition! Featuring All Of The Techs</title>

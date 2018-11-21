@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://xhocquet.info/reflections/meteor-angular-day-one/</loc>
+    <lastmod>2018-11-20T21:20:41-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://xhocquet.info/javerscropt/</loc>
     <lastmod>2018-11-19T22:00:14-06:00</lastmod>
   </url>
@@ -59,12 +64,12 @@
   
   <url>
     <loc>http://xhocquet.info/reflections/</loc>
-    <lastmod>2018-11-17T11:52:06-07:00</lastmod>
+    <lastmod>2018-11-20T21:20:41-07:00</lastmod>
   </url>
   
   <url>
     <loc>http://xhocquet.info/</loc>
-    <lastmod>2018-11-19T22:00:14-06:00</lastmod>
+    <lastmod>2018-11-20T21:20:41-07:00</lastmod>
     <priority>0</priority>
   </url>
   
