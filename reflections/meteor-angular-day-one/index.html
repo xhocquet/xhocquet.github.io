@@ -124,8 +124,8 @@ ga('create', 'your_google_analytics_id', 'auto');
 
 <p>I&rsquo;m impressed with how quick I have a todo app where I can add things, in real-time without page reloads. I can&rsquo;t confidently say Rails would be quicker. I think Mongo deserves a fair share of the credit, though, since it removes quite a bit of complexity around models in relational DBs. Simply inserting an object looks like Rails, but I didn&rsquo;t have to declare a model. This is basically all you need, and you aren&rsquo;t yet defining typed fields of any sort:</p>
 
-<pre><code class="language-js">export const Tasks = new Mongo.Collection('tasks');
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Tasks</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Mongo</span>.<span style="color:#a6e22e">Collection</span>(<span style="color:#e6db74">&#39;tasks&#39;</span>);
+</code></pre></div>
 
 <h2 id="code-separation">Code Separation</h2>
 
@@ -133,18 +133,18 @@ ga('create', 'your_google_analytics_id', 'auto');
 
 <p>React solves this by redefining HTML tags in Javascript. The React component files you end up with are all Javascript, including the classes you toggle in the same way you do in Angular. The difference is pretty large:</p>
 
-<pre><code class="language-js"># Angular
-&lt;span ng-class=&quot;{'active': item.isActive}&quot;
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">Angular</span>
+<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">span</span> <span style="color:#a6e22e">ng</span><span style="color:#f92672">-</span><span style="color:#66d9ef">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{&#39;active&#39;: item.isActive}&#34;</span>
+</code></pre></div>
 
 <p>vs.</p>
 
-<pre><code class="language-js"># React
-const classes = classnames('generic-class', {'active': item.isActive})
-return(
-  &lt;span classNames={classes} /&gt;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">React</span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">classes</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">classnames</span>(<span style="color:#e6db74">&#39;generic-class&#39;</span>, {<span style="color:#e6db74">&#39;active&#39;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">isActive</span>})
+<span style="color:#66d9ef">return</span>(
+  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">span</span> <span style="color:#a6e22e">classNames</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">classes</span>} <span style="color:#960050;background-color:#1e0010">/&gt;</span>
 )
-</code></pre>
+</code></pre></div>
 
 <p>There&rsquo;s definitely a bunch more code behind both of these examples, but I think I would objectively say the React code takes up more room. But, I still think it&rsquo;s better because of the consistency of the language. The big advantage is you can focus on a single type of developer for more of your coding, and as a developer you can stay in Javascript in your mind without switching back and forth. In fact, that&rsquo;s one of the huge selling points of all these new JS servers.</p>
 
