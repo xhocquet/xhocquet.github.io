@@ -80,6 +80,10 @@ h1 > a:hover {
 	border-color: #d7f100;
 }
 
+.project-description.complete {
+	border-color: #1af100;
+}
+
 .connector {
 	height: 50px;
 	width: 2px;

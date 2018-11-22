@@ -167,9 +167,31 @@ ga('create', 'your_google_analytics_id', 'auto');
 
 <p>My general experience thus far is definitely one I shared with Rails when I started. Lots of things I don&rsquo;t yet understand are helping me, and it feels good! I&rsquo;ve written very little code overall to create a functional CRUD app with a user-auth library and scoped records.</p>
 
-<p><strong>IN PROGRESS</strong></p>
+<h2 id="more-separation-and-optimistic-ui">More Separation and Optimistic UI</h2>
 
-<p>I&rsquo;m <sup>2</sup>&frasl;<sub>3</sub> through, I&rsquo;ll be updating my progress tomorrow</p>
+<p>As we start to peel away the incorrect basic setup and put in place more traditional patterns, I start to notice some more recognizable features of Meteor. Methods are Meteor&rsquo;s <a href="https://en.wikipedia.org/wiki/Inter-process_communication">IPC</a>, it allows the client to speak to the server. In React or Vanilla JS, that means writing a web request and handling the response. Meteor wraps that up with the Method functionality so that you just call the method from the frontend and the request is handled for you.</p>
+
+<p>Optimistic UI, however, is completely new to me. According to them:</p>
+
+<blockquote>
+<p>A simulation of the method runs directly on the client to attempt to predict the outcome of the server call using the available information</p>
+</blockquote>
+
+<p>If I try to parse that a little further, it seems like if you&rsquo;re acting on data the client already has, there&rsquo;s a good chance you get client-side speed in terms of interactions. Deleting a task, for example, should be straightforward and the client will hide the task before the request even completes. This kind of hybrid solution is a good sign of creativity and something Rails does a bunch (<code>.includes</code>, <code>size</code>, etc.). With a good framework, if you can leave some of these details up to it completely your efficiency will sharply increase.</p>
+
+<p>The downside, of course, is if there&rsquo;s an error, something has to revert on the screen which can seem a bit buggy. I think this is an OK compromise to make since you should expect 99.9% of your apps actions to succeed. If there&rsquo;s an error message in addition to the flashy UI, it should be clear what happened. I could even argue that the flickering UI is the least surprising behavior for an action that doesn&rsquo;t work. Very cool functionality built-in!</p>
+
+<h2 id="finishing-touches">Finishing Touches</h2>
+
+<p>The more I add to the app, the more I feel the speed resembling any hot-loading environment. The same issues I face when saving a file multiple times in a row happen in Meteor, so it isn&rsquo;t a silver bullet.</p>
+
+<p>I ended up just adding the ability to sort the tasks by content as a toggle for my personal task. It was really easy, and I see tons of opportunities for libraries and more tools to help devs here (if they don&rsquo;t already exist). Building a query conditionally in the same way you build classes. Modifying an object by hand gets messy. Entire modules for collection displays where you just pass in the model and config, and it does the rest. And better shorthand for the IPC piece. Writing the connection of methods between the client and server is a notorious hot-spot for failure, and I&rsquo;m surprised Meteor&rsquo;s implementation is so brittle. By using strings, typos are bound to happen. It&rsquo;s a similar issue to Redux&rsquo;s action types. You end up maintaining a huge list of constants, because if you don&rsquo;t you have to be perfect at writing strings 100% of the time. You can&rsquo;t do that, so we end up with constants!</p>
+
+<p>I&rsquo;m really liking Meteor so far. It feels a lot like when I first used Rails, and I could see myself using it for quick, beautiful prototypes where I know I won&rsquo;t be maintaining code. A lot of magic is involved, which really is clever code that has yet to be understood. As I now start to understand Rails magic pretty well, learning Meteor magic seems less daunting if that&rsquo;s what I want to do.</p>
+
+<p>My worries start to pile up with large projects. I can&rsquo;t yet see patterns emerging on how to structure large code-bases, which is what I would hope frameworks geared for enterprise would offer. I can&rsquo;t say that I&rsquo;m even positive that&rsquo;s one of the selling points here, it seems like a modern, hip JS project. Maybe the Angular piece strikes me as enterprise. Between maintaining complex UI with strings and methods in HTML, mixing languages indiscriminately, and an unresolved weakness between the server and client, there&rsquo;s enough to worry me before going with it long-term.</p>
+
+<p>Enjoyable nonetheless!</p>
 
             </div>
             
