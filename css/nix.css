@@ -47,6 +47,14 @@ h1 > a:hover {
 	text-decoration: none;
 }
 
+h1 {
+	margin: 20px 0;
+}
+
+h2 {
+	margin: 10px 0;
+}
+
 #user-name {
 	font-size: 5em;
 	text-transform: uppercase;
@@ -236,4 +244,29 @@ figure p {
 span.post-title {
 	font-family: 'Concert One', cursive;
 	font-size: 36px;
+}
+
+
+.ingredients-list {
+	float: left;
+	width: 55%;
+	position: relative;
+	border: 1px solid gray;
+	padding: 10px 24px;
+}
+
+.recipe-summary {
+	float: right;
+	width: 35%;
+	position: relative;
+	border: 1px solid gray;
+	padding: 10px 24px;
+}
+
+.tips, .directions, .personal-notes {
+	width: 100%;
+	float: left;
+	margin-top: 24px;
+	border: 1px solid gray;
+	padding: 10px 24px;
 }
