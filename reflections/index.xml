@@ -6,10 +6,20 @@
     <description>Recent content in Reflections on xhocquet.info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Nov 2018 21:20:41 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 04 Mar 2019 21:44:34 -0700</lastBuildDate>
     
 	<atom:link href="http://xhocquet.info/reflections/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Protecting my Electronic Life: Part 1</title>
+      <link>http://xhocquet.info/reflections/security-part-1/</link>
+      <pubDate>Mon, 04 Mar 2019 21:44:34 -0700</pubDate>
+      
+      <guid>http://xhocquet.info/reflections/security-part-1/</guid>
+      <description>Technology scares me. I consider myself lucky in that I can navigate it and make educated decisions, but at the same time I realize that I rely on hundreds of technologies every day and I don&amp;rsquo;t even know how they work!
+The most frightening thing is how fast it’s all happening. I thought I would be up-to-date for much longer than my parents were, or even my peers are today. It turns out another internet-addicted generation is already steadily replacing my idea of normal.</description>
+    </item>
     
     <item>
       <title>2018 Javascript Hack-o-thon Project 1</title>
