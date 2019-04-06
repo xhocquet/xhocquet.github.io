@@ -6,10 +6,19 @@
     <description>Recent content on xhocquet.info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 Mar 2019 21:44:34 -0700</lastBuildDate>
+    <lastBuildDate>Fri, 05 Apr 2019 20:43:58 -0600</lastBuildDate>
     
 	<atom:link href="http://xhocquet.info/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Protecting my Electronic Life: Part 2</title>
+      <link>http://xhocquet.info/reflections/security-part-2/</link>
+      <pubDate>Fri, 05 Apr 2019 20:43:58 -0600</pubDate>
+      
+      <guid>http://xhocquet.info/reflections/security-part-2/</guid>
+      <description>After some common-sense practices to use, I wanted to switch over to privacy and data online and off. Your privacy is literally under attack every day from countless sources, usually trying to pry out as much data from your activity as they can without breaking the law. I used to not care. I felt that since I had nothing to hide, it didn’t bother me that some companies could use my data points to make new things.</description>
+    </item>
     
     <item>
       <title>Protecting my Electronic Life: Part 1</title>
