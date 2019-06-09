@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Games on xhocquet.info</title>
+    <link>http://xhocquet.info/games/</link>
+    <description>Recent content in Games on xhocquet.info</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 02 Jun 2019 22:00:14 -0600</lastBuildDate>
+    
+	<atom:link href="http://xhocquet.info/games/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Civilization 6</title>
+      <link>http://xhocquet.info/games/civ6/</link>
+      <pubDate>Sun, 02 Jun 2019 22:00:14 -0600</pubDate>
+      
+      <guid>http://xhocquet.info/games/civ6/</guid>
+      <description>xhocquet@::1 ~ $ / games / civilization 6     My Thoughts  Good Mods
+Yet (not) Another Maps Pack Known as YnAMP. Detailed new map additions.
+ Terra Mirabilis Large rework of natural wonders.
+ Detailed Worlds Adds a bit more flavor to continents instead of blobs.
+ Production Queue Really solid quality-of-life enhancement. If you have a set production order for new cities, this saves you some time.</description>
+    </item>
+    
+  </channel>
+</rss>

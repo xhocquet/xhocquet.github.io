@@ -6,10 +6,19 @@
     <description>Recent content in Reflections on xhocquet.info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 05 Apr 2019 20:43:58 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 09 Jun 2019 12:29:08 -0600</lastBuildDate>
     
 	<atom:link href="http://xhocquet.info/reflections/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Civ6</title>
+      <link>http://xhocquet.info/reflections/civ6/</link>
+      <pubDate>Sun, 09 Jun 2019 12:29:08 -0600</pubDate>
+      
+      <guid>http://xhocquet.info/reflections/civ6/</guid>
+      <description>I like to decribe Civilization as the board game Risk but made interesting with software. The difficulty with simulation games is the sheer amount of information the user wants and needs to optimize their gameplay. You can see how something like a flight simulator would be quite complex. Now consider developing a simulator of human history (within a reasonable scope of effort). Crowd mentalities, statecraft, geopolitics. All these academic subjects about which humans know just the basics about must be concretely applied to the game in a tangible and rewarding, all while keeping it all balanced.</description>
+    </item>
     
     <item>
       <title>Protecting my Electronic Life: Part 2</title>
