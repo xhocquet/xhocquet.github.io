@@ -270,3 +270,31 @@ span.post-title {
 	border: 1px solid gray;
 	padding: 10px 24px;
 }
+
+.language-logo-container {
+	width: 45%;
+	height: 260px;
+	float: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+@media (max-width: 797px) {
+	.language-logo-container {
+		float: none;
+		width: 90%;
+		height: auto;
+	}
+}
+
+.language-logo-container > img {
+	max-width: 90%;
+}
+
+img.title-logo {
+	margin: 0 auto;
+	height: 200px;
+	display: block;
+
+}

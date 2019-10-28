@@ -45,15 +45,6 @@ Yet (not) Another Maps Pack Known as YnAMP. Detailed new map additions.
     </item>
     
     <item>
-      <title>Games - Opinions and Reference</title>
-      <link>http://xhocquet.info/games/vidja-games/</link>
-      <pubDate>Sun, 02 Jun 2019 22:00:14 -0600</pubDate>
-      
-      <guid>http://xhocquet.info/games/vidja-games/</guid>
-      <description> </description>
-    </item>
-    
-    <item>
       <title>Protecting my Electronic Life: Part 2</title>
       <link>http://xhocquet.info/reflections/security-part-2/</link>
       <pubDate>Fri, 05 Apr 2019 20:43:58 -0600</pubDate>
@@ -177,16 +168,6 @@ As a proud Belgian, it&amp;rsquo;s only natural to speak the gospel of mayonnais
     </item>
     
     <item>
-      <title>Wildstar&#39;s Find That Boss!</title>
-      <link>http://xhocquet.info/wildstar/</link>
-      <pubDate>Mon, 11 Jun 2018 22:00:14 -0600</pubDate>
-      
-      <guid>http://xhocquet.info/wildstar/</guid>
-      <description>Back to Site Wildstar&#39;s Find that Boss! Search:          Made by Xavier Hocquet.
-Submit suggestions via GitHub issues here or by email.          </description>
-    </item>
-    
-    <item>
       <title>Quick-n-Dirty Crusty Bread</title>
       <link>http://xhocquet.info/recipes/quick-n-dirty-crusty-bread/</link>
       <pubDate>Mon, 11 Jun 2018 20:21:37 -0600</pubDate>
@@ -196,6 +177,60 @@ Submit suggestions via GitHub issues here or by email.          </description>
 Directions  Combine all of the ingredients in a large mixing bowl
 Mix by hand to make a very sticky, rough dough.
 Cover the bowl, and let the dough rise at room temperature for 2 hours. (optional in case of rush)</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xhocquet.info/projects/crystal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://xhocquet.info/projects/crystal/</guid>
+      <description> Stock Sandbox  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xhocquet.info/projects/go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://xhocquet.info/projects/go/</guid>
+      <description> PDFtools  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xhocquet.info/projects/js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://xhocquet.info/projects/js/</guid>
+      <description> Waves - Electron music player with hot-loading GroceryGuru (Client) - React Native client for Rails API GraphQL Experiment Meteor Experiment - Task list Electron Agile Tool  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xhocquet.info/projects/ruby/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://xhocquet.info/projects/ruby/</guid>
+      <description> Boxr - Official Box Ruby Client GroceryGuru (Server) - Grocery Spending Tracking DIYRSS - Turn any website into a trackable content feed Flutter - Anime tracking data visualizer  </description>
+    </item>
+    
+    <item>
+      <title>Games - Opinions and Reference</title>
+      <link>http://xhocquet.info/games/vidja-games/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://xhocquet.info/games/vidja-games/</guid>
+      <description>  </description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>http://xhocquet.info/projects/all/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://xhocquet.info/projects/all/</guid>
+      <description>        </description>
     </item>
     
   </channel>
