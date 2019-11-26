@@ -6,10 +6,20 @@
     <description>Recent content on xhocquet.info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Jul 2019 15:26:38 -0600</lastBuildDate>
+    <lastBuildDate>Thu, 21 Nov 2019 16:32:27 -0700</lastBuildDate>
     
 	<atom:link href="http://xhocquet.info/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Buffalo Sauce</title>
+      <link>http://xhocquet.info/recipes/buffalo-sauce/</link>
+      <pubDate>Thu, 21 Nov 2019 16:32:27 -0700</pubDate>
+      
+      <guid>http://xhocquet.info/recipes/buffalo-sauce/</guid>
+      <description>Ingredients  1 cup melted butter 2&amp;frasl;3 cup Frank&amp;rsquo;s RedHot 1 splash vinegar 
+Directions  Combine ingredients in a saucepan over low heat for 5 - 10 minutes. Serve</description>
+    </item>
     
     <item>
       <title>An Ode to Gmail&#39;s Attachment Reminder</title>
@@ -69,7 +79,7 @@ The most frightening thing is how fast it’s all happening. I thought I would b
       <pubDate>Sun, 27 Jan 2019 16:32:27 -0700</pubDate>
       
       <guid>http://xhocquet.info/recipes/classic-baguettes/</guid>
-      <description>Ingredients Starter (Poolish)  113 grams cool water 1/16 teaspoon acive dry yeast or instant yeast 120 grams unbleached all-purpose flour  Dough  1 1/2 teaspoon active dry yeast or instant yeast 255 grams lukewarm water poolish 418 grams unbleached all-purpose flour 2 teaspoons salt   Summary  Make starter and let rest overnight Make dough and let rest 45 + 45 minutes Split dough and let rest 15 minutes - 1 hour Shape loaves, let rest 45 minutes - 1 hour Bake ~30 minutes    Directions  To make the starter: Mix everything together to make a soft dough.</description>
+      <description>Ingredients Starter (Poolish)  113 grams cool water 1/16 teaspoon acive dry yeast or instant yeast 120 grams unbleached all-purpose flour  Dough  1 1/2 teaspoon active dry yeast or instant yeast 255 grams lukewarm water poolish 418 grams unbleached all-purpose flour 2 teaspoons salt  Summary  Make starter and let rest overnight Make dough and let rest 45 + 45 minutes Split dough and let rest 15 minutes - 1 hour Shape loaves, let rest 45 minutes - 1 hour Bake ~30 minutes  Directions  To make the starter: Mix everything together to make a soft dough.</description>
     </item>
     
     <item>
@@ -181,38 +191,51 @@ Cover the bowl, and let the dough rise at room temperature for 2 hours. (optiona
     
     <item>
       <title></title>
-      <link>http://xhocquet.info/projects/crystal/</link>
+      <link>http://xhocquet.info/code/all/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://xhocquet.info/projects/crystal/</guid>
+      <guid>http://xhocquet.info/code/all/</guid>
+      <description>        </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xhocquet.info/code/crystal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://xhocquet.info/code/crystal/</guid>
       <description> Stock Sandbox  </description>
     </item>
     
     <item>
       <title></title>
-      <link>http://xhocquet.info/projects/go/</link>
+      <link>http://xhocquet.info/code/go/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://xhocquet.info/projects/go/</guid>
-      <description> PDFtools  </description>
+      <guid>http://xhocquet.info/code/go/</guid>
+      <description>Projects
+ PDFtools  Resources
+ Awesome GO  </description>
     </item>
     
     <item>
       <title></title>
-      <link>http://xhocquet.info/projects/js/</link>
+      <link>http://xhocquet.info/code/js/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://xhocquet.info/projects/js/</guid>
+      <guid>http://xhocquet.info/code/js/</guid>
       <description> Waves - Electron music player with hot-loading GroceryGuru (Client) - React Native client for Rails API GraphQL Experiment Meteor Experiment - Task list Electron Agile Tool  </description>
     </item>
     
     <item>
       <title></title>
-      <link>http://xhocquet.info/projects/ruby/</link>
+      <link>http://xhocquet.info/code/ruby/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://xhocquet.info/projects/ruby/</guid>
-      <description> Boxr - Official Box Ruby Client GroceryGuru (Server) - Grocery Spending Tracking DIYRSS - Turn any website into a trackable content feed Flutter - Anime tracking data visualizer  </description>
+      <guid>http://xhocquet.info/code/ruby/</guid>
+      <description>Projects
+ Boxr - Box Ruby Client GroceryGuru (Server) - Grocery Spending Tracking DIYRSS - Turn any website into a trackable content feed Flutter - Anime tracking data visualizer  Resource
+ Awesome Ruby  </description>
     </item>
     
     <item>
@@ -222,15 +245,6 @@ Cover the bowl, and let the dough rise at room temperature for 2 hours. (optiona
       
       <guid>http://xhocquet.info/games/vidja-games/</guid>
       <description>  </description>
-    </item>
-    
-    <item>
-      <title>Projects</title>
-      <link>http://xhocquet.info/projects/all/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://xhocquet.info/projects/all/</guid>
-      <description>        </description>
     </item>
     
   </channel>

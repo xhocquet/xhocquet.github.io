@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Codes on xhocquet.info</title>
+    <link>http://xhocquet.info/code/</link>
+    <description>Recent content in Codes on xhocquet.info</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://xhocquet.info/code/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>http://xhocquet.info/code/all/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://xhocquet.info/code/all/</guid>
+      <description>        </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xhocquet.info/code/crystal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://xhocquet.info/code/crystal/</guid>
+      <description> Stock Sandbox  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xhocquet.info/code/go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://xhocquet.info/code/go/</guid>
+      <description>Projects
+ PDFtools  Resources
+ Awesome GO  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xhocquet.info/code/js/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://xhocquet.info/code/js/</guid>
+      <description> Waves - Electron music player with hot-loading GroceryGuru (Client) - React Native client for Rails API GraphQL Experiment Meteor Experiment - Task list Electron Agile Tool  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://xhocquet.info/code/ruby/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://xhocquet.info/code/ruby/</guid>
+      <description>Projects
+ Boxr - Box Ruby Client GroceryGuru (Server) - Grocery Spending Tracking DIYRSS - Turn any website into a trackable content feed Flutter - Anime tracking data visualizer  Resource
+ Awesome Ruby  </description>
+    </item>
+    
+  </channel>
+</rss>
