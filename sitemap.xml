@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://xhocquet.info/reflections/media-tracking/</loc>
+    <lastmod>2019-11-25T20:04:03-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://xhocquet.info/recipes/buffalo-sauce/</loc>
     <lastmod>2019-11-21T16:32:27-07:00</lastmod>
   </url>
@@ -125,12 +130,12 @@
   
   <url>
     <loc>http://xhocquet.info/reflections/</loc>
-    <lastmod>2019-07-02T15:26:38-06:00</lastmod>
+    <lastmod>2019-11-25T20:04:03-07:00</lastmod>
   </url>
   
   <url>
     <loc>http://xhocquet.info/</loc>
-    <lastmod>2019-11-21T16:32:27-07:00</lastmod>
+    <lastmod>2019-11-25T20:04:03-07:00</lastmod>
     <priority>0</priority>
   </url>
   

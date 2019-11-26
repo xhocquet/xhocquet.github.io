@@ -6,10 +6,20 @@
     <description>Recent content in Reflections on xhocquet.info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 02 Jul 2019 15:26:38 -0600</lastBuildDate>
+    <lastBuildDate>Mon, 25 Nov 2019 20:04:03 -0700</lastBuildDate>
     
 	<atom:link href="http://xhocquet.info/reflections/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Media Tracking</title>
+      <link>http://xhocquet.info/reflections/media-tracking/</link>
+      <pubDate>Mon, 25 Nov 2019 20:04:03 -0700</pubDate>
+      
+      <guid>http://xhocquet.info/reflections/media-tracking/</guid>
+      <description>I love tracking things. It feeds my need to always be up-to-date on my progress. I feel that by knowing my status at all times, I can optimize my decisions at any moment to increase my productivity. Some may call that over-optimizing, but I believe it&amp;rsquo;s part of who I am and lets me perform at a high level while maintaining free time.
+This happens on a bunch of levels, for example: In the morning, I&amp;rsquo;m tracking the train moving through the city until it reaches my stop to optimize when I should go to bed and wake up.</description>
+    </item>
     
     <item>
       <title>An Ode to Gmail&#39;s Attachment Reminder</title>
