@@ -93,24 +93,7 @@
   </url>
   
   <url>
-    <loc>http://xhocquet.info/code/all/</loc>
-  </url>
-  
-  <url>
-    <loc>http://xhocquet.info/code/go/</loc>
-  </url>
-  
-  <url>
-    <loc>http://xhocquet.info/code/js/</loc>
-  </url>
-  
-  <url>
-    <loc>http://xhocquet.info/code/ruby/</loc>
-  </url>
-  
-  <url>
     <loc>http://xhocquet.info/code/</loc>
-    <priority>0</priority>
   </url>
   
   <url>

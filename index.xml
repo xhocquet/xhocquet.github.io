@@ -201,42 +201,16 @@ Cover the bowl, and let the dough rise at room temperature for 2 hours. (optiona
     
     <item>
       <title></title>
-      <link>http://xhocquet.info/code/all/</link>
+      <link>http://xhocquet.info/code/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://xhocquet.info/code/all/</guid>
-      <description>      </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://xhocquet.info/code/go/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://xhocquet.info/code/go/</guid>
-      <description>Projects
- PDFtools  Resources
- Awesome GO  </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://xhocquet.info/code/js/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://xhocquet.info/code/js/</guid>
-      <description> Waves - Electron music player with hot-loading GroceryGuru (Client) - React Native client for Rails API GraphQL Experiment Meteor Experiment - Task list Electron Agile Tool  </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>http://xhocquet.info/code/ruby/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://xhocquet.info/code/ruby/</guid>
-      <description>Projects
- Boxr - Box Ruby Client GroceryGuru (Server) - Grocery Spending Tracking DIYRSS - Turn any website into a trackable content feed Flutter - Anime tracking data visualizer  Resource
- Awesome Ruby  </description>
+      <guid>http://xhocquet.info/code/</guid>
+      <description>Ruby Projects
+Resource
+ Boxr - Box Ruby Client GroceryGuru (Server) - Grocery Spending Tracking DIYRSS - Turn any website into a trackable content feed Flutter - Anime tracking data visualizer   Awesome Ruby    Go Projects
+Resources
+ PDFtools   Awesome GO    JS Projects
+ Waves - Electron music player with hot-loading GroceryGuru (Client) - React Native client for Rails API GraphQL Experiment Meteor Experiment - Task list Electron Agile Tool    Rust Projects</description>
     </item>
     
     <item>
