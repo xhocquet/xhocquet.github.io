@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>product on xhocquet.info</title>
+    <link>http://xhocquet.info/tags/product/</link>
+    <description>Recent content in product on xhocquet.info</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 02 Jul 2019 15:26:38 -0600</lastBuildDate><atom:link href="http://xhocquet.info/tags/product/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>An Ode to Gmail&#39;s Attachment Reminder</title>
+      <link>http://xhocquet.info/reflections/gmail-attachment-reminder/</link>
+      <pubDate>Tue, 02 Jul 2019 15:26:38 -0600</pubDate>
+      
+      <guid>http://xhocquet.info/reflections/gmail-attachment-reminder/</guid>
+      <description>Rarely do features surprise me these days. I&amp;rsquo;ve seen every iteration of create, read, update, destroy you could think of in dozens of technologies of varying complexities and interoperability. Sometimes you have to wait for things, sometimes you need to display a lot of information.
+Because of this, I think it&amp;rsquo;s worthy to whip out a small post congratulating and celebrating the little things that keep our lives in order. This feature is as dumb as can be: When you type certain phrases that imply an attachment should be present, Gmail warns you if there&amp;rsquo;s no attachment before sending.</description>
+    </item>
+    
+  </channel>
+</rss>

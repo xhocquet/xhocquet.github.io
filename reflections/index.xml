@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Reflections on xhocquet.info</title>
@@ -6,11 +6,7 @@
     <description>Recent content in Reflections on xhocquet.info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Mar 2020 08:47:29 -0700</lastBuildDate>
-    
-	<atom:link href="http://xhocquet.info/reflections/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 04 Mar 2020 08:47:29 -0700</lastBuildDate><atom:link href="http://xhocquet.info/reflections/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Music Tracking (update!)</title>
       <link>http://xhocquet.info/reflections/music-tracking/</link>
@@ -76,8 +72,8 @@ The most frightening thing is how fast it’s all happening. I thought I would b
       <pubDate>Tue, 20 Nov 2018 21:20:41 -0700</pubDate>
       
       <guid>http://xhocquet.info/reflections/meteor-angular-day-one/</guid>
-      <description>Check out my code here  Meteor Exploration (and friend, Angular) I decided to look into Meteor because of it&amp;rsquo;s general popularity in enterprise. I was curious what made it attractive versus a typical app with Angular or React backed by some data store.
-Meteor offers generous documentation and tutorials, one of which I decided to follow. I wasn&amp;rsquo;t too interested in diving into mobile at this time, so I stuck with their simple to-do app.</description>
+      <description>Meteor Exploration (and friend, Angular) I decided to look into Meteor because of it&amp;rsquo;s general popularity in enterprise. I was curious what made it attractive versus a typical app with Angular or React backed by some data store.
+Meteor offers generous documentation and tutorials, one of which I decided to follow. I wasn&amp;rsquo;t too interested in diving into mobile at this time, so I stuck with their simple to-do app. I promised myself I would add some kind of extra feature after the tutorial ended to prove I understood a basic amount of the framework</description>
     </item>
     
     <item>

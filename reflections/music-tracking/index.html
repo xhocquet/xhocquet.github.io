@@ -6,7 +6,7 @@
 
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.44" />
+<meta name="generator" content="Hugo 0.78.2" />
 
 
 <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
@@ -33,58 +33,60 @@
     <body>
         <header>
 <nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" id="green-terminal" href=http://xhocquet.info/>xhocquet@::1 ~ $</a>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" id="green-terminal" href='http://xhocquet.info/'>
+        xhocquet@::1 ~ $
+      </a>
       
-        <a class="navbar-brand" id="green-terminal" href="">
+        <a class="navbar-brand" id="green-terminal" href='http://xhocquet.info/'>
           / reflections / 
         </a>
       
-		</div>
+    </div>
 
-		
-		<div class="collapse navbar-collapse" id="navbar-collapse-1">
-			<ul class="nav navbar-nav navbar-right">
-				
-				
-				<li class="dropdown">
+    
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        
+        
+        <li class="dropdown">
                     
-            		<a href="/code">~/code</a>
-            		
-        		</li>
-        		
-				
-				<li class="dropdown">
+                <a href="http://xhocquet.info/code">~/code</a>
+                
+            </li>
+            
+        
+        <li class="dropdown">
                     
-            		<a href="/games/vidja-games">~/games</a>
-            		
-        		</li>
-        		
-				
-				<li class="dropdown">
+                <a href="http://xhocquet.info/games/vidja-games">~/games</a>
+                
+            </li>
+            
+        
+        <li class="dropdown">
                     
-            		<a href="/recipes">~/recipes</a>
-            		
-        		</li>
-        		
-				
-				<li class="dropdown">
+                <a href="http://xhocquet.info/recipes">~/recipes</a>
+                
+            </li>
+            
+        
+        <li class="dropdown">
                     
-            		<a href="/reflections">~/reflections</a>
-            		
-        		</li>
-        		
+                <a href="http://xhocquet.info/reflections">~/reflections</a>
+                
+            </li>
+            
 
-			</ul>
-		</div>
-	</div>
+      </ul>
+    </div>
+  </div>
 </nav>
 </header>
 
@@ -94,35 +96,23 @@
                 <br><br>
             
             <div class="post-content">
-                
-
-<p><strong>Note</strong>: This post is a brief update to my <a href="../media-tracking">previous post</a>.</p>
-
+                <p><strong>Note</strong>: This post is a brief update to my <a href="../media-tracking">previous post</a>.</p>
 <h3 id="music-tracking">Music Tracking</h3>
-
 <p>I wanted to write this post primarily to brag + advertise my recent improvements in music library management thanks to some fantastic software I recently discovered: <a href="http://beets.io/">beets</a>.</p>
-
-<p>Beets is a lot of things, and if you sit on their current homepage long enough their taglines will boast their many, many features. At a high level though, beets is a tool to organize your music library. You feed it files and it can move them (or not), tag them (or not), and index them in your local beets&rsquo; database. Once indexed, those files can be used in the huge <a href="https://beets.readthedocs.io/en/stable/plugins/index.html">plugin ecosystem</a> to fill out other needs.</p>
-
+<p>Beets is a lot of things, and if you sit on their current homepage long enough their taglines will boast their many, many features. At a high level though, beets is a tool to organize your music library. You feed it files and it can move them (or not), tag them (or not), and index them in your local beets' database. Once indexed, those files can be used in the huge <a href="https://beets.readthedocs.io/en/stable/plugins/index.html">plugin ecosystem</a> to fill out other needs.</p>
 <p>Also, the open source project is thriving. I&rsquo;m proud <a href="https://github.com/beetbox/beets/commit/d4d04c61aa577673c5c9cebb316490e80b6d7fa9">to have contributed</a> a small bug-fix for the Genius lyrics scraper, but the complexity of this project is well-managed.</p>
-
 <h3 id="current-workflow">Current Workflow</h3>
-
 <p>Today, I keep a basic workflow with some manual steps to make sure I&rsquo;m aware of what&rsquo;s going on. I don&rsquo;t like fully automated solutions for hobby projects like these because the point is to be in-tune with my collection and keep the quality in-tact.</p>
-
 <p>So first step after I acquire any music files is to pass them through beets with <code>beets import -c</code>. <code>-c</code> is to copy files to leave the original intact, so I can move or dispose of them depending on where they came from. As I mentioned above, beets has a really good plugin ecosystem with things like lyrics and album art (and those are just the basics). When I run import, my config triggers album art and lyrics to be fetched automatically. For FLAC and other lossless formats, I also transcode a 320kbps version for portability and streaming.</p>
-
 <p><code>import</code> searches your folders/tracks against a set of sources that generally find what you have unless you live on the fringe of music. Every once in a while, it can be nice to add a release to <a href="musicbrainz.org/">MusicBrainz</a> to fill your own need and provide back to the community. That being said, you will eventually come across some file you can&rsquo;t categorize. For this purpose I keep a separate music folder of &lsquo;Unsortables&rsquo; outside of my primary beets library to not pollute the database. I&rsquo;ll check again every once in a while in case people add the previously-unsortable releases, but in general they&rsquo;re going to stay there.</p>
-
 <p>Which brings us to actual listening. beets handily sorts and creates folders appropriately based on the track metadata, and I just point my music player to watch the parent folder. Every time I import some new tracks using beets, my music player (<a href="https://getmusicbee.com/">MusicBee</a>) magically picks them up and they&rsquo;re ready to go! The music player also watches the unsortable folder separately so those tracks are also accessible. I have a couple of smart playlists in the player that can split up those tracks so I can navigate them individually.</p>
-
 <p>Plex is also watching these folders and indexing the mp3s so it&rsquo;s accessible anywhere!</p>
 
             </div>
             
             <div class="post-comments">
                 <div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     

@@ -6,7 +6,7 @@
 
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.44" />
+<meta name="generator" content="Hugo 0.78.2" />
 
 
 <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
@@ -33,58 +33,60 @@
     <body>
         <header>
 <nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" id="green-terminal" href=http://xhocquet.info/>xhocquet@::1 ~ $</a>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" id="green-terminal" href='http://xhocquet.info/'>
+        xhocquet@::1 ~ $
+      </a>
       
-        <a class="navbar-brand" id="green-terminal" href="">
+        <a class="navbar-brand" id="green-terminal" href='http://xhocquet.info/'>
           / reflections / 
         </a>
       
-		</div>
+    </div>
 
-		
-		<div class="collapse navbar-collapse" id="navbar-collapse-1">
-			<ul class="nav navbar-nav navbar-right">
-				
-				
-				<li class="dropdown">
+    
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        
+        
+        <li class="dropdown">
                     
-            		<a href="/code">~/code</a>
-            		
-        		</li>
-        		
-				
-				<li class="dropdown">
+                <a href="http://xhocquet.info/code">~/code</a>
+                
+            </li>
+            
+        
+        <li class="dropdown">
                     
-            		<a href="/games/vidja-games">~/games</a>
-            		
-        		</li>
-        		
-				
-				<li class="dropdown">
+                <a href="http://xhocquet.info/games/vidja-games">~/games</a>
+                
+            </li>
+            
+        
+        <li class="dropdown">
                     
-            		<a href="/recipes">~/recipes</a>
-            		
-        		</li>
-        		
-				
-				<li class="dropdown">
+                <a href="http://xhocquet.info/recipes">~/recipes</a>
+                
+            </li>
+            
+        
+        <li class="dropdown">
                     
-            		<a href="/reflections">~/reflections</a>
-            		
-        		</li>
-        		
+                <a href="http://xhocquet.info/reflections">~/reflections</a>
+                
+            </li>
+            
 
-			</ul>
-		</div>
-	</div>
+      </ul>
+    </div>
+  </div>
 </nav>
 </header>
 
@@ -94,98 +96,63 @@
                 <br><br>
             
             <div class="post-content">
-                
-
-<div style="border: 5px solid black; margin: 24px auto 0; text-align: center; padding: 2px 24px;">
-  Check out my code <a href="https://github.com/xhocquet/meteor-tasks">here</a>
-</div>
-
+                <!-- raw HTML omitted -->
 <h2 id="meteor-exploration-and-friend-angular">Meteor Exploration (and friend, Angular)</h2>
-
 <p>I decided to look into Meteor because of it&rsquo;s general popularity in enterprise. I was curious what made it attractive versus a typical app with Angular or React backed by some data store.</p>
-
 <p>Meteor offers generous documentation and <a href="https://www.meteor.com/tutorials">tutorials</a>, one of which I decided to follow. I wasn&rsquo;t too interested in diving into mobile at this time, so I stuck with their simple to-do app. I promised myself I would add some kind of extra feature after the tutorial ended to prove I understood a basic amount of the framework</p>
-
 <h2 id="collections">Collections</h2>
-
 <p>Templates are pretty standard to any set of JS tools, but a Collection is my first encounter with a Meteor concept. To me, it seems like a database query is bound to the client via a socket or something. So that if that query returns different results, the view receives new data. From there, Angular takes over. It&rsquo;s worth mentioning this is only my second or third time using Angular, and it&rsquo;s still very new to me. Coming from a heavy Rails background, the concept of markup with template helpers is not entirely foreign.</p>
-
 <p>I&rsquo;m impressed with how quick I have a todo app where I can add things, in real-time without page reloads. I can&rsquo;t confidently say Rails would be quicker. I think Mongo deserves a fair share of the credit, though, since it removes quite a bit of complexity around models in relational DBs. Simply inserting an object looks like Rails, but I didn&rsquo;t have to declare a model. This is basically all you need, and you aren&rsquo;t yet defining typed fields of any sort:</p>
-
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Tasks</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Mongo</span>.<span style="color:#a6e22e">Collection</span>(<span style="color:#e6db74">&#39;tasks&#39;</span>);
 </code></pre></div>
-
 <h2 id="code-separation">Code Separation</h2>
-
 <p>One of the things I&rsquo;m starting to dislike is the at times complex Javascript you end up writing in the angular tags.</p>
-
 <p>React solves this by redefining HTML tags in Javascript. The React component files you end up with are all Javascript, including the classes you toggle in the same way you do in Angular. The difference is pretty large:</p>
-
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">Angular</span>
 <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">span</span> <span style="color:#a6e22e">ng</span><span style="color:#f92672">-</span><span style="color:#66d9ef">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{&#39;active&#39;: item.isActive}&#34;</span>
 </code></pre></div>
-
 <p>vs.</p>
-
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#960050;background-color:#1e0010">#</span> <span style="color:#a6e22e">React</span>
 <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">classes</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">classnames</span>(<span style="color:#e6db74">&#39;generic-class&#39;</span>, {<span style="color:#e6db74">&#39;active&#39;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">isActive</span>})
 <span style="color:#66d9ef">return</span>(
-  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">span</span> <span style="color:#a6e22e">classNames</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">classes</span>} <span style="color:#960050;background-color:#1e0010">/&gt;</span>
+  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">span</span> <span style="color:#a6e22e">classNames</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">classes</span>} <span style="color:#f92672">/&gt;</span>
 )
 </code></pre></div>
-
 <p>There&rsquo;s definitely a bunch more code behind both of these examples, but I think I would objectively say the React code takes up more room. But, I still think it&rsquo;s better because of the consistency of the language. The big advantage is you can focus on a single type of developer for more of your coding, and as a developer you can stay in Javascript in your mind without switching back and forth. In fact, that&rsquo;s one of the huge selling points of all these new JS servers.</p>
-
 <p>Second, imagine scaling this. There&rsquo;s probably a solution to this I don&rsquo;t know yet, because I can&rsquo;t imagine big corporations running Angular apps with a half-dozen conditional classes on a piece of text or an input. It basically looks like in-line CSS, which we&rsquo;ve long since abandoned for better tools.</p>
-
 <h2 id="data-binding">Data Binding</h2>
-
 <p>I just reached my first usage of <code>getReactively()</code>, a major data-binding component of Angular/Meteor.</p>
-
 <blockquote>
 <p>To make Meteor understand Angular bindings and the other way around, we use <a href="https://angular-meteor.com/api/angular-meteor/1.3.11/get-reactively">$scope.getReactively</a> function that turns Angular scope variables into <a href="http://docs.meteor.com/#/full/reactivevar_pkg">Meteor reactive variables</a>.</p>
 </blockquote>
-
-<p>It lives in the controller, more specifically in the <code>tasks()</code> action where it makes the DB call. My closest approximation would be a Redux selector (<a href="https://github.com/reduxjs/reselect">brand spankin&rsquo; new!</a>), filtering data in the connection to the store.</p>
-
-<p>There&rsquo;s a lot of &lsquo;magic&rsquo; going on for data-binding to work without a lot of extra boiler-plate:
-- Putting controller methods in your view creates a data-bind for that method. What triggers it?
-- Selector-like methods in the actions create data-bindings for the property you hook into.
-- Just updating the DB triggers a re-render (for example, checking an item). Thanks to the collection (<code>Mongo.Collection('tasks')</code>)</p>
-
+<p>It lives in the controller, more specifically in the <code>tasks()</code> action where it makes the DB call. My closest approximation would be a Redux selector (<a href="https://github.com/reduxjs/reselect">brand spankin' new!</a>), filtering data in the connection to the store.</p>
+<p>There&rsquo;s a lot of &lsquo;magic&rsquo; going on for data-binding to work without a lot of extra boiler-plate:</p>
+<ul>
+<li>Putting controller methods in your view creates a data-bind for that method. What triggers it?</li>
+<li>Selector-like methods in the actions create data-bindings for the property you hook into.</li>
+<li>Just updating the DB triggers a re-render (for example, checking an item). Thanks to the collection (<code>Mongo.Collection('tasks')</code>)</li>
+</ul>
 <p>My general experience thus far is definitely one I shared with Rails when I started. Lots of things I don&rsquo;t yet understand are helping me, and it feels good! I&rsquo;ve written very little code overall to create a functional CRUD app with a user-auth library and scoped records.</p>
-
 <h2 id="more-separation-and-optimistic-ui">More Separation and Optimistic UI</h2>
-
 <p>As we start to peel away the incorrect basic setup and put in place more traditional patterns, I start to notice some more recognizable features of Meteor. Methods are Meteor&rsquo;s <a href="https://en.wikipedia.org/wiki/Inter-process_communication">IPC</a>, it allows the client to speak to the server. In React or Vanilla JS, that means writing a web request and handling the response. Meteor wraps that up with the Method functionality so that you just call the method from the frontend and the request is handled for you.</p>
-
 <p>Optimistic UI, however, is completely new to me. According to them:</p>
-
 <blockquote>
 <p>A simulation of the method runs directly on the client to attempt to predict the outcome of the server call using the available information</p>
 </blockquote>
-
 <p>If I try to parse that a little further, it seems like if you&rsquo;re acting on data the client already has, there&rsquo;s a good chance you get client-side speed in terms of interactions. Deleting a task, for example, should be straightforward and the client will hide the task before the request even completes. This kind of hybrid solution is a good sign of creativity and something Rails does a bunch (<code>.includes</code>, <code>size</code>, etc.). With a good framework, if you can leave some of these details up to it completely your efficiency will sharply increase.</p>
-
 <p>The downside, of course, is if there&rsquo;s an error, something has to revert on the screen which can seem a bit buggy. I think this is an OK compromise to make since you should expect 99.9% of your apps actions to succeed. If there&rsquo;s an error message in addition to the flashy UI, it should be clear what happened. I could even argue that the flickering UI is the least surprising behavior for an action that doesn&rsquo;t work. Very cool functionality built-in!</p>
-
 <h2 id="finishing-touches">Finishing Touches</h2>
-
 <p>The more I add to the app, the more I feel the speed resembling any hot-loading environment. The same issues I face when saving a file multiple times in a row happen in Meteor, so it isn&rsquo;t a silver bullet.</p>
-
 <p>I ended up just adding the ability to sort the tasks by content as a toggle for my personal task. It was really easy, and I see tons of opportunities for libraries and more tools to help devs here (if they don&rsquo;t already exist). Building a query conditionally in the same way you build classes. Modifying an object by hand gets messy. Entire modules for collection displays where you just pass in the model and config, and it does the rest. And better shorthand for the IPC piece. Writing the connection of methods between the client and server is a notorious hot-spot for failure, and I&rsquo;m surprised Meteor&rsquo;s implementation is so brittle. By using strings, typos are bound to happen. It&rsquo;s a similar issue to Redux&rsquo;s action types. You end up maintaining a huge list of constants, because if you don&rsquo;t you have to be perfect at writing strings 100% of the time. You can&rsquo;t do that, so we end up with constants!</p>
-
 <p>I&rsquo;m really liking Meteor so far. It feels a lot like when I first used Rails, and I could see myself using it for quick, beautiful prototypes where I know I won&rsquo;t be maintaining code. A lot of magic is involved, which really is clever code that has yet to be understood. As I now start to understand Rails magic pretty well, learning Meteor magic seems less daunting if that&rsquo;s what I want to do.</p>
-
 <p>My worries start to pile up with large projects. I can&rsquo;t yet see patterns emerging on how to structure large code-bases, which is what I would hope frameworks geared for enterprise would offer. I can&rsquo;t say that I&rsquo;m even positive that&rsquo;s one of the selling points here, it seems like a modern, hip JS project. Maybe the Angular piece strikes me as enterprise. Between maintaining complex UI with strings and methods in HTML, mixing languages indiscriminately, and an unresolved weakness between the server and client, there&rsquo;s enough to worry me before going with it long-term.</p>
-
 <p>Enjoyable nonetheless!</p>
 
             </div>
             
             <div class="post-comments">
                 <div id="disqus_thread"></div>
-<script>
+<script type="application/javascript">
     var disqus_config = function () {
     
     
