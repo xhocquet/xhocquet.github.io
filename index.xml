@@ -6,7 +6,18 @@
     <description>Recent content on xhocquet.info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Nov 2020 21:07:45 -0600</lastBuildDate><atom:link href="http://xhocquet.info/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Nov 2020 20:05:06 -0600</lastBuildDate><atom:link href="http://xhocquet.info/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bias Balancer</title>
+      <link>http://xhocquet.info/reflections/bias-balancer/</link>
+      <pubDate>Mon, 30 Nov 2020 20:05:06 -0600</pubDate>
+      
+      <guid>http://xhocquet.info/reflections/bias-balancer/</guid>
+      <description>The past few days I&amp;rsquo;ve been working on a tiny little project that&amp;rsquo;s been on my mind.
+So I want to introduce: Bias Balancer!
+We all know bias exists, but we tend to passively acknowledge it instead of actively fighting back. Like most problems, the first step is education and awareness. I wanted a way to measure bias in my browsing habits so that I could take steps to remedy it.</description>
+    </item>
+    
     <item>
       <title>Artist of the Month - 11.2020 - Tobi Lou</title>
       <link>http://xhocquet.info/reflections/aotm-11-2020/</link>

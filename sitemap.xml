@@ -3,27 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://xhocquet.info/reflections/bias-balancer/</loc>
+    <lastmod>2020-11-30T20:05:06-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://xhocquet.info/reflections/</loc>
+    <lastmod>2020-11-30T20:05:06-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://xhocquet.info/tags/</loc>
+    <lastmod>2020-11-30T20:05:06-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://xhocquet.info/tags/tech/</loc>
+    <lastmod>2020-11-30T20:05:06-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://xhocquet.info/</loc>
+    <lastmod>2020-11-30T20:05:06-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://xhocquet.info/reflections/aotm-11-2020/</loc>
     <lastmod>2020-11-18T21:07:45-06:00</lastmod>
   </url>
   
   <url>
     <loc>http://xhocquet.info/tags/music/</loc>
-    <lastmod>2020-11-18T21:07:45-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://xhocquet.info/reflections/</loc>
-    <lastmod>2020-11-18T21:07:45-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://xhocquet.info/tags/</loc>
-    <lastmod>2020-11-18T21:07:45-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://xhocquet.info/</loc>
     <lastmod>2020-11-18T21:07:45-06:00</lastmod>
   </url>
   
@@ -39,11 +49,6 @@
   
   <url>
     <loc>http://xhocquet.info/reflections/music-tracking/</loc>
-    <lastmod>2020-03-04T08:47:29-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://xhocquet.info/tags/tech/</loc>
     <lastmod>2020-03-04T08:47:29-07:00</lastmod>
   </url>
   
