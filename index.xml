@@ -6,7 +6,16 @@
     <description>Recent content on xhocquet.info</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Jan 2021 09:40:34 -0600</lastBuildDate><atom:link href="http://xhocquet.info/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Feb 2021 12:15:58 -0600</lastBuildDate><atom:link href="http://xhocquet.info/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Git and Uis</title>
+      <link>http://xhocquet.info/reflections/git-and-uis/</link>
+      <pubDate>Sun, 28 Feb 2021 12:15:58 -0600</pubDate>
+      
+      <guid>http://xhocquet.info/reflections/git-and-uis/</guid>
+      <description>Version control is one of the foundational tools of modern software development. Without it, we would still be manually uploading new files to servers every time a change was made. If you had enough forethought (or if you had been bit before), you might also backup the previous version of the files with .bak or in a folder just in case. Tools like Git and SVN implement the model of files changing over time and make it easy to move through time and inspect differences between different points in time.</description>
+    </item>
+    
     <item>
       <title>The Unfortunate Dichotomy of Security and Accessibility</title>
       <link>http://xhocquet.info/reflections/security-and-accessibility/</link>

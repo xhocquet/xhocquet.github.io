@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Git and Uis &middot; xhocquet.info </title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="generator" content="Hugo 0.78.2" />
+
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="http://xhocquet.info/css/nix.css">
+
+
+<link href="https://fonts.googleapis.com/css?family=Inconsolata%7COpen+Sans%7CConcert+One" rel="stylesheet">
+
+
+
+
+    </head>
+
+    <body>
+        <header>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse font-header">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" id="green-terminal" href='http://xhocquet.info/'>
+        xhocquet@::1 ~ $
+      </a>
+      
+        <a class="navbar-brand" id="green-terminal" href='http://xhocquet.info/'>
+          / reflections / 
+        </a>
+      
+    </div>
+
+    
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        
+        
+        <li class="dropdown">
+                    
+                <a href="http://xhocquet.info/code">~/code</a>
+                
+            </li>
+            
+        
+        <li class="dropdown">
+                    
+                <a href="http://xhocquet.info/games/vidja-games">~/games</a>
+                
+            </li>
+            
+        
+        <li class="dropdown">
+                    
+                <a href="http://xhocquet.info/recipes">~/recipes</a>
+                
+            </li>
+            
+        
+        <li class="dropdown">
+                    
+                <a href="http://xhocquet.info/reflections">~/reflections</a>
+                
+            </li>
+            
+
+      </ul>
+    </div>
+  </div>
+</nav>
+</header>
+
+        <div class="container wrapper">
+            
+                <span class="post-title">Git and Uis</span>
+                <br><br>
+            
+            <div class="post-content">
+                <p>Version control is one of the foundational tools of modern software development. Without it, we would still be manually uploading new files to servers every time a change was made. If you had enough forethought (or if you had been bit before), you might also backup the previous version of the files with <code>.bak</code> or in a folder <em>just in case</em>. Tools like Git and SVN implement the model of files changing over time and make it easy to move through time and inspect differences between different points in time.</p>
+<p>My first experience with with version control was with video game mods. For some reason that I don&rsquo;t fully understand to this day, mods for Garry&rsquo;s Mod, Counter Strike, and others would be accessed with <a href="https://tortoisesvn.net/">TortoiseSVN</a> on some server, downloaded locally, and moved to the appropriate folder. Later, in college, Git was introduced at a very high level both to collaborate with classmates and to give professors some basic auditing tools. While I&rsquo;m thankful that version control was brought up at all, I think it should be a much larger focus given its ubiquity across software disciplines.</p>
+<p>As you progress through a career in software, usage and expertise between people tends to diverge. Most people get by with their clones, pulls, branches, and pushes. Experts are seen as technicians to call over when something goes terribly wrong. While Git &lsquo;only&rsquo; has a couple dozen commands, the flags and complexity available with each one can be overwhelming, especially when using one for the first time. Countless <a href="https://stackoverflow.com/questions/tagged/git">Q&amp;As</a>, <a href="https://ohshitgit.com/">guides</a>, and <a href="https://desktop.github.com/">tools</a> have been created to solve all kinds of holes that people get themselves into.</p>
+<p>I consider myself pretty well-versed in Git, happy to handle a gnarly rebase, cherry-picking commits out of a messed up branch, or restoring accidentally deleted code and commits. And while Git is most definitely a 100% CLI tool, I don&rsquo;t think there&rsquo;s a need to restrict ourselves to only using the terminal to work with it. I like to use the best tool for the job, and part of that is graphical interfaces.</p>
+<p><img src="/git-and-uis/screenshot.png" alt="Github Desktop"></p>
+<p>I&rsquo;ll frequently use a tool like <a href="https://desktop.github.com/">Github Desktop</a> as a crucial step in my workflow to review my work before bugging a coworker for a code review. Don&rsquo;t be fooled by the name, the tool (and most Git tools like it) works with Git and does not need to involve any web service. Here are some of the ways I use graphical tools to check out my work:</p>
+<ul>
+<li>Reviewing the &lsquo;story&rsquo; my commits tell and making sure it&rsquo;s easy to follow and review</li>
+<li>Reviewing the diffing of my code, and making sure that indentation or lint changes haven&rsquo;t blown up the PR into something horrible to review</li>
+<li>Clicking through files to quickly review my changes</li>
+<li>Comparing my code vs. test changes, and making sure there is (more or less) a 1:1 ratio</li>
+</ul>
+<p>In other words, quick visual grokking of your work and the changes in your code is much more easily done in graphical tools that can give you color coding, code navigation, and other modern aids. This isn&rsquo;t to say that you can&rsquo;t colorize your Git diffs and do much of the same in the terminal, but web and modern UI tooling was built to handle the graphical piece of software, so use it!</p>
+
+            </div>
+            
+            <div class="post-comments">
+                <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "xhocquetinfo" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+            
+            <div class="push"></div>
+        </div>
+        <footer class="footer text-center">
+<p>Copyright &copy; 2021 Xavier Hocquet -
+<span class="credit">
+	Powered by
+	<a target="_blank" href="https://gohugo.io">Hugo</a>
+	and
+	<a target="_blank" href="https://github.com/LordMathis/hugo-theme-nix/">Nix</a> theme.
+</span>
+</p>
+</footer>
+
+    </body>
