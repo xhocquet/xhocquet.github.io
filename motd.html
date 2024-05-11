@@ -12,10 +12,28 @@
             background-color: #111;
             color: #fff;
             text-align: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        .confetti {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
         }
 
         .motd-container {
-            margin-top: 100px;
+            margin-top: 80px;
         }
 
         .motd-title {
@@ -31,36 +49,35 @@
 <body>
     <div class="motd-container">
         <h1 class="motd-title">Welcome to meesles' climbing gym</h1>
-        <!-- <p class="motd-message">Message of the Day goes here...</p> -->
+        <ul>
+            <li class="motd-message">Be kind.</li>
+            <li class="motd-message">Have fun!</li>
+        </ul>
     </div>
 </body>
 <script>
   var maxParticleCount = 150;
-  var particleSpeed = 2;
-  var startConfetti;
-  var stopConfetti;
-  var toggleConfetti;
-  var removeConfetti;
+    var particleSpeed = 2;
+    var startConfetti;
+    var stopConfetti;
+    var toggleConfetti;
+    var removeConfetti;
 
-  (function () {
-    startConfetti = startConfettiInner;
-
-
-    var colors = [
-      "DodgerBlue",
-      "OliveDrab",
-      "Gold",
-      "Pink",
-      "SlateBlue",
-      "LightBlue",
-      "Violet",
-      "PaleGreen",
-      "SteelBlue",
-      "SandyBrown",
-      "Chocolate",
-      "Crimson"
-    ];
-      var streamingConfetti = false;
+    (function () {
+      var colors = [
+        "DodgerBlue",
+        "OliveDrab",
+        "Gold",
+        "Pink",
+        "SlateBlue",
+        "LightBlue",
+        "Violet",
+        "PaleGreen",
+        "SteelBlue",
+        "SandyBrown",
+        "Chocolate",
+        "Crimson"
+      ];
       var animationTimer = null;
       var particles = [];
       var waveAngle = 0;
@@ -76,9 +93,37 @@
 
         return particle;
       }
+
       function startConfettiInner() {
-        var width = window.innerWidth; var height = window.innerHeight; window.requestAnimFrame = (function () { return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function (callback) { return window.setTimeout(callback, 16.6666667); }; })(); var canvas = document.getElementById("confetti-canvas"); if (canvas === null) { canvas = document.createElement("canvas"); canvas.setAttribute("id", "confetti-canvas"); canvas.setAttribute("style", "display:block;z-index:999999;pointer-events:none"); document.body.appendChild(canvas); canvas.width = width; canvas.height = height; window.addEventListener("resize", function () { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }, true); }
-        var context = canvas.getContext("2d"); while (particles.length < maxParticleCount)
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+
+        window.requestAnimFrame = (
+          function () {
+            return window.requestAnimationFrame ||
+              window.webkitRequestAnimationFrame ||
+              window.mozRequestAnimationFrame ||
+              window.oRequestAnimationFrame ||
+              window.msRequestAnimationFrame ||
+              function (callback) {
+                return window.setTimeout(callback, 16.6666667);
+              };
+          }
+        )();
+
+        canvas = document.createElement("canvas");
+        canvas.setAttribute("class", "confetti");
+        document.body.append(canvas);
+        canvas.width = width;
+        canvas.height = height;
+
+        window.addEventListener("resize", function () {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+        }, true);
+
+        var context = canvas.getContext("2d");
+        while (particles.length < maxParticleCount)
           particles.push(resetParticle({}, width, height)); streamingConfetti = true; if (animationTimer === null) {
             (function runAnimation() {
               context.clearRect(0, 0, window.innerWidth, window.innerHeight); if (particles.length === 0)
@@ -86,10 +131,21 @@
             })();
           }
       }
-      function stopConfettiInner() { streamingConfetti = false; }
-      function removeConfettiInner() { stopConfetti(); particles = []; }
 
-      function drawParticles(context) { var particle; var x; for (var i = 0; i < particles.length; i++) { particle = particles[i]; context.beginPath(); context.lineWidth = particle.diameter; context.strokeStyle = particle.color; x = particle.x + particle.tilt; context.moveTo(x + particle.diameter / 2, particle.y); context.lineTo(x, particle.y + particle.tilt + particle.diameter / 2); context.stroke(); } }
+      function drawParticles(context) {
+        var particle;
+        var x;
+        for (var i = 0; i < particles.length; i++) {
+          particle = particles[i];
+          context.beginPath();
+          context.lineWidth = particle.diameter;
+          context.strokeStyle = particle.color;
+          x = particle.x + particle.tilt;
+          context.moveTo(x + particle.diameter / 2, particle.y);
+          context.lineTo(x, particle.y + particle.tilt + particle.diameter / 2);
+          context.stroke();
+        }
+      }
       function updateParticles() {
         var width = window.innerWidth;
         var height = window.innerHeight;
@@ -110,7 +166,7 @@
           }
 
           if (particle.x > width + 20 || particle.x < -20 || particle.y > height) {
-            if (streamingConfetti && particles.length <= maxParticleCount) {
+            if (particles.length <= maxParticleCount) {
               resetParticle(particle, width, height);
             } else {
               particles.splice(i, 1);
