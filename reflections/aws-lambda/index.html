@@ -6,7 +6,7 @@
 
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="generator" content="Hugo 0.78.2" />
+<meta name="generator" content="Hugo 0.125.7">
 
 
 <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
@@ -46,7 +46,7 @@
       </a>
       
         <a class="navbar-brand" id="green-terminal" href='http://xhocquet.info/'>
-          / reflections / 
+          / /reflections/aws-lambda
         </a>
       
     </div>
@@ -116,7 +116,7 @@
 <p>First of all, it&rsquo;s free up to a limit. Their <a href="https://aws.amazon.com/lambda/pricing/">pricing page</a> says you get 400,000 GB-seconds free per month, with a max of 1 million requests. With some creativity, that can serve a small startup extremely well.</p>
 <p>After that, the prices are competitive and tiny per operation. The cost benefit tails off for the largest scale, but for a majority of cases it&rsquo;s cheaper than running your own solution.</p>
 <h2 id="scaling-help">Scaling help</h2>
-<p>Second, you get to leverage AWS' massive infrastructure and near-endless resources. If you&rsquo;re reading this, you&rsquo;re probably their target customer. Not only is the compute power cheap, but with it you get a managed scalable system that you don&rsquo;t need to worry about.</p>
+<p>Second, you get to leverage AWS&rsquo; massive infrastructure and near-endless resources. If you&rsquo;re reading this, you&rsquo;re probably their target customer. Not only is the compute power cheap, but with it you get a managed scalable system that you don&rsquo;t need to worry about.</p>
 <p>If tomorrow you suddenly see a hundred-fold increase in traffic, your Lambdas will run as they always have, spread as wide as needed (and/or configured).</p>
 <h2 id="familiar-tools">Familiar tools</h2>
 <p>Third, you can leverage a language and package system you already know. Lambdas are written in a set of allowed languages allowing you to use most of your favorite technologies and their ecosystems.</p>
@@ -152,8 +152,8 @@
             
             <div class="post-comments">
                 <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
+<script>
+    window.disqus_config = function () {
     
     
     
@@ -176,7 +176,7 @@
             <div class="push"></div>
         </div>
         <footer class="footer text-center">
-<p>Copyright &copy; 2021 Xavier Hocquet -
+<p>Copyright &copy; 2024 Xavier Hocquet -
 <span class="credit">
 	Powered by
 	<a target="_blank" href="https://gohugo.io">Hugo</a>

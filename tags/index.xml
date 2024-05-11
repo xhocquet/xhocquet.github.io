@@ -4,71 +4,58 @@
     <title>Tags on xhocquet.info</title>
     <link>http://xhocquet.info/tags/</link>
     <description>Recent content in Tags on xhocquet.info</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Feb 2021 12:15:58 -0600</lastBuildDate><atom:link href="http://xhocquet.info/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Feb 2021 12:15:58 -0600</lastBuildDate>
+    <atom:link href="http://xhocquet.info/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>tech</title>
+      <title>Tech</title>
       <link>http://xhocquet.info/tags/tech/</link>
-      <pubDate>Sun, 28 Feb 2021 12:15:58 -0600</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://xhocquet.info/tags/tech/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>music</title>
+      <title>Music</title>
       <link>http://xhocquet.info/tags/music/</link>
-      <pubDate>Wed, 18 Nov 2020 21:07:45 -0600</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://xhocquet.info/tags/music/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>anime</title>
+      <title>Anime</title>
       <link>http://xhocquet.info/tags/anime/</link>
-      <pubDate>Mon, 25 Nov 2019 20:04:03 -0700</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://xhocquet.info/tags/anime/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>games</title>
+      <title>Games</title>
       <link>http://xhocquet.info/tags/games/</link>
-      <pubDate>Mon, 25 Nov 2019 20:04:03 -0700</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://xhocquet.info/tags/games/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>product</title>
+      <title>Product</title>
       <link>http://xhocquet.info/tags/product/</link>
-      <pubDate>Tue, 02 Jul 2019 15:26:38 -0600</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://xhocquet.info/tags/product/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>js</title>
+      <title>Js</title>
       <link>http://xhocquet.info/tags/js/</link>
-      <pubDate>Tue, 20 Nov 2018 21:20:41 -0700</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://xhocquet.info/tags/js/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>food</title>
+      <title>Food</title>
       <link>http://xhocquet.info/tags/food/</link>
-      <pubDate>Sun, 17 Jun 2018 20:21:37 -0600</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://xhocquet.info/tags/food/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>
