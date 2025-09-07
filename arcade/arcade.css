@@ -220,7 +220,9 @@
   border-radius: 999px;
   padding: 10px 18px;
   box-shadow: 0 8px 0 #c41414, 0 0 12px rgba(255, 42, 42, .3);
-  transition: transform .06s ease, box-shadow .06s ease
+  transition: transform .06s ease, box-shadow .06s ease;
+  text-decoration: none;
+  display: inline-block;
 }
 .btn:active {
   transform: translateY(4px);

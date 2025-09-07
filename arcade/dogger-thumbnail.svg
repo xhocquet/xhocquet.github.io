@@ -101,13 +101,4 @@
     <rect x="14" y="15" width="2" height="4" fill="#654321"/>
   </g>
 
-  <!-- Score display -->
-  <rect x="0" y="0" width="320" height="40" fill="url(#panel)" rx="18"/>
-  <text x="20" y="25" fill="#9ca3af" font-family="Courier New, monospace" font-size="14" font-weight="700">Score: 500</text>
-  <text x="200" y="25" fill="#9ca3af" font-family="Courier New, monospace" font-size="14" font-weight="700">Lives: 3</text>
-
-  <!-- Title overlay -->
-  <rect x="40" y="60" width="240" height="60" fill="url(#panel)" rx="16" stroke="#1f2937" stroke-width="1"/>
-  <text x="160" y="85" text-anchor="middle" fill="#00ff00" font-family="Courier New, monospace" font-size="24" font-weight="700">🐕 Dogger</text>
-  <text x="160" y="105" text-anchor="middle" fill="#9ca3af" font-family="Courier New, monospace" font-size="12">Click to play</text>
 </svg>

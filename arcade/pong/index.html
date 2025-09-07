@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 
 <head>
   <title> Pong &middot; xhocquet.info </title>
@@ -28,6 +28,7 @@
 
 
 
+  <link rel="stylesheet" href="/arcade/arcade.css">
 </head>
 
 <body>
@@ -100,11 +101,19 @@
 </header>
 
   <div class="container wrapper">
-    <div class="post-content">
-      
+    <div class="arcade-cabinet">
+      <div class="cabinet-top">
+        <div class="marquee">
+          <h1 class="marquee-text">ARCADE</h1>
+        </div>
+      </div>
+      <div class="cabinet-body">
+        <div class="screen">
+          <div class="post-content">
+            
 <link rel="stylesheet" href="/arcade/pong.css">
 
-<div class="wrap">
+<div class="pong-container">
   <canvas id="game" width="920" height="540" aria-label="Pong game area"></canvas>
 
   <div class="hud" aria-hidden="true">
@@ -143,9 +152,45 @@
 
 <script src="/arcade/pong.js"></script>
 
+          </div>
+        </div>
+      </div>
+      <div class="control-panel">
+        <div class="button-cluster diamond-buttons">
+          <a href="/arcade/" class="btn small white" aria-hidden="true"></a>
+          <a href="/arcade/" class="btn small yellow" aria-hidden="true"></a>
+          <a href="/arcade/" class="btn small blue" aria-hidden="true"></a>
+        </div>
+        <div class="joypad">
+          <button class="joy-arrow up" aria-hidden="true">▲</button>
+          <button class="joy-arrow left" aria-hidden="true">◀</button>
+          <div class="joystick" title="Use to navigate">
+            <div class="stick"></div>
+          </div>
+          <button class="joy-arrow right" aria-hidden="true">▶</button>
+          <button class="joy-arrow down" aria-hidden="true">▼</button>
+        </div>
+        <div class="button-cluster diamond-buttons">
+          <a href="/arcade/" class="btn small white" aria-hidden="true"></a>
+          <a href="/arcade/" class="btn small red" aria-hidden="true"></a>
+          <a href="/arcade/" class="btn small red" aria-hidden="true"></a>
+        </div>
+      </div>
     </div>
+
+    
+    <div class="tooltip-container">
+      <div class="tooltip-trigger">?</div>
+      <div class="tooltip-content">
+        <p>This page is an LLM experiment and 100% generated through AI prompts in Cursor or other tools. No code is
+          handwritten.</p>
+        <p>Joystick works to navigate, so do the side arrows. Press any circular button to go home.</p>
+      </div>
+    </div>
+
     <div class="push"></div>
   </div>
+  <script src="/arcade/arcade.js"></script>
   <footer class="footer text-center">
 <p>Copyright &copy; 2025 Xavier Hocquet -
 <span class="credit">

@@ -1,0 +1,91 @@
+<svg width="320" height="180" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#98FB98;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="panel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(18, 24, 38, 0.92);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(12, 17, 29, 0.92);stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="bubble1" cx="30%" cy="30%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e74c3c;stop-opacity:1" />
+    </radialGradient>
+    <radialGradient id="bubble2" cx="30%" cy="30%">
+      <stop offset="0%" style="stop-color:#4ecdc4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16a085;stop-opacity:1" />
+    </radialGradient>
+    <radialGradient id="bubble3" cx="30%" cy="30%">
+      <stop offset="0%" style="stop-color:#45b7d1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2980b9;stop-opacity:1" />
+    </radialGradient>
+    <radialGradient id="bubble4" cx="30%" cy="30%">
+      <stop offset="0%" style="stop-color:#96ceb4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#27ae60;stop-opacity:1" />
+    </radialGradient>
+    <radialGradient id="bubble5" cx="30%" cy="30%">
+      <stop offset="0%" style="stop-color:#feca57;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f39c12;stop-opacity:1" />
+    </radialGradient>
+    <radialGradient id="bubble6" cx="30%" cy="30%">
+      <stop offset="0%" style="stop-color:#ff9ff3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e91e63;stop-opacity:1" />
+    </radialGradient>
+    <radialGradient id="bubble7" cx="30%" cy="30%">
+      <stop offset="0%" style="stop-color:#54a0ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2196f3;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="320" height="180" fill="url(#bg)" rx="18"/>
+
+  <!-- Bubble grid pattern -->
+  <!-- Row 1 -->
+  <circle cx="60" cy="50" r="12" fill="url(#bubble1)" stroke="#fff" stroke-width="1"/>
+  <circle cx="100" cy="50" r="12" fill="url(#bubble2)" stroke="#fff" stroke-width="1"/>
+  <circle cx="140" cy="50" r="12" fill="url(#bubble3)" stroke="#fff" stroke-width="1"/>
+  <circle cx="180" cy="50" r="12" fill="url(#bubble4)" stroke="#fff" stroke-width="1"/>
+  <circle cx="220" cy="50" r="12" fill="url(#bubble5)" stroke="#fff" stroke-width="1"/>
+  <circle cx="260" cy="50" r="12" fill="url(#bubble6)" stroke="#fff" stroke-width="1"/>
+
+  <!-- Row 2 (offset) -->
+  <circle cx="40" cy="75" r="12" fill="url(#bubble2)" stroke="#fff" stroke-width="1"/>
+  <circle cx="80" cy="75" r="12" fill="url(#bubble3)" stroke="#fff" stroke-width="1"/>
+  <circle cx="120" cy="75" r="12" fill="url(#bubble4)" stroke="#fff" stroke-width="1"/>
+  <circle cx="160" cy="75" r="12" fill="url(#bubble5)" stroke="#fff" stroke-width="1"/>
+  <circle cx="200" cy="75" r="12" fill="url(#bubble6)" stroke="#fff" stroke-width="1"/>
+  <circle cx="240" cy="75" r="12" fill="url(#bubble7)" stroke="#fff" stroke-width="1"/>
+  <circle cx="280" cy="75" r="12" fill="url(#bubble1)" stroke="#fff" stroke-width="1"/>
+
+  <!-- Row 3 -->
+  <circle cx="60" cy="100" r="12" fill="url(#bubble3)" stroke="#fff" stroke-width="1"/>
+  <circle cx="100" cy="100" r="12" fill="url(#bubble4)" stroke="#fff" stroke-width="1"/>
+  <circle cx="140" cy="100" r="12" fill="url(#bubble5)" stroke="#fff" stroke-width="1"/>
+  <circle cx="180" cy="100" r="12" fill="url(#bubble6)" stroke="#fff" stroke-width="1"/>
+  <circle cx="220" cy="100" r="12" fill="url(#bubble7)" stroke="#fff" stroke-width="1"/>
+  <circle cx="260" cy="100" r="12" fill="url(#bubble1)" stroke="#fff" stroke-width="1"/>
+
+  <!-- Row 4 (offset) -->
+  <circle cx="40" cy="125" r="12" fill="url(#bubble4)" stroke="#fff" stroke-width="1"/>
+  <circle cx="80" cy="125" r="12" fill="url(#bubble5)" stroke="#fff" stroke-width="1"/>
+  <circle cx="120" cy="125" r="12" fill="url(#bubble6)" stroke="#fff" stroke-width="1"/>
+  <circle cx="160" cy="125" r="12" fill="url(#bubble7)" stroke="#fff" stroke-width="1"/>
+  <circle cx="200" cy="125" r="12" fill="url(#bubble1)" stroke="#fff" stroke-width="1"/>
+  <circle cx="240" cy="125" r="12" fill="url(#bubble2)" stroke="#fff" stroke-width="1"/>
+  <circle cx="280" cy="125" r="12" fill="url(#bubble3)" stroke="#fff" stroke-width="1"/>
+
+  <!-- Highlight effects on bubbles -->
+  <circle cx="60" cy="42" r="4" fill="#fff" opacity="0.6"/>
+  <circle cx="100" cy="42" r="4" fill="#fff" opacity="0.6"/>
+  <circle cx="140" cy="42" r="4" fill="#fff" opacity="0.6"/>
+  <circle cx="180" cy="42" r="4" fill="#fff" opacity="0.6"/>
+  <circle cx="220" cy="42" r="4" fill="#fff" opacity="0.6"/>
+  <circle cx="260" cy="42" r="4" fill="#fff" opacity="0.6"/>
+
+  <!-- Shooting bubble -->
+  <circle cx="160" cy="150" r="12" fill="url(#bubble2)" stroke="#fff" stroke-width="2"/>
+  <circle cx="160" cy="142" r="4" fill="#fff" opacity="0.8"/>
+
+</svg>

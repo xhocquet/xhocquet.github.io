@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(180deg, #87CEEB 0%, #98FB98 20%, #90EE90 40%, #8FBC8F 60%, #228B22 80%, #006400 100%);
+  background: linear-gradient(180deg, #87CEEB 0%, #98FB98 100%);
   font-family: 'Courier New', monospace;
   color: #fff;
 }
@@ -19,6 +19,7 @@
 
 #game {
   display: block;
+  background: linear-gradient(180deg, #87CEEB 0%, #98FB98 100%);
   image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
@@ -37,6 +38,11 @@
 .game-ui div {
   color: #fff;
   text-shadow: 2px 2px 0px #000;
+}
+
+.high-score {
+  font-size: 0.9em;
+  opacity: 0.8;
 }
 
 .game-menu, .game-over {
@@ -116,29 +122,36 @@ kbd {
   color: #fff;
 }
 
-/* Game-specific styles */
-#game {
-  background:
-    /* Sky */
-    linear-gradient(180deg, #87CEEB 0%, #98FB98 20%),
-    /* Road sections */
-    repeating-linear-gradient(0deg,
-      #333 0px,
-      #333 40px,
-      #fff 40px,
-      #fff 44px,
-      #333 44px,
-      #333 84px),
-    /* Water sections */
-    repeating-linear-gradient(0deg,
-      #0066cc 0px,
-      #0066cc 40px,
-      #0088ff 40px,
-      #0088ff 44px,
-      #0066cc 44px,
-      #0066cc 84px);
-  background-size: 100% 100%, 100% 100%, 100% 100%;
-  background-position: 0 0, 0 0, 0 0;
+
+/* Game-specific animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes sleep {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes cloud-drift {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
 }
 
 /* Responsive design */

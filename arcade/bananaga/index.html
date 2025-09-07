@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 
 <head>
   <title> Bananaga &middot; xhocquet.info </title>
@@ -28,6 +28,7 @@
 
 
 
+  <link rel="stylesheet" href="/arcade/arcade.css">
 </head>
 
 <body>
@@ -100,36 +101,76 @@
 </header>
 
   <div class="container wrapper">
-    <div class="post-content">
-      
-<div class="arcade-game">
-  <div class="game-container">
-    <div class="game-ui">
-      <div class="score">Score: <span id="score">0</span></div>
-      <div class="lives">Lives: <span id="lives">3</span></div>
-      <div class="level">Level: <span id="level">1</span></div>
-    </div>
-    <canvas id="gameCanvas" width="800" height="600"></canvas>
-    <div class="game-menu" id="gameMenu">
-      <h2>🍌 BANANAGA 🍌</h2>
-      <p>You are a monkey! Shoot the bananas to eat them!</p>
-      <p>Use ARROW KEYS to move, SPACE to shoot</p>
-      <button id="startBtn">Start Game</button>
-    </div>
-    <div class="game-over" id="gameOver" style="display: none;">
-      <h2>Game Over!</h2>
-      <p>Final Score: <span id="finalScore">0</span></p>
-      <button id="restartBtn">Play Again</button>
-    </div>
-  </div>
+    <div class="arcade-cabinet">
+      <div class="cabinet-top">
+        <div class="marquee">
+          <h1 class="marquee-text">ARCADE</h1>
+        </div>
+      </div>
+      <div class="cabinet-body">
+        <div class="screen">
+          <div class="post-content">
+            
+<div class="game-ui">
+  <div class="score">Score: <span id="score">0</span></div>
+  <div class="lives">Lives: <span id="lives">3</span></div>
+  <div class="level">Level: <span id="level">1</span></div>
+</div>
+<canvas id="gameCanvas" width="800" height="600"></canvas>
+<div class="game-menu" id="gameMenu">
+  <h2>🍌 BANANAGA 🍌</h2>
+  <p>You are a monkey! Shoot the bananas to eat them!</p>
+  <p>Use ARROW KEYS to move, SPACE to shoot</p>
+  <button id="startBtn">Start Game</button>
+</div>
+<div class="game-over" id="gameOver" style="display: none;">
+  <h2>Game Over!</h2>
+  <p>Final Score: <span id="finalScore">0</span></p>
+  <button id="restartBtn">Play Again</button>
 </div>
 
-<link rel="stylesheet" href="/arcade/game-04.css">
-<script src="/arcade/game-04.js"></script>
+<link rel="stylesheet" href="/arcade/bananaga.css">
+<script src="/arcade/bananaga.js"></script>
 
+          </div>
+        </div>
+      </div>
+      <div class="control-panel">
+        <div class="button-cluster diamond-buttons">
+          <a href="/arcade/" class="btn small white" aria-hidden="true"></a>
+          <a href="/arcade/" class="btn small yellow" aria-hidden="true"></a>
+          <a href="/arcade/" class="btn small blue" aria-hidden="true"></a>
+        </div>
+        <div class="joypad">
+          <button class="joy-arrow up" aria-hidden="true">▲</button>
+          <button class="joy-arrow left" aria-hidden="true">◀</button>
+          <div class="joystick" title="Use to navigate">
+            <div class="stick"></div>
+          </div>
+          <button class="joy-arrow right" aria-hidden="true">▶</button>
+          <button class="joy-arrow down" aria-hidden="true">▼</button>
+        </div>
+        <div class="button-cluster diamond-buttons">
+          <a href="/arcade/" class="btn small white" aria-hidden="true"></a>
+          <a href="/arcade/" class="btn small red" aria-hidden="true"></a>
+          <a href="/arcade/" class="btn small red" aria-hidden="true"></a>
+        </div>
+      </div>
     </div>
+
+    
+    <div class="tooltip-container">
+      <div class="tooltip-trigger">?</div>
+      <div class="tooltip-content">
+        <p>This page is an LLM experiment and 100% generated through AI prompts in Cursor or other tools. No code is
+          handwritten.</p>
+        <p>Joystick works to navigate, so do the side arrows. Press any circular button to go home.</p>
+      </div>
+    </div>
+
     <div class="push"></div>
   </div>
+  <script src="/arcade/arcade.js"></script>
   <footer class="footer text-center">
 <p>Copyright &copy; 2025 Xavier Hocquet -
 <span class="credit">

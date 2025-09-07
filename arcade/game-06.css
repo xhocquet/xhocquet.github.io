@@ -1,17 +1,17 @@
 :root {
-  --bg: #0b0f16;
-  --panel: #121826;
-  --accent: #7dd3fc;
-  --accent-2: #a78bfa;
-  --line: #1f2937;
-  --text: #e5e7eb;
-  --muted: #9ca3af;
-  --win: #34d399;
-  --lose: #f87171;
-  --pinball-red: #ef4444;
-  --pinball-yellow: #fbbf24;
-  --pinball-green: #10b981;
-  --pinball-blue: #3b82f6;
+  --bg: #87CEEB;
+  --cloud: #ffffff;
+  --cloud-shadow: #e0e0e0;
+  --ground: #90EE90;
+  --animal: #8B4513;
+  --animal-sleep: #DDA0DD;
+  --text: #2c3e50;
+  --muted: #7f8c8d;
+  --accent: #3498db;
+  --accent-2: #9b59b6;
+  --line: #bdc3c7;
+  --win: #27ae60;
+  --lose: #e74c3c;
 }
 
 * {
@@ -25,7 +25,7 @@ html, body {
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-  background: radial-gradient(1000px 600px at 50% -10%, #111827 0%, var(--bg) 60%);
+  background: linear-gradient(180deg, #87CEEB 0%, #98FB98 100%);
   color: var(--text);
   display: grid;
   place-items: center;
@@ -42,8 +42,8 @@ canvas {
   height: auto;
   display: block;
   border-radius: 18px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, .35);
-  background: linear-gradient(180deg, #0b1220, #0b0f16);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .2);
+  background: linear-gradient(180deg, #87CEEB 0%, #98FB98 100%);
 }
 
 .hud {
@@ -55,12 +55,22 @@ canvas {
   padding: 16px;
 }
 
-.score, .balls, .multiplier {
+.score, .high-score {
   text-align: center;
   font-weight: 700;
   letter-spacing: .08em;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 8px 16px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.high-score {
+  margin-top: 8px;
+  font-size: 0.9em;
   color: var(--muted);
-  margin: 4px 0;
 }
 
 .overlay {
@@ -72,17 +82,18 @@ canvas {
 
 .card {
   width: min(92%, 560px);
-  background: linear-gradient(180deg, rgba(18, 24, 38, .92), rgba(12, 17, 29, .92));
+  background: linear-gradient(180deg, rgba(255, 255, 255, .95), rgba(240, 248, 255, .95));
   border: 1px solid var(--line);
   border-radius: 16px;
   padding: 28px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, .45);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, .15);
   backdrop-filter: blur(6px);
 }
 
 h1 {
   margin: 0 0 8px;
   font-size: clamp(24px, 4vw, 38px);
+  color: var(--text);
 }
 
 p {
@@ -91,12 +102,12 @@ p {
 }
 
 kbd {
-  background: #0b1220;
-  border: 1px solid #1f2937;
-  border-bottom-color: #111827;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-bottom-color: #adb5bd;
   padding: 2px 6px;
   border-radius: 6px;
-  color: #cbd5e1;
+  color: var(--text);
 }
 
 .btns {
@@ -114,15 +125,26 @@ kbd {
   font-weight: 700;
   cursor: pointer;
   background: linear-gradient(180deg, var(--accent), var(--accent-2));
-  color: #081018;
-  box-shadow: 0 8px 24px rgba(124, 58, 237, .35);
+  color: white;
+  box-shadow: 0 8px 24px rgba(52, 152, 219, .35);
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(52, 152, 219, .45);
 }
 
 .btn.secondary {
-  background: #0b1220;
+  background: #f8f9fa;
   color: var(--text);
   border-color: var(--line);
   box-shadow: none;
+}
+
+.btn.secondary:hover {
+  background: #e9ecef;
+  transform: translateY(-1px);
 }
 
 .hidden {
@@ -130,8 +152,8 @@ kbd {
 }
 
 .end.win .card {
-  border-color: rgba(52, 211, 153, .4);
-  box-shadow: 0 10px 40px rgba(16, 185, 129, .25);
+  border-color: rgba(39, 174, 96, .4);
+  box-shadow: 0 10px 40px rgba(39, 174, 96, .25);
 }
 
 .end.win h1 {
@@ -139,8 +161,8 @@ kbd {
 }
 
 .end.lose .card {
-  border-color: rgba(248, 113, 113, .35);
-  box-shadow: 0 10px 40px rgba(248, 113, 113, .25);
+  border-color: rgba(231, 76, 60, .35);
+  box-shadow: 0 10px 40px rgba(231, 76, 60, .25);
 }
 
 .end.lose h1 {
@@ -151,4 +173,66 @@ kbd {
   font-size: 12px;
   opacity: .9;
   margin-top: 10px;
+}
+
+/* Game-specific animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes sleep {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes cloud-drift {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 1000px) {
+  .wrap {
+    width: 95vw;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .hud {
+    padding: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .btns {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .card h1 {
+    font-size: 28px;
+  }
 }

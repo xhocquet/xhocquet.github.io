@@ -55,6 +55,4 @@
     </g>
   </g>
 
-  <!-- Game title -->
-  <text x="100" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">😴 Nappy Bird</text>
 </svg>

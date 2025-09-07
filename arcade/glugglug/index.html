@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 
 <head>
   <title> Glug Glug &middot; xhocquet.info </title>
@@ -28,6 +28,7 @@
 
 
 
+  <link rel="stylesheet" href="/arcade/arcade.css">
 </head>
 
 <body>
@@ -100,51 +101,93 @@
 </header>
 
   <div class="container wrapper">
-    <div class="post-content">
-      
-<div class="arcade-game">
-  <div id="game-container">
-    <div id="menu-screen" class="screen active">
-      <h1>GLUG GLUG</h1>
-      <p>Drink your way through the underground!</p>
-      <div class="menu-buttons">
-        <button id="start-btn">START GAME</button>
-        <button id="instructions-btn">INSTRUCTIONS</button>
+    <div class="arcade-cabinet">
+      <div class="cabinet-top">
+        <div class="marquee">
+          <h1 class="marquee-text">ARCADE</h1>
+        </div>
       </div>
-      <div id="instructions" class="hidden">
-        <h3>How to Play:</h3>
-        <p>• Use WASD or Arrow Keys to move</p>
-        <p>• Press SPACE to drink (dig)</p>
-        <p>• Avoid the drunkards and monsters</p>
-        <p>• Collect all the beer mugs to win!</p>
-        <button id="back-btn">BACK</button>
-      </div>
+      <div class="cabinet-body">
+        <div class="screen">
+          <div class="post-content">
+            
+<div id="game-container">
+  <div id="menu-screen" class="screen active">
+    <h1>GLUG GLUG</h1>
+    <p>Drink your way through the underground!</p>
+    <div class="menu-buttons">
+      <button id="start-btn">START GAME</button>
+      <button id="instructions-btn">INSTRUCTIONS</button>
     </div>
+    <div id="instructions" class="hidden">
+      <h3>How to Play:</h3>
+      <p>• Use WASD or Arrow Keys to move</p>
+      <p>• Press SPACE to drink (dig)</p>
+      <p>• Avoid the drunkards and monsters</p>
+      <p>• Collect all the beer mugs to win!</p>
+      <button id="back-btn">BACK</button>
+    </div>
+  </div>
 
-    <div id="game-screen" class="screen">
-      <div id="hud">
-        <div id="score">Score: <span id="score-value">0</span></div>
-        <div id="lives">Lives: <span id="lives-value">3</span></div>
-        <div id="level">Level: <span id="level-value">1</span></div>
-      </div>
-      <canvas id="game-canvas" width="800" height="600"></canvas>
+  <div id="game-screen" class="screen">
+    <div id="hud">
+      <div id="score">Score: <span id="score-value">0</span></div>
+      <div id="lives">Lives: <span id="lives-value">3</span></div>
+      <div id="level">Level: <span id="level-value">1</span></div>
     </div>
+    <canvas id="game-canvas" width="800" height="600"></canvas>
+  </div>
 
-    <div id="end-screen" class="screen">
-      <h2 id="end-title">GAME OVER</h2>
-      <div id="final-score">Final Score: <span id="final-score-value">0</span></div>
-      <button id="restart-btn">PLAY AGAIN</button>
-      <button id="menu-btn">MAIN MENU</button>
-    </div>
+  <div id="end-screen" class="screen">
+    <h2 id="end-title">GAME OVER</h2>
+    <div id="final-score">Final Score: <span id="final-score-value">0</span></div>
+    <button id="restart-btn">PLAY AGAIN</button>
+    <button id="menu-btn">MAIN MENU</button>
   </div>
 </div>
 
-<link rel="stylesheet" href="/arcade/game-03.css">
-<script src="/arcade/game-03.js"></script>
+<link rel="stylesheet" href="/arcade/glugglug.css">
+<script src="/arcade/glugglug.js"></script>
 
+          </div>
+        </div>
+      </div>
+      <div class="control-panel">
+        <div class="button-cluster diamond-buttons">
+          <a href="/arcade/" class="btn small white" aria-hidden="true"></a>
+          <a href="/arcade/" class="btn small yellow" aria-hidden="true"></a>
+          <a href="/arcade/" class="btn small blue" aria-hidden="true"></a>
+        </div>
+        <div class="joypad">
+          <button class="joy-arrow up" aria-hidden="true">▲</button>
+          <button class="joy-arrow left" aria-hidden="true">◀</button>
+          <div class="joystick" title="Use to navigate">
+            <div class="stick"></div>
+          </div>
+          <button class="joy-arrow right" aria-hidden="true">▶</button>
+          <button class="joy-arrow down" aria-hidden="true">▼</button>
+        </div>
+        <div class="button-cluster diamond-buttons">
+          <a href="/arcade/" class="btn small white" aria-hidden="true"></a>
+          <a href="/arcade/" class="btn small red" aria-hidden="true"></a>
+          <a href="/arcade/" class="btn small red" aria-hidden="true"></a>
+        </div>
+      </div>
     </div>
+
+    
+    <div class="tooltip-container">
+      <div class="tooltip-trigger">?</div>
+      <div class="tooltip-content">
+        <p>This page is an LLM experiment and 100% generated through AI prompts in Cursor or other tools. No code is
+          handwritten.</p>
+        <p>Joystick works to navigate, so do the side arrows. Press any circular button to go home.</p>
+      </div>
+    </div>
+
     <div class="push"></div>
   </div>
+  <script src="/arcade/arcade.js"></script>
   <footer class="footer text-center">
 <p>Copyright &copy; 2025 Xavier Hocquet -
 <span class="credit">

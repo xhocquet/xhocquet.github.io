@@ -10,5 +10,4 @@
     <rect x="12" y="10" width="136" height="100" rx="6"/>
     <path d="M40 80 L120 40"/>
   </g>
-  <text x="80" y="64" text-anchor="middle" fill="#bbb" font-family="monospace" font-size="10">COMING SOON</text>
 </svg>
