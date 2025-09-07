@@ -1,0 +1,113 @@
+<svg width="320" height="180" viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="20%" style="stop-color:#98FB98;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#90EE90;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#8FBC8F;stop-opacity:1" />
+      <stop offset="80%" style="stop-color:#228B22;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#006400;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="panel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(18, 24, 38, 0.92);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(12, 17, 29, 0.92);stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="water" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066cc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0088ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background with game sections -->
+  <rect width="320" height="180" fill="url(#bg)" rx="18"/>
+
+  <!-- Sky section -->
+  <rect x="0" y="0" width="320" height="36" fill="#87CEEB" rx="18"/>
+
+  <!-- Water section -->
+  <rect x="0" y="36" width="320" height="36" fill="url(#water)"/>
+
+  <!-- Road section -->
+  <rect x="0" y="72" width="320" height="36" fill="#333"/>
+
+  <!-- Sidewalk -->
+  <rect x="0" y="108" width="320" height="18" fill="#8B4513"/>
+
+  <!-- Grass section -->
+  <rect x="0" y="126" width="320" height="54" fill="#228B22" rx="0 0 18 18"/>
+
+  <!-- Road lines -->
+  <g opacity="0.8">
+    <rect x="0" y="84" width="320" height="2" fill="#fff"/>
+    <rect x="0" y="96" width="320" height="2" fill="#fff"/>
+  </g>
+
+  <!-- Goals at top -->
+  <rect x="20" y="8" width="40" height="20" fill="#8B4513" stroke="#fff" stroke-width="1"/>
+  <rect x="80" y="8" width="40" height="20" fill="#8B4513" stroke="#fff" stroke-width="1"/>
+  <rect x="140" y="8" width="40" height="20" fill="#00ff00" stroke="#fff" stroke-width="1"/>
+  <rect x="200" y="8" width="40" height="20" fill="#8B4513" stroke="#fff" stroke-width="1"/>
+  <rect x="260" y="8" width="40" height="20" fill="#8B4513" stroke="#fff" stroke-width="1"/>
+
+  <!-- Cars -->
+  <rect x="50" y="78" width="30" height="15" fill="#ff0000" rx="2"/>
+  <rect x="200" y="78" width="30" height="15" fill="#0000ff" rx="2"/>
+  <rect x="120" y="78" width="30" height="15" fill="#ffff00" rx="2"/>
+
+  <!-- Car details -->
+  <rect x="55" y="81" width="8" height="5" fill="#000"/>
+  <rect x="65" y="81" width="8" height="5" fill="#000"/>
+  <rect x="55" y="88" width="8" height="5" fill="#000"/>
+  <rect x="65" y="88" width="8" height="5" fill="#000"/>
+
+  <!-- Logs in water -->
+  <rect x="40" y="42" width="40" height="12" fill="#8B4513" rx="2"/>
+  <rect x="120" y="42" width="40" height="12" fill="#8B4513" rx="2"/>
+  <rect x="200" y="42" width="40" height="12" fill="#8B4513" rx="2"/>
+
+  <!-- Log texture -->
+  <circle cx="50" cy="48" r="3" fill="#654321" opacity="0.6"/>
+  <circle cx="70" cy="48" r="3" fill="#654321" opacity="0.6"/>
+  <circle cx="130" cy="48" r="3" fill="#654321" opacity="0.6"/>
+  <circle cx="150" cy="48" r="3" fill="#654321" opacity="0.6"/>
+  <circle cx="210" cy="48" r="3" fill="#654321" opacity="0.6"/>
+  <circle cx="230" cy="48" r="3" fill="#654321" opacity="0.6"/>
+
+  <!-- Dog character -->
+  <g transform="translate(150, 130)">
+    <!-- Dog body -->
+    <rect x="5" y="7" width="10" height="10" fill="#8B4513"/>
+
+    <!-- Dog head -->
+    <rect x="7" y="2" width="8" height="8" fill="#8B4513"/>
+
+    <!-- Dog ears -->
+    <rect x="6" y="1" width="3" height="4" fill="#654321"/>
+    <rect x="13" y="1" width="3" height="4" fill="#654321"/>
+
+    <!-- Dog eyes -->
+    <rect x="9" y="4" width="1" height="1" fill="#000"/>
+    <rect x="12" y="4" width="1" height="1" fill="#000"/>
+
+    <!-- Dog nose -->
+    <rect x="10" y="6" width="2" height="1" fill="#000"/>
+
+    <!-- Dog tail -->
+    <rect x="2" y="10" width="4" height="2" fill="#8B4513"/>
+
+    <!-- Dog legs -->
+    <rect x="6" y="15" width="2" height="4" fill="#654321"/>
+    <rect x="10" y="15" width="2" height="4" fill="#654321"/>
+    <rect x="14" y="15" width="2" height="4" fill="#654321"/>
+  </g>
+
+  <!-- Score display -->
+  <rect x="0" y="0" width="320" height="40" fill="url(#panel)" rx="18"/>
+  <text x="20" y="25" fill="#9ca3af" font-family="Courier New, monospace" font-size="14" font-weight="700">Score: 500</text>
+  <text x="200" y="25" fill="#9ca3af" font-family="Courier New, monospace" font-size="14" font-weight="700">Lives: 3</text>
+
+  <!-- Title overlay -->
+  <rect x="40" y="60" width="240" height="60" fill="url(#panel)" rx="16" stroke="#1f2937" stroke-width="1"/>
+  <text x="160" y="85" text-anchor="middle" fill="#00ff00" font-family="Courier New, monospace" font-size="24" font-weight="700">🐕 Dogger</text>
+  <text x="160" y="105" text-anchor="middle" fill="#9ca3af" font-family="Courier New, monospace" font-size="12">Click to play</text>
+</svg>

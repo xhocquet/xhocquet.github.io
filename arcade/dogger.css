@@ -1,0 +1,212 @@
+/* Dogger - Frogger-style game with dog character */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', monospace;
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+}
+
+.wrap {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #87CEEB 0%, #98FB98 20%, #90EE90 40%, #8FBC8F 60%, #228B22 80%, #006400 100%);
+}
+
+#game {
+  background: #000;
+  border: 4px solid #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.hud {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 2px 2px 0px #000;
+  z-index: 10;
+}
+
+.score, .lives, .level {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 2px solid #fff;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.card {
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+  border: 3px solid #fff;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  width: 90%;
+}
+
+.card h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 0px #000;
+  color: #00ff00;
+}
+
+.card p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.btns {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn {
+  background: linear-gradient(145deg, #4CAF50, #45a049);
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  background: linear-gradient(145deg, #66bb6a, #4CAF50);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn.secondary {
+  background: linear-gradient(145deg, #666, #555);
+}
+
+.btn.secondary:hover {
+  background: linear-gradient(145deg, #777, #666);
+}
+
+.hint {
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+kbd {
+  background: #333;
+  border: 1px solid #666;
+  border-radius: 3px;
+  padding: 2px 6px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  color: #fff;
+}
+
+/* Game-specific styles */
+#game {
+  background:
+    /* Sky */
+    linear-gradient(180deg, #87CEEB 0%, #98FB98 20%),
+    /* Road sections */
+    repeating-linear-gradient(0deg,
+      #333 0px,
+      #333 40px,
+      #fff 40px,
+      #fff 44px,
+      #333 44px,
+      #333 84px),
+    /* Water sections */
+    repeating-linear-gradient(0deg,
+      #0066cc 0px,
+      #0066cc 40px,
+      #0088ff 40px,
+      #0088ff 44px,
+      #0066cc 44px,
+      #0066cc 84px);
+  background-size: 100% 100%, 100% 100%, 100% 100%;
+  background-position: 0 0, 0 0, 0 0;
+}
+
+/* Responsive design */
+@media (max-width: 1000px) {
+  #game {
+    width: 90vw;
+    height: 50vh;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card h1 {
+    font-size: 36px;
+  }
+
+  .hud {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .btns {
+    gap: 10px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  .card h1 {
+    font-size: 28px;
+  }
+}

@@ -184,11 +184,67 @@
       <description> </description>
     </item>
     <item>
+      <title>Bananaga</title>
+      <link>http://xhocquet.info/arcade/bananaga/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://xhocquet.info/arcade/bananaga/</guid>
+      <description>&#xD;Score: 0&#xD;Lives: 3&#xD;Level: 1&#xD;🍌 BANANAGA 🍌&#xD;You are a monkey! Shoot the bananas to eat them!&#xA;Use ARROW KEYS to move, SPACE to shoot&#xA;Start Game&#xD;Game Over!&#xD;Final Score: 0&#xA;Play Again&#xD;</description>
+    </item>
+    <item>
       <title>Code</title>
       <link>http://xhocquet.info/code/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://xhocquet.info/code/</guid>
       <description>Go Projects PDFtools Javascript Projects Waves - Electron music player with hot-loading GroceryGuru (Client) - React Native client for Rails API GraphQL Experiment Meteor Experiment - Task list Electron Agile Tool Ruby Projects Boxr - Box Ruby Client GroceryGuru (Server) - Grocery Spending Tracking DIYRSS - Turn any website into a trackable content feed Flutter - Anime tracking data visualizer Rust Projects Personal Dashboard - Playing with Rust&amp;rsquo;s Rocket framework Rustlings </description>
+    </item>
+    <item>
+      <title>Dogger</title>
+      <link>http://xhocquet.info/arcade/dogger/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://xhocquet.info/arcade/dogger/</guid>
+      <description>&#xD;Score: 0&#xD;Lives: 3&#xD;Level: 1&#xD;🐕 Dogger&#xD;Help the dog cross the busy road and river!&#xA;Controls: W/A/S/D or Arrow Keys. Pause with P. Restart&#xD;with R.&#xA;Start Game&#xD;Easy Mode&#xD;Avoid cars and use logs to cross the river!&#xD;Game Over!&#xD;Final score: 0&#xA;Play again&#xD;Main menu&#xD;Press Enter to play again or M for menu.&#xD;Paused&#xD;Resume&#xD;Restart&#xD;Main Menu&#xD;</description>
+    </item>
+    <item>
+      <title>Game 06</title>
+      <link>http://xhocquet.info/arcade/game-06/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://xhocquet.info/arcade/game-06/</guid>
+      <description>&#xD;Game 06&#xD;</description>
+    </item>
+    <item>
+      <title>Game 07</title>
+      <link>http://xhocquet.info/arcade/game-07/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://xhocquet.info/arcade/game-07/</guid>
+      <description>&#xD;Game 07&#xD;</description>
+    </item>
+    <item>
+      <title>Game 08</title>
+      <link>http://xhocquet.info/arcade/game-08/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://xhocquet.info/arcade/game-08/</guid>
+      <description>&#xD;Game 08&#xD;</description>
+    </item>
+    <item>
+      <title>Glug Glug</title>
+      <link>http://xhocquet.info/arcade/glugglug/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://xhocquet.info/arcade/glugglug/</guid>
+      <description>&#xD;GLUG GLUG&#xD;Drink your way through the underground!&#xA;START GAME&#xD;INSTRUCTIONS&#xD;How to Play:&#xD;• Use WASD or Arrow Keys to move&#xA;• Press SPACE to drink (dig)&#xA;• Avoid the drunkards and monsters&#xA;• Collect all the beer mugs to win!&#xA;BACK&#xD;Score: 0&#xD;Lives: 3&#xD;Level: 1&#xD;GAME OVER&#xD;Final Score: 0&#xD;PLAY AGAIN&#xD;MAIN MENU&#xD;</description>
+    </item>
+    <item>
+      <title>Pong</title>
+      <link>http://xhocquet.info/arcade/pong/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://xhocquet.info/arcade/pong/</guid>
+      <description>&#xD;0 — 0&#xD;🏓 Pong&#xD;First to 7 points wins.&#xA;Controls: W/S or ↑/↓. Pause with P. Restart with&#xD;R.&#xD;Start Game&#xD;Practice (slower)&#xD;Tip: the ball angle depends on where it hits your paddle.&#xD;You Win!&#xD;Final score 7–3.&#xA;Play again&#xD;Main menu&#xD;Press Enter to play again or M for menu.&#xD;</description>
+    </item>
+    <item>
+      <title>Tetris</title>
+      <link>http://xhocquet.info/arcade/tetris/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://xhocquet.info/arcade/tetris/</guid>
+      <description> Score: 0 Lines: 0 Level: 1 Next: 🧩 Tetris Clear lines by filling complete rows with falling blocks!&#xA;Controls: ←/→ move, ↓ soft drop, ↑ rotate, Space hard drop. Pause with P. Restart with R.&#xA;Start Game Easy Mode Complete lines to score points and level up! Game Over! Final score: 0&#xA;Play again Main menu Press Enter to play again or M for menu. Paused Resume Restart Main Menu </description>
     </item>
   </channel>
 </rss>
