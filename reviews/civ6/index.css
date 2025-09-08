@@ -1,0 +1,55 @@
+.civ-search {
+  margin: 6px 0 12px;
+}
+
+.civilizations-container {
+  margin: 0 -15px 24px;
+}
+
+.civilizations-container > .civ {
+  margin: 2px 0;
+}
+
+.civilizations-container > .civ:hover {
+  background-color: #adfcdc;
+}
+
+.civilizations-container > .civ.selected {
+  background-color: #adfcdc;
+}
+
+.civilizations-container > .civ > a > img {
+  margin-right: 6px;
+}
+
+.civilizations-container > .civ > .civ-link {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.civilizations-container > .content-container {
+  width: 100%;
+}
+
+.civilizations-container > .content-container > .civ-content {
+  display: none;
+  border: 1px solid black;
+  padding: 8px;
+}
+
+.civilizations-container > .content-container > .civ-content.selected {
+  display: block;
+}
+
+.civilizations-container > .content-container > .civ-content > .description {
+  width: 100%;
+}
+
+.civilizations-container > .content-container > .civ-content > .column-container {
+  display: flex;
+}
+
+.civilizations-container > .content-container > .civ-content > .column-container > div {
+  flex-grow: 1;
+}

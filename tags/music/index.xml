@@ -2,17 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Music on xhocquet.info</title>
-    <link>http://xhocquet.info/tags/music/</link>
+    <link>http://localhost:1313/tags/music/</link>
     <description>Recent content in Music on xhocquet.info</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Nov 2020 21:07:45 -0600</lastBuildDate>
-    <atom:link href="http://xhocquet.info/tags/music/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Dec 2024 10:00:00 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/music/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Music Organization: Utility Playlists</title>
+      <link>http://localhost:1313/reflections/music-organization-utility-playlists/</link>
+      <pubDate>Thu, 19 Dec 2024 10:00:00 -0700</pubDate>
+      <guid>http://localhost:1313/reflections/music-organization-utility-playlists/</guid>
+      <description>This is part 3 of my music organization series. Check out part 1 and part 2 for the full context.&#xA;The Problem with Discovery After setting up beets and getting my library properly organized, I found myself facing a new challenge: actually using my music collection. Having thousands of tracks properly tagged and organized is great, but it doesn&amp;rsquo;t solve the fundamental problem of music discovery and curation.&#xA;I was spending more time browsing through folders than actually listening to music.</description>
+    </item>
     <item>
       <title>Artist of the Month - 11.2020 - Tobi Lou</title>
-      <link>http://xhocquet.info/reflections/aotm-11-2020/</link>
+      <link>http://localhost:1313/reflections/aotm-11-2020/</link>
       <pubDate>Wed, 18 Nov 2020 21:07:45 -0600</pubDate>
-      <guid>http://xhocquet.info/reflections/aotm-11-2020/</guid>
+      <guid>http://localhost:1313/reflections/aotm-11-2020/</guid>
       <description>I wanted to try a new series on music to try and spur some writing! My thought was that I hope to discover at least one new great artist a month, and that writing about them should be easy if I really like them! This month, we&amp;rsquo;ll start with hip-hop which should be a common theme through these posts.&#xA;My artist of choice this month is Tobi Lou a Nigeria-to-Chicago rapper whose unique style is endearing and captivating.</description>
     </item>
   </channel>

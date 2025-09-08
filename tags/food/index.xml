@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Food on xhocquet.info</title>
-    <link>http://xhocquet.info/tags/food/</link>
+    <link>http://localhost:1313/tags/food/</link>
     <description>Recent content in Food on xhocquet.info</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 17 Jun 2018 20:21:37 -0600</lastBuildDate>
-    <atom:link href="http://xhocquet.info/tags/food/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/food/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Belgian Mayo: Seriously</title>
-      <link>http://xhocquet.info/reflections/belgian-mayo/</link>
+      <link>http://localhost:1313/reflections/belgian-mayo/</link>
       <pubDate>Sun, 17 Jun 2018 20:21:37 -0600</pubDate>
-      <guid>http://xhocquet.info/reflections/belgian-mayo/</guid>
+      <guid>http://localhost:1313/reflections/belgian-mayo/</guid>
       <description>Mayo and Me Today, I want to give mayonnaise the proper attention it deserves. A recent underdog in the American condiment game, mayo is quickly gaining popularity and climbing the sauce ladder. 1 This comes as a huge relief, since I&amp;rsquo;ve often pondered how long I can survive in a country that treats my favorite sauce as a second class citizen.&#xA;As a proud Belgian, it&amp;rsquo;s only natural to speak the gospel of mayonnaise.</description>
     </item>
   </channel>
