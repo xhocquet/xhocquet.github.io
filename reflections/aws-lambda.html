@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>AWS Lambda | xhocquet.info</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="AWS Lambda" />
+<meta name="author" content="Xavier Hocquet" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="It feels like every day, it gets harder to put a simple website online. Between defending against spam, vulnerabilities in your dependencies, system maintenance, scaling, and a million others, the sheer amount of knowledge needed can be overwhelming. Even though most sites share the same base, you can be sure you’ll spend a significant amount of time patching it together again from past experiences and scattered blog posts." />
+<meta property="og:description" content="It feels like every day, it gets harder to put a simple website online. Between defending against spam, vulnerabilities in your dependencies, system maintenance, scaling, and a million others, the sheer amount of knowledge needed can be overwhelming. Even though most sites share the same base, you can be sure you’ll spend a significant amount of time patching it together again from past experiences and scattered blog posts." />
+<link rel="canonical" href="https://xhocquet.info/reflections/aws-lambda.html" />
+<meta property="og:url" content="https://xhocquet.info/reflections/aws-lambda.html" />
+<meta property="og:site_name" content="xhocquet.info" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-08-26T16:06:44-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="AWS Lambda" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Xavier Hocquet"},"dateModified":"2018-08-26T16:06:44-04:00","datePublished":"2018-08-26T16:06:44-04:00","description":"It feels like every day, it gets harder to put a simple website online. Between defending against spam, vulnerabilities in your dependencies, system maintenance, scaling, and a million others, the sheer amount of knowledge needed can be overwhelming. Even though most sites share the same base, you can be sure you’ll spend a significant amount of time patching it together again from past experiences and scattered blog posts.","headline":"AWS Lambda","mainEntityOfPage":{"@type":"WebPage","@id":"https://xhocquet.info/reflections/aws-lambda.html"},"url":"https://xhocquet.info/reflections/aws-lambda.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link id="main-stylesheet" rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://xhocquet.info/feed.xml" title="xhocquet.info" />
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">xhocquet.info</a>
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon"></span>
+        </label>
+
+        <div class="nav-items">
+  <a class="nav-item" href="/code">code</a>
+  <a class="nav-item" href="/recipes">recipes</a>
+  <a class="nav-item" href="/reflections">reflections</a>
+  <a class="nav-item" href="/reviews">reviews</a>
+  <!-- <a class="nav-item" href="/arcade">arcade</a> -->
+</div>
+
+      </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="home"><h1 class="page-heading">AWS Lambda</h1><p>It feels like every day, it gets harder to put a simple website online. Between defending against spam, vulnerabilities in your dependencies, system maintenance, scaling, and a million others, the sheer amount of knowledge needed can be overwhelming. Even though most sites share the same base, you can be sure you’ll spend a significant amount of time patching it together again from past experiences and scattered blog posts.</p>
+
+<p>Services like <a href="https://www.heroku.com/">Heroku</a>, <a href="https://www.digitalocean.com/">Digital Ocean</a>, and <a href="https://aws.amazon.com/">AWS</a> attempt to make all of this more accessible by abstracting it all away in a variety of tools. S3 for storage, EC2 for servers, Elastic IP for networking are some of the examples of what AWS offers to create and manage your infrastructure.</p>
+
+<p>Today, I want to focus on a specific piece of AWS, and how Lambdas can be an ideal solution to your sporadic processing problems!</p>
+
+<h1 id="lambdas">Lambdas?</h1>
+<p>In programming, a <a href="https://en.wikipedia.org/wiki/Anonymous_function">lambda</a> (or anonymous function or closure) is a function that isn’t tied to a source. A good lambda can be called from anywhere, and give you the same output for the same input.</p>
+
+<p>AWS takes idea, and puts it on the cloud:</p>
+
+<p><img src="/reflections/lambda/1.png" alt="" /></p>
+
+<p>Above, you’ll see some of the possible connections it has to other services.</p>
+
+<p>Common uses of Lambdas range from:</p>
+
+<ul>
+  <li>When a request comes through an API, process the payload and respond to the request.</li>
+  <li>When an object is uploaded to S3, do something with that object and log the results.</li>
+  <li>Process the background job queue with my Lambda and send results to my application.</li>
+</ul>
+
+<hr />
+
+<h1 id="why-should-i-use-one">Why should I use one?</h1>
+
+<h2 id="price">Price</h2>
+<p>First of all, it’s free up to a limit. Their <a href="https://aws.amazon.com/lambda/pricing/">pricing page</a> says you get 400,000 GB-seconds free per month, with a max of 1 million requests. With some creativity, that can serve a small startup extremely well.</p>
+
+<p>After that, the prices are competitive and tiny per operation. The cost benefit tails off for the largest scale, but for a majority of cases it’s cheaper than running your own solution.</p>
+
+<h2 id="scaling-help">Scaling help</h2>
+
+<p>Second, you get to leverage AWS’ massive infrastructure and near-endless resources. If you’re reading this, you’re probably their target customer. Not only is the compute power cheap, but with it you get a managed scalable system that you don’t need to worry about.</p>
+
+<p>If tomorrow you suddenly see a hundred-fold increase in traffic, your Lambdas will run as they always have, spread as wide as needed (and/or configured).</p>
+
+<h2 id="familiar-tools">Familiar tools</h2>
+
+<p>Third, you can leverage a language and package system you already know. Lambdas are written in a set of allowed languages allowing you to use most of your favorite technologies and their ecosystems.</p>
+
+<p><img src="/reflections/lambda/2.png" alt="" /></p>
+
+<p>For Javascript, you can bundle node modules into your Lambda. For Go, you can include its packages. A Lambda is just a function, but your function can include a plethora of modules (up to a size limit for the Lambda), leaving your options quite open.</p>
+
+<hr />
+
+<h1 id="why-shouldnt-i-use-lambdas">Why shouldn’t I use Lambdas?</h1>
+<h2 id="aws-remains-complex">AWS remains complex</h2>
+
+<p><img src="/reflections/lambda/3.png" alt="" /></p>
+
+<p>At the end of the day, using even one piece of AWS can be an undertaking. If you or your developers don’t use AWS yet, opening it for the first time can be intimidating. There’s a minimum of security and access configurations you’ll need to run a Lambda, but thankfully there’s plenty of guides online to help you out.</p>
+
+<h2 id="asynchronous-is-key">Asynchronous is key</h2>
+<p>Since your function will be running over and over on this Lambda, charged by GB of memory per second, you’ll want to aggressively scope what you want it to do before you start development. Lambdas excel at small operations, though you won’t save money with operations below 100ms. You are also constrained by AWS with how much code you can upload.</p>
+
+<p>If your Lambda is interacting with outside services like a document store, API, or another server, you’ll also want to tightly control the asynchronous flow of those calls. Worst-case scenario, a web request gets stuck and your Lambda times out. Not only did you pay for the most amount of waste allowed under your usage limits, but there wasn’t even a result!</p>
+
+<h2 id="ease-of-development">Ease-of-development</h2>
+<p>While using your favorite language and its modules is awesome, actually putting code on the Lambda is not so glorious.</p>
+
+<p>Your options are either to use the editor provided in the dashboard:</p>
+
+<p><img src="/reflections/lambda/4.png" alt="" /></p>
+
+<p>This editor is honestly not that bad and has a respectable amount of features. Anyone who has used a web-based code editor knows its challenges, and Amazon hasn’t solved them here.</p>
+
+<p>Your other options are to upload the code package either via a manual zip file upload or S3. This will be your preferred method if you plan on including packages. As Lambda uses a special event set-up, you’ll find yourself needing to build a testing environment in your local system as well if you’re writing anything somewhat complicated. What should have been just writing some code and throwing it on AWS becomes a somewhat involved develop and build process.</p>
+
+<hr />
+
+<h1 id="my-use-cases">My use cases</h1>
+<p>I’ve so far implemented two of these for different cases.</p>
+
+<h2 id="document-processing">Document processing</h2>
+<p>At Maxwell, we’re processing PDFs that can get quite large into images for another system. We ran into challenges isolating this sporadic processing within our infrastructure, resulting in ripple-effects when many large documents came in simultaneously.</p>
+
+<p>Lambdas came to mind as a great solution to isolate the processing from our systems, while also allowing us to tailor memory consumption based on the trends we were seeing. It took about a day for us to build a simple Lambda to hook into our document store, and start processing documents in a variety of ways using popular packages.</p>
+
+<p>As we put it into effect, we expect to be able to reduce some of our larger servers we had boosted because of large document processing. In addition, we didn’t spend that much time to get a working proof of concept online. The other great benefit was that we were able to use a language we already know, so the spin-up time was exclusively AWS-related, not code-related.</p>
+
+<h2 id="web-scraping">Web scraping</h2>
+<p>For a <a href="http://diyrss.info">personal project</a>, I ping websites regularly to check for new content. The issue is the same: for a flaky operation like scraping a web page, residual effects from poorly managed background queues can leak into your application and cause other issues. This is doubly the case when building a system like this alone, and allows me to off-shore some of the complexities of the task so I can focus on delivery.</p>
+
+<h1 id="conclusions">Conclusions</h1>
+<p>All-in-all, Lambdas are a great solution for a variety of problems. More importantly, it’s a way of solving a problem that you anticipate will need scaling you aren’t yet ready to tackle head-on. While it isn’t a replacement for a properly architected system, in today’s fast-paced landscape it’s one of your best options for putting a scalable function on the web.</p>
+
+
+
+  </div>
+
+      </div>
+    </main><link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css">
+
+<footer class="site-footer h-card">
+  <data class="u-url" value="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <ul class="contact-list">
+          
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p></p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+    <a rel="me" href="https://github.com/xhocquet" target="_blank" title="GitHub">
+      <span class="grey fa-brands fa-github-alt fa-lg"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://linkedin.com/in/xhocquet" target="_blank" title="LinkedIn">
+      <span class="grey fa-brands fa-linkedin-in fa-lg"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://docs.google.com/document/d/1NkF057FcXJHJ0WFpiFlqJ3t80GODgBVdQNpsUFtZEBs/preview" target="_blank" title="CV">
+      <span class="grey fa-brands fa-readme fa-lg"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://news.ycombinator.com/user?id=meesles" target="_blank" title="HackerNews">
+      <span class="grey fa-brands fa-hacker-news fa-lg"></span>
+    </a>
+  </li>
+  <li>
+    <a href="https://xhocquet.info/feed.xml" target="_blank" title="Subscribe to syndication feed">
+      <svg class="svg-icon grey" viewbox="0 0 16 16">
+        <path d="M12.8 16C12.8 8.978 7.022 3.2 0 3.2V0c8.777 0 16 7.223 16 16h-3.2zM2.194
+          11.61c1.21 0 2.195.985 2.195 2.196 0 1.21-.99 2.194-2.2 2.194C.98 16 0 15.017 0
+          13.806c0-1.21.983-2.195 2.194-2.195zM10.606
+          16h-3.11c0-4.113-3.383-7.497-7.496-7.497v-3.11c5.818 0 10.606 4.79 10.606 10.607z"
+        />
+      </svg>
+    </a>
+  </li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>
