@@ -1,0 +1,54 @@
+---
+title: "Classic Baguettes"
+layout: page
+---
+<a href="https://www.kingarthurflour.com/recipes/classic-baguettes-recipe">source</a>
+
+### Ingredients
+### Starter (Poolish)
+
+ * <b>113 grams</b> cool water
+ * <b>1/16 teaspoon</b> acive dry yeast or instant yeast
+ * <b>120 grams</b> unbleached all-purpose flour
+
+### Dough
+
+ * <b>1 1/2 teaspoon</b> active dry yeast or instant yeast
+ * <b>255 grams</b> lukewarm water
+ * <b>418 grams</b> unbleached all-purpose flour
+ * <b>2 teaspoons</b> salt
+
+### Summary
+
+ * Make starter and let rest overnight
+ * Make dough and let rest 45 + 45 minutes
+ * Split dough and let rest 15 minutes - 1 hour
+ * Shape loaves, let rest 45 minutes - 1 hour
+ * Bake ~30 minutes
+
+### Directions
+### Starter (Poolish)
+ * Mix ingredients together to make a soft dough.
+ * Cover and let rest at room temperature for about 14 hours; overnight works well. The starter should have expanded and become bubbly.
+
+### Bread
+ * Mix and knead everything together — by hand, mixer or bread machine set on the dough cycle — to make a soft, somewhat smooth dough; it should be cohesive, but the surface may still be a bit rough. If you're using a stand mixer, knead for about 4 minutes on medium-low speed (speed 2 on a KitchenAid); the finished dough should stick a bit at the bottom of the bowl.
+ * Place the dough in a lightly greased medium-sized bowl, cover the bowl, and let the dough rise for 90 minutes, gently deflating it, folding the edges into the center, and turning it over after 45 minutes.
+ * Turn the dough out onto a lightly greased work surface. Gently deflate it, and divide it into three equal pieces.
+ * Round each piece of dough into a rough ball by pulling the edges into the center. Cover with greased plastic wrap, and let rest for 15 minutes; or for up to 1 hour, if that works better with your schedule.
+ * Working with one piece at a time, flatten the dough slightly then fold it nearly (but not quite) in half, sealing the edges with the heel of your hand. Turn the dough around, and repeat: fold, then flatten. Repeat this whole process again; the dough should have started to elongate itself.
+ * With the seam side down, cup your fingers and gently roll the dough into a 16" log. Your goal is a 15" baguette, so 16" allows for the slight shrinkage you'll see once you're done rolling. Taper each end of the log slightly to create the baguette's typical "pointy" end.
+ * Place the logs seam-side down onto a lightly greased or parchment-lined sheet pan or pans; or into the folds of a heavily floured cotton dish towel (or couche). Cover them with lightly greased plastic wrap, and allow the loaves to rise until they're slightly puffy ("marshmallow-y" is the term we use in our baking school). The loaves should certainly look lighter and less dense than when you first shaped them, but won't be anywhere near doubled in bulk. This should take about 45 minutes to an hour at room temperature (about 68°F).
+ * Towards the end of the rising time, preheat your oven to 450°F with a cast iron pan on the floor of the oven, or on the lowest rack. If you're using a baking stone, place it on a middle rack. Start to heat 1 1/2 cups water to boiling.
+ * If your baguettes have risen in a dish towel or couche, gently roll them (seam side down) onto a lightly greased (or parchment-lined) baking sheet. If you plan on baking them on a baking stone, roll them onto a piece of parchment, and lift the parchment onto a baker's peel.
+ * Using a baker's lame (a special curved blade) or a very sharp knife held at about a 45° angle, make three to five long lengthwise slashes in each baguette.
+ * Load the baguettes into the oven. If you’re baking on a stone, use a baker’s peel to transfer the baguettes, parchment and all, onto the hot stone. Carefully pour the boiling water into the cast iron pan, and quickly shut the oven door. The billowing steam created by the boiling water will help the baguettes rise, and give them a lovely, shiny crust.
+ * Bake the baguettes — on the pan, or on a stone — for 24 to 28 minutes, or until they're a very deep golden brown. Remove them from the oven and cool them on a rack. Or, for the very crispiest baguettes, turn off the oven, crack it open about 2", and allow the baguettes to cool completely in the oven, until both baguettes and oven are at room temperature.
+ * Store any leftover baguettes in a paper bag overnight; freeze for longer storage. Thaw and reheat just before serving.
+
+### Tips
+ * We recommend our unbleached all-purpose flour for this recipe, as its protein level and other attributes closely mimic the flour used by French bread bakers. Feel free to use unbleached bread flour, if you like; there's no need to adjust the amount of liquid, the dough will simply be a bit stiffer.
+ * A long, slow rise is an excellent way to develop flavor in simple breads like this baguette. As yeast grows, it releases organic acids and alcohol, both of which are flavor carriers. If desired, reduce the yeast in the dough to 1 teaspoon and allow the dough to rise for 3 hours (rather than 90 minutes) at cool room temperature (around 68°F). Gently deflate the dough, fold it into the center, and turn it over after 1 hour, and again after 2 hours.
+ * To make demi baguettes: Divide the dough into 6 pieces. Shape each piece as you would for a classic baguette, rolling them into 7" to 8" long loaves.
+ * Bake baguettes in a three-well baguette pan, if desired. To bake baguettes in a stoneware baguette baker: Divide the dough into four pieces. Shape each piece as you would for a classic baguette, rolling them into 12"-long loaves.
+ * To make an épi de blé, a slightly longer and more slender loaf that bears resemblance to its namesake sheaf of wheat: Divide the dough into 3 pieces. Shape each piece as you would for a classic baguette. Hold a pair of scissors at a low angle at one end of the loaf and open the scissors so they're wider than the width of the bread. Make a swift, clean cut 3/4 of the way into the dough, moving the cut piece to one side of the loaf. Repeat the process 2" to 3" farther down the loaf, moving the newly cut piece to the opposite side of the loaf from the first. Continue doing this until you reach the other end of the loaf. Note: the farther you cut into the loaf, the more elegant, though fragile, your épi de blé will be.

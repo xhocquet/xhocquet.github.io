@@ -1,0 +1,58 @@
+// Placeholder to allow defining custom styles that override everything else.
+// (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+.site-header {
+  background-color: $dark-header;
+  font-size: 1.2em;
+  font-family: 'Inconsolata', monospace;
+  border-top: 0;
+
+  .site-title {
+    font-size: 1em;
+    color: $code-green;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  a.nav-item {
+    color: $header-text;
+  }
+
+  a.nav-item:hover {
+    color: white;
+  }
+
+  .wrapper {
+    width: 90%;
+    max-width: none;
+    // margin: 0 auto;
+    // padding: 0 $spacing-unit;
+    // @extend %clearfix;
+
+    // @media screen and (max-width: $on-medium) {
+    //   padding-right: $spacing-unit * 0.6;
+    //   padding-left: $spacing-unit * 0.6;
+    // }
+  }
+}
+
+.site-footer {
+  background-color: $secondary-color;
+  padding: 12px;
+
+  .footer-col-wrapper {
+    display: none;
+  }
+
+  .social-links a {
+    background-color: $primary-color;
+  }
+}
+
+.page-content {
+  a {
+    text-decoration: underline;
+  }
+}
