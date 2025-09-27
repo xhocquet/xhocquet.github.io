@@ -4,7 +4,7 @@ serve:
 deploy:
   bundle exec jekyll build
   git checkout public
-  rm -rf *
+  rm -rf !(_site)
   cp -r _site/* .
   rm -rf _site
   git add .
