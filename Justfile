@@ -4,8 +4,8 @@ serve:
 deploy:
   bundle exec jekyll build
   git checkout public
-  rm -rf *
-  cp -r _site/* .
+  find -type d ! -name "_site" -delete
+  mv _site/* ./
   rm -rf _site
   git add .
   git commit -m "Deploy site"
