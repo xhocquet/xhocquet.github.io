@@ -1,8 +1,8 @@
 ---
 title: reviews
 ---
-[![Civilization 6](/reviews/civ6/banner.png)](./civ6)
+[![Civilization 6](/reviews/civ6/banner.png)](reviews/civ6)
 
-[![Satisfactory](/reviews/satisfactory/banner.jpg)](./satisfactory)
+[![Satisfactory](/reviews/satisfactory/banner.jpg)](reviews/satisfactory)
 
-[![Rocket League](/reviews/rocketleague/banner.jpg)](./rocketleague)
+[![Rocket League](/reviews/rocketleague/banner.jpg)](reviews/rocketleague)
