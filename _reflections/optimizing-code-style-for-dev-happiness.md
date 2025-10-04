@@ -16,7 +16,7 @@ An important caveat is that I usually don't prioritize performance. Writing code
 
 I think many people will immediately know what I'm talking about. If not, allow me to lead with an example similar to real code I've worked with. In my case, there were a good two-dozen methods in the array.
 
-{{< highlight ruby >}}
+```
 class AdvancedProgrammingTechniquesConcern
   included do
     ['average', 'sum', 'max', 'min'].each do |method|
@@ -28,24 +28,24 @@ class AdvancedProgrammingTechniquesConcern
     end
   end
 end
-{{< / highlight >}}
+```
 
 My first argument against a lot of these is that there's just not much reason to do it. In this case, writing each method out would be roughly the same amount of lines of code. In my real-life instance it may have been a bit more, but who cares? You aren't paid by the line. There are many more people creating software limited by time rather than resources.
 
 My second argument is just plain practical. Tomorrow, I'm going to have to debug the following code:
 
-{{< highlight ruby >}}
+```
   # average_calculation_controller.rb
   def create
     Calcuation.new(params).calculate_average
   end
-{{< / highlight >}}
+```
 
 Something is wrong with the calculations coming from this API endpoint. My first move may be to look at the calculation method to see if anything seems wrong there. I would probably search for `calculate_average`. Guess what? Nothing! Because of the string interpolation, searching the method name doesn't give you the method definition. Kind of odd, right?
 
 Knowing that I would see that as needless confusion, I skip the opportunity to show off my meta-programming skills (time and place!) and write something a bit more 'basic':
 
-{{< highlight ruby >}}
+```
 class AdvancedProgrammingTechniquesConcern
   included do
     def average
@@ -59,7 +59,7 @@ class AdvancedProgrammingTechniquesConcern
     # ...
   end
 end
-{{< / highlight >}}
+```
 
 DRY evangelists will cry out: "But why would you write something so similar out so many times?". My response is simple and two-part: Because copy-pasting a few lines doesn't cost you so much time, and people down the line will have an easier time understanding your code. In most real-world environments, software engineering is driven by how well developers and the rest of the company communicate with each other. Code readability is a significant part of a developer's ability to communicate with other developers.
 
@@ -69,7 +69,7 @@ DRY evangelists will cry out: "But why would you write something so similar out 
 
 Again, let me defer to a real-life-inspired example:
 
-{{< highlight ruby >}}
+```
 # Home sweet home
 class ApplicationController < ActiveController::Base
 end
@@ -89,7 +89,7 @@ end
 module V2; class AdminController; end; end
 module V2; class UserController; end; end
 # Etc.
-{{< / highlight >}}
+```
 
 
 You get the idea. What you'll also get is a scattered collection of business rules crucial to your application's functioning that will be hard to find, read, and reason about. Certain behaviors will be inherited in your API controller all the way from the original base controller. Arguably there shouldn't be an original anymore, but it's often the case to leave behind some legacy code to maintain the status quo and not have to migrate core functionality.
@@ -114,12 +114,12 @@ This one really bothers me since it can be a real time sink.
 
 I consider all things code-styling, formatting, and general conventions to be purely subjective decisions. How to format your conditionals, conventions with folder structure, and how you standardize similar items (services, classes, mailers) does not have any basis in fact nor does it drive noticeable efficiency gains. These are all things any developer should be able to adapt to and shouldn't consume significant amounts of developer time discussing.
 
-{{< highlight js >}}
+```
 if (true)
 {
   // I will never understand people who write if-statements like this
 }
-{{< / highlight >}}
+```
 
 Enter: Linters! Linters are fantastic, and in our modern day-and-age, super customizable. The beauty is in the fact that you don't need to write complex regex to write a linter. Linters parse code into what basically ends up being an [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree). This gives you the ability to walk up and down the code in an intuitive tree-structure format. The contents of an if-conditional are the children of the if-conditional node. All code has a parent all the way up to the original Ruby call. After building familiarity with the methods available, you can write some [very complex linting rules](https://gist.github.com/xhocquet/719a8bdeb336b5c463c8fef9e2deed5a) based off of whether a piece of code is a class or module, or if there's a private method call.
 

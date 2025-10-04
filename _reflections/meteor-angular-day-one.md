@@ -20,9 +20,9 @@ Templates are pretty standard to any set of JS tools, but a Collection is my fir
 
 I'm impressed with how quick I have a todo app where I can add things, in real-time without page reloads. I can't confidently say Rails would be quicker. I think Mongo deserves a fair share of the credit, though, since it removes quite a bit of complexity around models in relational DBs. Simply inserting an object looks like Rails, but I didn't have to declare a model. This is basically all you need, and you aren't yet defining typed fields of any sort:
 
-{{< highlight js >}}
+```
 export const Tasks = new Mongo.Collection('tasks');
-{{< / highlight >}}
+```
 
 ## Code Separation
 
@@ -30,20 +30,20 @@ One of the things I'm starting to dislike is the at times complex Javascript you
 
 React solves this by redefining HTML tags in Javascript. The React component files you end up with are all Javascript, including the classes you toggle in the same way you do in Angular. The difference is pretty large:
 
-{{< highlight js >}}
+```
 # Angular
 <span ng-class="{'active': item.isActive}"
-{{< / highlight >}}
+```
 
 vs.
 
-{{< highlight js >}}
+```
 # React
 const classes = classnames('generic-class', {'active': item.isActive})
 return(
   <span classNames={classes} />
 )
-{{< / highlight >}}
+```
 
 There's definitely a bunch more code behind both of these examples, but I think I would objectively say the React code takes up more room. But, I still think it's better because of the consistency of the language. The big advantage is you can focus on a single type of developer for more of your coding, and as a developer you can stay in Javascript in your mind without switching back and forth. In fact, that's one of the huge selling points of all these new JS servers.
 
