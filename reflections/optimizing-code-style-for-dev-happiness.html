@@ -57,42 +57,46 @@
 
 <p>I think many people will immediately know what I’m talking about. If not, allow me to lead with an example similar to real code I’ve worked with. In my case, there were a good two-dozen methods in the array.</p>
 
-<p>class AdvancedProgrammingTechniquesConcern
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class AdvancedProgrammingTechniquesConcern
   included do
-    [‘average’, ‘sum’, ‘max’, ‘min’].each do |method|
-        method_name = “calculate_#{method}”
+    ['average', 'sum', 'max', 'min'].each do |method|
+        method_name = "calculate_#{method}"
         define_method(method_name) do
-            klass = “#{method.titleize}CalcuationService”.classify
+            klass = "#{method.titleize}CalcuationService".classify
             klass.calculate(self)
         end
     end
   end
-end</p>
+end
+</code></pre></div></div>
 
 <p>My first argument against a lot of these is that there’s just not much reason to do it. In this case, writing each method out would be roughly the same amount of lines of code. In my real-life instance it may have been a bit more, but who cares? You aren’t paid by the line. There are many more people creating software limited by time rather than resources.</p>
 
 <p>My second argument is just plain practical. Tomorrow, I’m going to have to debug the following code:</p>
 
-<p># average_calculation_controller.rb
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  # average_calculation_controller.rb
   def create
     Calcuation.new(params).calculate_average
-  end</p>
+  end
+</code></pre></div></div>
 
 <p>Something is wrong with the calculations coming from this API endpoint. My first move may be to look at the calculation method to see if anything seems wrong there. I would probably search for <code class="language-plaintext highlighter-rouge">calculate_average</code>. Guess what? Nothing! Because of the string interpolation, searching the method name doesn’t give you the method definition. Kind of odd, right?</p>
 
 <p>Knowing that I would see that as needless confusion, I skip the opportunity to show off my meta-programming skills (time and place!) and write something a bit more ‘basic’:</p>
 
-<p>class AdvancedProgrammingTechniquesConcern
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class AdvancedProgrammingTechniquesConcern
   included do
     def average
       AverageCalculationService.calculate(self)
-    end</p>
+    end
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def sum
-  SumCalculationService.calculate(self)
+    def sum
+      SumCalculationService.calculate(self)
+    end
+
+    # ...
+  end
 end
-
-# ...   end end
 </code></pre></div></div>
 
 <p>DRY evangelists will cry out: “But why would you write something so similar out so many times?”. My response is simple and two-part: Because copy-pasting a few lines doesn’t cost you so much time, and people down the line will have an easier time understanding your code. In most real-world environments, software engineering is driven by how well developers and the rest of the company communicate with each other. Code readability is a significant part of a developer’s ability to communicate with other developers.</p>
@@ -103,25 +107,26 @@ end
 
 <p>Again, let me defer to a real-life-inspired example:</p>
 
-<h1 id="home-sweet-home">Home sweet home</h1>
-<p>class ApplicationController &lt; ActiveController::Base
-end</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Home sweet home
+class ApplicationController &lt; ActiveController::Base
+end
 
-<h1 id="we-upgraded-our-app-once-upon-a-time">We upgraded our app once upon a time</h1>
-<p>module V2
+# We upgraded our app once upon a time
+module V2
   class ApplicationController &lt; ::ApplicationController
   end
-end</p>
+end
 
-<h1 id="you-should-always-keep-your-api-controllers-separate">You should always keep your API controllers separate!</h1>
-<p>module Api
+# You should always keep your API controllers separate!
+module Api
   class BaseController &lt; V2::ApplicationController
   end
-end</p>
+end
 
-<p>module V2; class AdminController; end; end
-module V2; class UserController; end; end</p>
-<h1 id="etc">Etc.</h1>
+module V2; class AdminController; end; end
+module V2; class UserController; end; end
+# Etc.
+</code></pre></div></div>
 
 <p>You get the idea. What you’ll also get is a scattered collection of business rules crucial to your application’s functioning that will be hard to find, read, and reason about. Certain behaviors will be inherited in your API controller all the way from the original base controller. Arguably there shouldn’t be an original anymore, but it’s often the case to leave behind some legacy code to maintain the status quo and not have to migrate core functionality.</p>
 
@@ -145,10 +150,11 @@ module V2; class UserController; end; end</p>
 
 <p>I consider all things code-styling, formatting, and general conventions to be purely subjective decisions. How to format your conditionals, conventions with folder structure, and how you standardize similar items (services, classes, mailers) does not have any basis in fact nor does it drive noticeable efficiency gains. These are all things any developer should be able to adapt to and shouldn’t consume significant amounts of developer time discussing.</p>
 
-<p>if (true)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>if (true)
 {
   // I will never understand people who write if-statements like this
-}</p>
+}
+</code></pre></div></div>
 
 <p>Enter: Linters! Linters are fantastic, and in our modern day-and-age, super customizable. The beauty is in the fact that you don’t need to write complex regex to write a linter. Linters parse code into what basically ends up being an <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">AST</a>. This gives you the ability to walk up and down the code in an intuitive tree-structure format. The contents of an if-conditional are the children of the if-conditional node. All code has a parent all the way up to the original Ruby call. After building familiarity with the methods available, you can write some <a href="https://gist.github.com/xhocquet/719a8bdeb336b5c463c8fef9e2deed5a">very complex linting rules</a> based off of whether a piece of code is a class or module, or if there’s a private method call.</p>
 
