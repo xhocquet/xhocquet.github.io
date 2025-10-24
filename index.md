@@ -4,7 +4,7 @@
 ---
 
 <br>
-# Welcome to my personal site.
+# Welcome to my personal page.
 <br>
 
 I maintain this as a way to share some information about myself and be reachable. I also toss side-projects on here and remove them as I lose interest. This site is built with [Jekyll](https://jekyllrb.com/) and hosted on [Github](https://github.com/xhocquet/xhocquet.github.io).
