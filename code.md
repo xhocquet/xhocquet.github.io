@@ -12,7 +12,7 @@ title: code
 ## Game Projects
 
 - [Glue Prince - Gamemaker Studio 2](https://github.com/xhocquet/glue-prince)
-  - Blog post: [Glue Prince](https://xhocquet.github.io/reflections/glue-prince/)
+  - Blog post: [Glue Prince](https://xhocquet.github.io/reflections/glue-prince-wrap-up/)
 
 ## Go Projects
 
