@@ -30,7 +30,3 @@ title: code
 
 - [Personal Dashboard - Playing with Rust's Rocket framework](https://github.com/xhocquet/rust-personal-dashboard/)
 - [Rustlings](https://github.com/xhocquet/rustlings)
-
-## AI Projects
-
-- [Arcade - Fully LLM-generated arcade mini-games](/arcade/)
