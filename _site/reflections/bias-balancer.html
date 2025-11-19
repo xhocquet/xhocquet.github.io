@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Bias Balancer | xhocquet.info</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Bias Balancer" />
+<meta name="author" content="Xavier Hocquet" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The past few days I’ve been working on a tiny little project that’s been on my mind." />
+<meta property="og:description" content="The past few days I’ve been working on a tiny little project that’s been on my mind." />
+<link rel="canonical" href="https://xhocquet.github.io/reflections/bias-balancer.html" />
+<meta property="og:url" content="https://xhocquet.github.io/reflections/bias-balancer.html" />
+<meta property="og:site_name" content="xhocquet.info" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-11-30T21:05:06-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Bias Balancer" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Xavier Hocquet"},"dateModified":"2020-11-30T21:05:06-05:00","datePublished":"2020-11-30T21:05:06-05:00","description":"The past few days I’ve been working on a tiny little project that’s been on my mind.","headline":"Bias Balancer","mainEntityOfPage":{"@type":"WebPage","@id":"https://xhocquet.github.io/reflections/bias-balancer.html"},"url":"https://xhocquet.github.io/reflections/bias-balancer.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link id="main-stylesheet" rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://xhocquet.github.io/feed.xml" title="xhocquet.info" />
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">xhocquet.info</a>
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon"></span>
+        </label>
+
+        <div class="nav-items">
+  <a class="nav-item" href="/code">code</a>
+  <a class="nav-item" href="/recipes">recipes</a>
+  <a class="nav-item" href="/reflections">reflections</a>
+  <a class="nav-item" href="/reviews">reviews</a>
+  <!-- <a class="nav-item" href="/arcade">arcade</a> -->
+</div>
+
+      </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="home"><h1 class="page-heading">Bias Balancer</h1><p>The past few days I’ve been working on a tiny little project that’s been on my mind.</p>
+
+<p>So I want to introduce: <a href="https://github.com/xhocquet/bias-balancer">Bias Balancer</a>!</p>
+
+<p>We all know bias exists, but we tend to passively acknowledge it instead of actively fighting back. Like most problems, the first step is education and awareness. I wanted a way to measure bias in my browsing habits so that I could take steps to remedy it.</p>
+
+<p>The idea for the tool is pretty simple: Install an extension on your browsers and it tracks the news sites you visit. Then, Bias Balancer gives you a ‘Bias Score’ on a +/- scale. If I notice myself constantly slipping in one direction, I will be more mindful to look for alternate points of view.</p>
+
+<p>I generate this score very simply right now. In the <a href="https://github.com/xhocquet/bias-balancer">source code</a>, I indicate the data source that inspired this project. By using those numbers, I calculated a mean bias score for each news organization available. One every page load, if the host matches a URL in that list, the bias score is added to the user’s current bias score.</p>
+
+<p>What I have so far is a working prototype in Chrome/Firefox that will keep track of a score and update the extension’s icon based on the score.</p>
+
+<p>Possible enhancements:</p>
+<ul>
+  <li>Customizable bias lists</li>
+  <li>Better algorithm for the Bias Score.
+    <ul>
+      <li>Take into account volume</li>
+    </ul>
+  </li>
+  <li>Filter index/root page views for more accurate tracking</li>
+  <li>Adjustable icon/level thresholds</li>
+  <li>Article topic grouping</li>
+  <li>Additional stats on bias by news organization, viewing habits, etc.</li>
+</ul>
+
+
+
+  </div>
+
+      </div>
+    </main><link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css">
+
+<footer class="site-footer h-card">
+  <data class="u-url" value="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <ul class="contact-list">
+          
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p></p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+    <a rel="me" href="https://github.com/xhocquet" target="_blank" title="GitHub">
+      <span class="grey fa-brands fa-github-alt fa-lg"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://linkedin.com/in/xhocquet" target="_blank" title="LinkedIn">
+      <span class="grey fa-brands fa-linkedin-in fa-lg"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://docs.google.com/document/d/1NkF057FcXJHJ0WFpiFlqJ3t80GODgBVdQNpsUFtZEBs/preview" target="_blank" title="CV">
+      <span class="grey fa-brands fa-readme fa-lg"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://news.ycombinator.com/user?id=meesles" target="_blank" title="HackerNews">
+      <span class="grey fa-brands fa-hacker-news fa-lg"></span>
+    </a>
+  </li>
+  <li>
+    <a href="https://xhocquet.github.io/feed.xml" target="_blank" title="Subscribe to syndication feed">
+      <svg class="svg-icon grey" viewbox="0 0 16 16">
+        <path d="M12.8 16C12.8 8.978 7.022 3.2 0 3.2V0c8.777 0 16 7.223 16 16h-3.2zM2.194
+          11.61c1.21 0 2.195.985 2.195 2.196 0 1.21-.99 2.194-2.2 2.194C.98 16 0 15.017 0
+          13.806c0-1.21.983-2.195 2.194-2.195zM10.606
+          16h-3.11c0-4.113-3.383-7.497-7.496-7.497v-3.11c5.818 0 10.606 4.79 10.606 10.607z"
+        />
+      </svg>
+    </a>
+  </li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>

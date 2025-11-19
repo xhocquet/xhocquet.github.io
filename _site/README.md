@@ -1,0 +1,3 @@
+- `just serve` to start the site locally
+- `just deploy` to deploy the site. This is needed to build and push assets
+- `public` branch is what is deployed

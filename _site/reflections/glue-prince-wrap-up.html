@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Glue Prince: Wrap-up | xhocquet.info</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Glue Prince: Wrap-up" />
+<meta name="author" content="Xavier Hocquet" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This post is a write-up of a little project I just wrapped up and pushed to GitHub." />
+<meta property="og:description" content="This post is a write-up of a little project I just wrapped up and pushed to GitHub." />
+<link rel="canonical" href="https://xhocquet.github.io/reflections/glue-prince-wrap-up.html" />
+<meta property="og:url" content="https://xhocquet.github.io/reflections/glue-prince-wrap-up.html" />
+<meta property="og:site_name" content="xhocquet.info" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-23T21:55:00-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Glue Prince: Wrap-up" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Xavier Hocquet"},"dateModified":"2025-10-23T21:55:00-04:00","datePublished":"2025-10-23T21:55:00-04:00","description":"This post is a write-up of a little project I just wrapped up and pushed to GitHub.","headline":"Glue Prince: Wrap-up","mainEntityOfPage":{"@type":"WebPage","@id":"https://xhocquet.github.io/reflections/glue-prince-wrap-up.html"},"url":"https://xhocquet.github.io/reflections/glue-prince-wrap-up.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link id="main-stylesheet" rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://xhocquet.github.io/feed.xml" title="xhocquet.info" />
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">xhocquet.info</a>
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon"></span>
+        </label>
+
+        <div class="nav-items">
+  <a class="nav-item" href="/code">code</a>
+  <a class="nav-item" href="/recipes">recipes</a>
+  <a class="nav-item" href="/reflections">reflections</a>
+  <a class="nav-item" href="/reviews">reviews</a>
+  <!-- <a class="nav-item" href="/arcade">arcade</a> -->
+</div>
+
+      </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <div class="home"><h1 class="page-heading">Glue Prince: Wrap-up</h1><p>This post is a write-up of a little project I just wrapped up and pushed to <a href="https://github.com/xhocquet/glue-prince">GitHub</a>.</p>
+
+<p>Glue Prince came on the heels of me finishing an <em>actually</em> fun game — <a href="https://www.blueprincegame.com/">Blue Prince</a>. The game is excellent, and as I type this, I’m considering writing a separate review of it. It might just be my top game of 2025!</p>
+
+<p>Without getting too far off track, one of the standout mechanics in <em>Blue Prince</em> is a hybrid hand-drawing and tile-placement system that lets you build your game board. Think <a href="https://boardgamegeek.com/boardgame/10547/betrayal-at-house-on-the-hill">Betrayal at House on the Hill</a>, but more interactive and strategic.</p>
+
+<p>Around the same time, I started getting the itch for game dev, which I hadn’t had in a long time, so I seized the opportunity to spin up this little demo. My main goal was to recreate a semblance of the tile-placement mechanic and see where it went.</p>
+
+<p>Some highlights of the results:</p>
+
+<ul>
+  <li>Programmatic UI: start menu, game UI, end screen</li>
+  <li>Movement limited by tile placement, as in <em>Blue Prince</em></li>
+  <li>Hand tiles are randomly drawn from the deck</li>
+  <li>Items replenish stamina, which is required to reach the chest</li>
+  <li>Piggies will fight you — a dice roll determines whether you take damage</li>
+  <li>Light animations using freely available assets</li>
+</ul>
+
+<p><img src="/reflections/glue-prince/main.jpg" alt="screenshot 1" />
+<img src="/reflections/glue-prince/main2.jpg" alt="screenshot 2" />
+<img src="/reflections/glue-prince/main3.jpg" alt="screenshot 3" />
+<img src="/reflections/glue-prince/main4.jpg" alt="screenshot 4" /></p>
+
+<p>A big part of this project was learning GameMaker (Studio 2 — they’ve had some versioning <em>stuff</em>). I chose it mainly because I wanted the quickest route to a prototype, and Unity felt a bit overkill for a simple 2D grid-based game. I stumbled upon GM while browsing online, and it hit the sweet spot: just enough abstraction, an interface for managing assets (with some half-decent editors), and a straightforward scripting framework.</p>
+
+<p>It definitely has its quirks! The language, GML, looks vaguely like Java or C#. Writing in it feels fairly high-level, but you’re reliant on oddly specific methods and quirky documentation (a common software theme, I guess). Each object gets its own gigantor script file with a mix of inter-process calls and internal variables. There’s a lot of shared state, so you have to be careful with naming. Objects are structured around “steps,” which are sequential segments of their behavior centered around the update/draw loop.</p>
+
+<p>As is tradition, you drop script objects into the game world to handle higher-level systems — levels, object management, asset loading, and so on. GameMaker provides helpers for asset management, but after a few dozen manual calls, you’ll want to write your own wrappers to keep things sane. Errors were generally well-handled and pointed to specific lines, which was nice.</p>
+
+<p>As expected, a lot of cycles were “wasted” on assets — getting animations imported, timed, and playing nicely within the framework. I’ll continue to appreciate both the work of artists and the heavy lifting a good engine does to manage all that complexity!</p>
+
+<p>This was a positive experience, and I think GameMaker is a solid choice for building quick prototypes of games (and even full-fledged ones!). I do think at scale the tools have limitations, which I was far from reaching. Glue Prince itself is a cute little demo, and I’m curious to see if it can run in a few years. Feel free to give it a spin!</p>
+
+
+
+  </div>
+
+      </div>
+    </main><link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css">
+
+<footer class="site-footer h-card">
+  <data class="u-url" value="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <ul class="contact-list">
+          
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p></p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+    <a rel="me" href="https://github.com/xhocquet" target="_blank" title="GitHub">
+      <span class="grey fa-brands fa-github-alt fa-lg"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://linkedin.com/in/xhocquet" target="_blank" title="LinkedIn">
+      <span class="grey fa-brands fa-linkedin-in fa-lg"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://docs.google.com/document/d/1NkF057FcXJHJ0WFpiFlqJ3t80GODgBVdQNpsUFtZEBs/preview" target="_blank" title="CV">
+      <span class="grey fa-brands fa-readme fa-lg"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://news.ycombinator.com/user?id=meesles" target="_blank" title="HackerNews">
+      <span class="grey fa-brands fa-hacker-news fa-lg"></span>
+    </a>
+  </li>
+  <li>
+    <a href="https://xhocquet.github.io/feed.xml" target="_blank" title="Subscribe to syndication feed">
+      <svg class="svg-icon grey" viewbox="0 0 16 16">
+        <path d="M12.8 16C12.8 8.978 7.022 3.2 0 3.2V0c8.777 0 16 7.223 16 16h-3.2zM2.194
+          11.61c1.21 0 2.195.985 2.195 2.196 0 1.21-.99 2.194-2.2 2.194C.98 16 0 15.017 0
+          13.806c0-1.21.983-2.195 2.194-2.195zM10.606
+          16h-3.11c0-4.113-3.383-7.497-7.496-7.497v-3.11c5.818 0 10.606 4.79 10.606 10.607z"
+        />
+      </svg>
+    </a>
+  </li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>
