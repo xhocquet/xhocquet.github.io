@@ -289,7 +289,7 @@
       <div class="wrapper">
         <div class="home"><h1 class="page-heading">Multiplayer game implementation with GD-Sync</h1><p>I recently completed a little side-quest to add multiplayer support to an existing game!</p>
 
-<p>An acquaintance from a game development Discord server was looking for help adding multiplayer support to an existing hobby project. The game is a ‘rocket jumper’ game: think of the <a href="https://wiki.teamfortress.com/wiki/Soldier">Soldier from TF2</a>. Using this mechanic of launching yourself up with your own projectiles, you jump from platform to platform and attempt to reach the top (video below).</p>
+<p>An acquaintance from a game development Discord server was looking for help adding multiplayer support to an existing hobby project. The game is a ‘rocket jumper’ game: think of the <a href="https://wiki.teamfortress.com/wiki/Soldier">Soldier from TF2</a>. Using this mechanic of launching yourself up with your own projectiles, you jump from platform to platform and attempt to reach the top (video at the bottom).</p>
 
 <p>The game is intuitive and it works well in practice. Now imagine if you add in some friends and the fun of blasting them out of your way - way more fun.</p>
 
@@ -305,9 +305,9 @@
 
 <h2 id="getting-started">Getting Started</h2>
 
-<p>My standard approach for solving new problems is to look at the landscape: in this case Godot multiplayer support. Good news: <a href="https://docs.godotengine.org/en/stable/classes/class_multiplayersynchronizer.html">it exists</a>. Unfortunately, like most game tooling you’re given the components and ther is plenty of work left to put it together. Building a server with all of the syncing logic myself seemed like too much scope for a first project, so:</p>
+<p>My standard approach for solving new problems is to look at the landscape: in this case Godot multiplayer support. Good news: <a href="https://docs.godotengine.org/en/stable/classes/class_multiplayersynchronizer.html">it exists</a>. Unfortunately, like most game tooling you’re given the components and there is plenty of work left to put it together. Building a server with all of the syncing logic myself seemed like too much scope for a first project, so:</p>
 
-<p>I went looking for plugins/libraries and landed on <a href="https://www.gd-sync.com/">GD-Sync</a>, which is what this post will be about. GD-Sync provides a Godot addon for abstracting the common use-cases of mutlipayer Godot games, providing their own servers as a service on top of that. For my purposes, I was particularly interested in their free tier of up to 4 players, perfect for testing with friends.</p>
+<p>I went looking for plugins/libraries and landed on <a href="https://www.gd-sync.com/">GD-Sync</a>, which is what this post will be about. GD-Sync provides a Godot addon for abstracting the common use-cases of multiplayer Godot games, providing their own servers as a service on top of that. For my purposes, I was particularly interested in their free tier of up to 4 players, perfect for testing with friends.</p>
 
 <p>First things first, some setup. Using their site you generate an API key, download the plugin, and get that setup. There wasn’t much to this step.</p>
 
@@ -315,7 +315,7 @@
 
 <h2 id="ownership--authority">Ownership &amp; Authority</h2>
 
-<p>Once of the first important concepts I absorbed was object ownership and how it relates to server authority. I kept getting turned around within the multiple editor windows, but some key concepts kept me grounded:</p>
+<p>One of the first important concepts I absorbed was object ownership and how it relates to server authority. I kept getting turned around within the multiple editor windows, but some key concepts kept me grounded:</p>
 
 <p><strong>Objects have one and only one owner</strong></p>
 
@@ -330,13 +330,13 @@
 
 <p><strong>Your game will have one and only one <em>authority server</em></strong></p>
 
-<p>An authority server is the primary instance of the game which gets the role of abitrating the game events and updating all the players on the results.</p>
+<p>An authority server is the primary instance of the game which gets the role of arbitrating the game events and updating all the players on the results.</p>
 
 <p>This is important because while players can report their own state without too much concern, we can’t let them manage collisions, scoring, and other more sensitive operations. It’s only a matter of time before a savvy technologist figures out a way to trick their local game into giving them an unfair advantage!</p>
 
 <p>I’ll talk about the solution to this later, but first the server setup.</p>
 
-<p>GD-Sync abstracts a lot of this away which is lovely. Local multiplayer (where 2 players are connecting from the same machine) and full server-based multiplayer implemented in the game itself the same way, and they initialization of the library determines which mode you’re in:</p>
+<p>GD-Sync abstracts a lot of this away which is lovely. Local multiplayer (where 2 players are connecting from the same machine) and full server-based multiplayer implemented in the game itself the same way, and the initialization of the library determines which mode you’re in:</p>
 
 <div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">GDSync</span><span class="p">.</span><span class="nf">start_local_multiplayer</span><span class="p">()</span>
 <span class="c1">// or</span>
@@ -363,7 +363,7 @@
 
 <h2 id="hooking-into-gd-sync-components">Hooking into GD-Sync components</h2>
 
-<p>Once you lock in a mental model of object ownership and authorities, you move on the easy part! Hooking up your components and their attributes to various components and code needed by other players to sync data across the intertubes.</p>
+<p>Once you lock in a mental model of object ownership and authorities, you move on to the easy part! Hooking up your components and their attributes to various components and code needed by other players to sync data across the intertubes.</p>
 
 <p>In my implementation, I used two core components:</p>
 
