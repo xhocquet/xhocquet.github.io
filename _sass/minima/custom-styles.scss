@@ -2,10 +2,13 @@
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
 
 .site-header {
+  position: relative;
+  overflow: visible;
   background-color: $dark-header;
   font-size: 1.2em;
   font-family: 'Inconsolata', monospace;
   border-top: 0;
+  margin-bottom: 80px;
 
   .site-title {
     font-size: 1em;
@@ -27,14 +30,6 @@
   .wrapper {
     width: 90%;
     max-width: none;
-    // margin: 0 auto;
-    // padding: 0 $spacing-unit;
-    // @extend %clearfix;
-
-    // @media screen and (max-width: $on-medium) {
-    //   padding-right: $spacing-unit * 0.6;
-    //   padding-left: $spacing-unit * 0.6;
-    // }
   }
 }
 
@@ -55,4 +50,102 @@
   a {
     text-decoration: underline;
   }
+}
+
+/* Christmas Lights */
+
+#Christmas_Lights {
+  position: absolute;
+  top: 55px;
+  left: 0;
+  width: 100%;
+  // height: 120px;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.light_cord {
+  fill: none;
+  stroke: #174700;
+}
+
+.light_fixture {
+  fill: #134413;
+}
+
+.red_bulb,
+.green_bulb,
+.blue_bulb,
+.white_bulb,
+.gold_bulb {
+  stroke: #6D6D6D;
+  stroke-miterlimit: 10;
+}
+
+.red_bulb {
+  fill: #CA2128;
+}
+
+.green_bulb {
+  fill: #2D754A;
+}
+
+.blue_bulb {
+  fill: #2C3EA8;
+}
+
+.white_bulb {
+  fill: #F5EED7;
+}
+
+.gold_bulb {
+  fill: #ffcc5e;
+}
+
+.bulb {
+  animation: glow 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    fill-opacity: 0.25;
+  }
+
+  100% {
+    fill-opacity: 1;
+  }
+}
+
+.blink-1 {
+  animation-delay: 0.6s;
+}
+
+.blink-2,
+.blink-3,
+.blink-7 {
+  animation-delay: 2s;
+}
+
+.blink-4 {
+  animation-delay: 6s;
+}
+
+.blink-5 {
+  animation-delay: 2.5s;
+}
+
+.blink-6 {
+  animation-delay: 0.3s;
+}
+
+.blink-8 {
+  animation-delay: 0.2s;
+}
+
+.blink-9 {
+  animation-delay: 0.95s;
+}
+
+.blink-10 {
+  animation-delay: 1.2s;
 }
