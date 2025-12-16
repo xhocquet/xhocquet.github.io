@@ -3,19 +3,22 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>reflections | xhocquet.info</title>
+<title>Multiplayer game implementation with GD-Sync | xhocquet.info</title>
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="reflections" />
+<meta property="og:title" content="Multiplayer game implementation with GD-Sync" />
 <meta name="author" content="Xavier Hocquet" />
 <meta property="og:locale" content="en_US" />
-<link rel="canonical" href="https://xhocquet.github.io/reflections.html" />
-<meta property="og:url" content="https://xhocquet.github.io/reflections.html" />
+<meta name="description" content="I recently completed a little side-quest to add multiplayer support to an existing game!" />
+<meta property="og:description" content="I recently completed a little side-quest to add multiplayer support to an existing game!" />
+<link rel="canonical" href="https://xhocquet.github.io/reflections/2025-12-15-reflections-gd-sync-implementation.html" />
+<meta property="og:url" content="https://xhocquet.github.io/reflections/2025-12-15-reflections-gd-sync-implementation.html" />
 <meta property="og:site_name" content="xhocquet.info" />
-<meta property="og:type" content="website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-12-15T20:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="reflections" />
+<meta property="twitter:title" content="Multiplayer game implementation with GD-Sync" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Xavier Hocquet"},"headline":"reflections","url":"https://xhocquet.github.io/reflections.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Xavier Hocquet"},"dateModified":"2025-12-15T20:00:00-05:00","datePublished":"2025-12-15T20:00:00-05:00","description":"I recently completed a little side-quest to add multiplayer support to an existing game!","headline":"Multiplayer game implementation with GD-Sync","mainEntityOfPage":{"@type":"WebPage","@id":"https://xhocquet.github.io/reflections/2025-12-15-reflections-gd-sync-implementation.html"},"url":"https://xhocquet.github.io/reflections/2025-12-15-reflections-gd-sync-implementation.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link id="main-stylesheet" rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://xhocquet.github.io/feed.xml" title="xhocquet.info" />
 </head>
@@ -284,47 +287,109 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><h1 class="page-heading">reflections</h1>
-<h3 id="multiplayer-game-implementation-with-gd-sync"><a href="/reflections/2025-12-15-reflections-gd-sync-implementation">Multiplayer game implementation with GD-Sync</a></h3>
+        <div class="home"><h1 class="page-heading">Multiplayer game implementation with GD-Sync</h1><p>I recently completed a little side-quest to add multiplayer support to an existing game!</p>
 
-<h3 id="glue-prince-wrap-up"><a href="/reflections/glue-prince-wrap-up">Glue Prince: Wrap-up</a></h3>
+<p>An acquaintance from a game development Discord server was looking for help adding multiplayer support to an existing hobby project. The game is a ‘rocket jumper’ game: think of the <a href="https://wiki.teamfortress.com/wiki/Soldier">Soldier from TF2</a>. Using this mechanic of launching yourself up with your own projectiles, you jump from platform to platform and attempt to reach the top (video below).</p>
 
-<h3 id="software-as-gardening"><a href="/reflections/software-as-gardening">Software as Gardening</a></h3>
+<p>The game is intuitive and it works well in practice. Now imagine if you add in some friends and the fun of blasting them out of your way - way more fun.</p>
 
-<h3 id="blog-rewrite"><a href="/reflections/2025-09-jekyll-rewrite">Blog Rewrite!</a></h3>
+<p>I was interested in this project because:</p>
+<ul>
+  <li>Multiplayer for games is hard, so finding an entrypoint is valuable</li>
+  <li>Godot is a great entry point for nearly anything - the learning curve is smooth as butter</li>
+  <li>Personally, even having a game I <em>want</em> to add multiplayer to is a challenge</li>
+  <li>Small + simple software makes great testbeds for learning and experimentation</li>
+</ul>
 
-<h3 id="music-organization-utility-playlists"><a href="/reflections/music-organization-utility-playlists">Music Organization: Utility Playlists</a></h3>
+<p>So I offered my services and started getting to work. Thankfully the project was a modern Godot project, so I didn’t have to worry about <a href="https://docs.godotengine.org/en/stable/tutorials/migrating/upgrading_to_godot_4.html">Godot 3 support</a>.</p>
 
-<h3 id="git-and-uis"><a href="/reflections/git-and-uis">Git and Uis</a></h3>
+<h2 id="getting-started">Getting Started</h2>
 
-<h3 id="the-unfortunate-dichotomy-of-security-and-accessibility"><a href="/reflections/security-and-accessibility">The Unfortunate Dichotomy of Security and Accessibility</a></h3>
+<p>My standard approach for solving new problems is to look at the landscape: in this case Godot multiplayer support. Good news: <a href="https://docs.godotengine.org/en/stable/classes/class_multiplayersynchronizer.html">it exists</a>. Unfortunately, like most game tooling you’re given the components and ther is plenty of work left to put it together. Building a server with all of the syncing logic myself seemed like too much scope for a first project, so:</p>
 
-<h3 id="bias-balancer"><a href="/reflections/bias-balancer">Bias Balancer</a></h3>
+<p>I went looking for plugins/libraries and landed on <a href="https://www.gd-sync.com/">GD-Sync</a>, which is what this post will be about. GD-Sync provides a Godot addon for abstracting the common use-cases of mutlipayer Godot games, providing their own servers as a service on top of that. For my purposes, I was particularly interested in their free tier of up to 4 players, perfect for testing with friends.</p>
 
-<h3 id="artist-of-the-month---112020---tobi-lou"><a href="/reflections/aotm-11-2020">Artist of the Month - 11.2020 - Tobi Lou</a></h3>
+<p>First things first, some setup. Using their site you generate an API key, download the plugin, and get that setup. There wasn’t much to this step.</p>
 
-<h3 id="music-tracking-update"><a href="/reflections/music-tracking">Music Tracking (update!)</a></h3>
+<p><img src="/reflections/gd-sync/gdsync-setup.png" alt="GD-Sync setup" /></p>
 
-<h3 id="media-tracking"><a href="/reflections/media-tracking">Media Tracking</a></h3>
+<h2 id="ownership--authority">Ownership &amp; Authority</h2>
 
-<h3 id="an-ode-to-gmails-attachment-reminder"><a href="/reflections/gmail-attachment-reminder">An Ode to Gmail’s Attachment Reminder</a></h3>
+<p>Once of the first important concepts I absorbed was object ownership and how it relates to server authority. I kept getting turned around within the multiple editor windows, but some key concepts kept me grounded:</p>
 
-<h3 id="civ6"><a href="/reflections/civ6">Civ6</a></h3>
+<p><strong>Objects have one and only one owner</strong></p>
 
-<h3 id="protecting-my-electronic-life-part-2"><a href="/reflections/security-part-2">Protecting my Electronic Life: Part 2</a></h3>
+<p>One of the first things that comes up is who owns what object. Ownership is important because you want to allow game clients to do processing for their player input so that you reduce latency and keep the game snappy. Ownership of things like players belong to the players, while a LOT of other thing should be left to the server authority.</p>
 
-<h3 id="protecting-my-electronic-life-part-1"><a href="/reflections/security-part-1">Protecting my Electronic Life: Part 1</a></h3>
+<p>In GD-Sync, setting ownership is done via:</p>
 
-<h3 id="2018-javascript-hack-o-thon-project-1"><a href="/reflections/meteor-angular-day-one">2018 Javascript Hack-o-thon Project 1</a></h3>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">GDSync</span><span class="p">.</span><span class="nf">set_gdsync_owner</span><span class="p">(</span><span class="n">game_object</span><span class="p">,</span> <span class="n">player_id</span><span class="p">)</span>
+</code></pre></div></div>
 
-<h3 id="optimizing-code-style-for-developer-happiness"><a href="/reflections/optimizing-code-style-for-dev-happiness">Optimizing Code Style for Developer Happiness</a></h3>
+<p>IDs are provided when connecting to GD-Sync servers, and are useful for managing the state of who is connected to a game server, for example. In my project, assigning ownership was done right after the player connected to the game server.</p>
 
-<h3 id="aws-lambda"><a href="/reflections/aws-lambda">AWS Lambda</a></h3>
+<p><strong>Your game will have one and only one <em>authority server</em></strong></p>
 
-<h3 id="megalo-box"><a href="/reflections/megalo_box">Megalo Box</a></h3>
+<p>An authority server is the primary instance of the game which gets the role of abitrating the game events and updating all the players on the results.</p>
 
-<h3 id="belgian-mayo-seriously"><a href="/reflections/belgian-mayo">Belgian Mayo: Seriously</a></h3>
+<p>This is important because while players can report their own state without too much concern, we can’t let them manage collisions, scoring, and other more sensitive operations. It’s only a matter of time before a savvy technologist figures out a way to trick their local game into giving them an unfair advantage!</p>
 
+<p>I’ll talk about the solution to this later, but first the server setup.</p>
+
+<p>GD-Sync abstracts a lot of this away which is lovely. Local multiplayer (where 2 players are connecting from the same machine) and full server-based multiplayer implemented in the game itself the same way, and they initialization of the library determines which mode you’re in:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">GDSync</span><span class="p">.</span><span class="nf">start_local_multiplayer</span><span class="p">()</span>
+<span class="c1">// or</span>
+<span class="n">GDSync</span><span class="p">.</span><span class="nf">start_multiplayer</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>My implementation was limited to local multiplayer, meaning no external game instances existed besides the players themselves. This means the authority belongs to one of the connected players, typically the host of the lobby.</p>
+
+<p>To start, I kept it simple and create a static lobby when the first player connects, and then had subsequent players connect to the same lobby. The first player is expected to be the authority and stick around for the duration of the game.</p>
+
+<h2 id="ownership-for-rockets-explosions-etc">Ownership for rockets, explosions, etc.</h2>
+
+<p>Earlier, I mentioned how users can’t be allowed to tell the server whether they hit Player B or not. Any self-respecting hacker would immediately start spamming “HIT” commands to the server.</p>
+
+<p>Instead, players are allowed to tell the server certain events like “Shoot bullet in direction Vector(x,y,z)”. These instructions are optionally broadcast to all players in some engines (unsure about GD-Sync’s implementation), allowing everyone to render at least the first few frames of a rocket shooting out of the player’s RPG.</p>
+
+<p>A sample command might look like:</p>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">var</span> <span class="n">missile</span> <span class="p">:=</span> <span class="n">rocket_instantiator</span><span class="p">.</span><span class="nf">instantiate_node</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>The authority (host) is the only one truly processing the rocket’s movement and physics in order to report that info back to the players. If the host detects a collision between a rocket and any of the players, it calculates the impact force and sends <em>that</em> information to the affected player. The affected player processes that input and flies around, syncing their position to all players.</p>
+
+<p>It truly is an amazing dance!</p>
+
+<h2 id="hooking-into-gd-sync-components">Hooking into GD-Sync components</h2>
+
+<p>Once you lock in a mental model of object ownership and authorities, you move on the easy part! Hooking up your components and their attributes to various components and code needed by other players to sync data across the intertubes.</p>
+
+<p>In my implementation, I used two core components:</p>
+
+<p><strong>PropertySynchronizer</strong></p>
+
+<p><a href="https://www.gd-sync.com/docs/custom-node-types#PropertySynchronizer"><code class="language-plaintext highlighter-rouge">PropertySynchronizer</code></a> seems to be a wrapper around the aforementioned <a href="https://docs.godotengine.org/en/stable/classes/class_multiplayersynchronizer.html"><code class="language-plaintext highlighter-rouge">MultiplayerSynchronizer</code></a> that Godot provides.</p>
+
+<p>Its purpose is to take one object (and optionally its sub-objects) and keep attributes in sync. These can be any type supported by Godot, as long as they’re on your object.</p>
+
+<p>In my solution, these were applied to each player instance as well as each <em>spawned</em> rocket. Players that shoot the rockets were not responsible for creating these.</p>
+
+<p><img src="/reflections/gd-sync/gdsync-components.png" alt="PropertySynchronizer and NodeInstantiator" /></p>
+
+<p><strong>NodeInstantiator</strong></p>
+
+<p>The other node you see in the screenshot above is the <a href="https://www.gd-sync.com/docs/custom-node-types#NodeInstantiator"><code class="language-plaintext highlighter-rouge">NodeInstantiator</code></a>, which serves as a useful abstraction over game objects that spawn (many) other game objects, like a gun shooting bullets.</p>
+
+<p>The specific challenge here is that if you shoot 60 bullets, you don’t necessarily want to have to send 60 events, and there’s a lot of optimizations available to interpolate that information and make it more efficient in a low-latency environment.</p>
+
+<p>So this node handles that abstraction, and is configured with the object you want to spawn. GD-Sync’s implementation spreads that information around, allowing other players to create the rocket and render it based on data from the player + authority.</p>
+
+<h2 id="the-big-reveal">The big reveal</h2>
+
+<p>This was a great little learning experience, and the end result is exactly what we were going for!</p>
+
+<iframe width="100%" height="380px" src="/reflections/gd-sync/demo.webm" frameborder="0" allowfullscreen=""></iframe>
 
 
 
