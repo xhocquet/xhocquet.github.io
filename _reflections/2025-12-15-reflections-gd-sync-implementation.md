@@ -6,7 +6,7 @@ tags: ['games', 'tech']
 
 I recently completed a little side-quest to add multiplayer support to an existing game!
 
-An acquaintance from a game development Discord server was looking for help adding multiplayer support to an existing hobby project. The game is a 'rocket jumper' game: think of the [Soldier from TF2](https://wiki.teamfortress.com/wiki/Soldier). Using this mechanic of launching yourself up with your own projectiles, you jump from platform to platform and attempt to reach the top (video below).
+An acquaintance from a game development Discord server was looking for help adding multiplayer support to an existing hobby project. The game is a 'rocket jumper' game: think of the [Soldier from TF2](https://wiki.teamfortress.com/wiki/Soldier). Using this mechanic of launching yourself up with your own projectiles, you jump from platform to platform and attempt to reach the top (video at the bottom).
 
 The game is intuitive and it works well in practice. Now imagine if you add in some friends and the fun of blasting them out of your way - way more fun.
 
@@ -21,9 +21,9 @@ So I offered my services and started getting to work. Thankfully the project was
 
 ## Getting Started
 
-My standard approach for solving new problems is to look at the landscape: in this case Godot multiplayer support. Good news: [it exists](https://docs.godotengine.org/en/stable/classes/class_multiplayersynchronizer.html). Unfortunately, like most game tooling you're given the components and ther is plenty of work left to put it together. Building a server with all of the syncing logic myself seemed like too much scope for a first project, so:
+My standard approach for solving new problems is to look at the landscape: in this case Godot multiplayer support. Good news: [it exists](https://docs.godotengine.org/en/stable/classes/class_multiplayersynchronizer.html). Unfortunately, like most game tooling you're given the components and there is plenty of work left to put it together. Building a server with all of the syncing logic myself seemed like too much scope for a first project, so:
 
-I went looking for plugins/libraries and landed on [GD-Sync](https://www.gd-sync.com/), which is what this post will be about. GD-Sync provides a Godot addon for abstracting the common use-cases of mutlipayer Godot games, providing their own servers as a service on top of that. For my purposes, I was particularly interested in their free tier of up to 4 players, perfect for testing with friends.
+I went looking for plugins/libraries and landed on [GD-Sync](https://www.gd-sync.com/), which is what this post will be about. GD-Sync provides a Godot addon for abstracting the common use-cases of multiplayer Godot games, providing their own servers as a service on top of that. For my purposes, I was particularly interested in their free tier of up to 4 players, perfect for testing with friends.
 
 First things first, some setup. Using their site you generate an API key, download the plugin, and get that setup. There wasn't much to this step.
 
@@ -31,7 +31,7 @@ First things first, some setup. Using their site you generate an API key, downlo
 
 ## Ownership & Authority
 
-Once of the first important concepts I absorbed was object ownership and how it relates to server authority. I kept getting turned around within the multiple editor windows, but some key concepts kept me grounded:
+One of the first important concepts I absorbed was object ownership and how it relates to server authority. I kept getting turned around within the multiple editor windows, but some key concepts kept me grounded:
 
 **Objects have one and only one owner**
 
@@ -47,13 +47,13 @@ IDs are provided when connecting to GD-Sync servers, and are useful for managing
 
 **Your game will have one and only one _authority server_**
 
-An authority server is the primary instance of the game which gets the role of abitrating the game events and updating all the players on the results.
+An authority server is the primary instance of the game which gets the role of arbitrating the game events and updating all the players on the results.
 
 This is important because while players can report their own state without too much concern, we can't let them manage collisions, scoring, and other more sensitive operations. It's only a matter of time before a savvy technologist figures out a way to trick their local game into giving them an unfair advantage!
 
 I'll talk about the solution to this later, but first the server setup.
 
-GD-Sync abstracts a lot of this away which is lovely. Local multiplayer (where 2 players are connecting from the same machine) and full server-based multiplayer implemented in the game itself the same way, and they initialization of the library determines which mode you're in:
+GD-Sync abstracts a lot of this away which is lovely. Local multiplayer (where 2 players are connecting from the same machine) and full server-based multiplayer implemented in the game itself the same way, and the initialization of the library determines which mode you're in:
 
 ```csharp
 GDSync.start_local_multiplayer()
@@ -82,7 +82,7 @@ It truly is an amazing dance!
 
 ## Hooking into GD-Sync components
 
-Once you lock in a mental model of object ownership and authorities, you move on the easy part! Hooking up your components and their attributes to various components and code needed by other players to sync data across the intertubes.
+Once you lock in a mental model of object ownership and authorities, you move on to the easy part! Hooking up your components and their attributes to various components and code needed by other players to sync data across the intertubes.
 
 In my implementation, I used two core components:
 
