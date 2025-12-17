@@ -4,7 +4,7 @@ title: code
 
 ## Ruby Projects
 
-- [Boxr - Box Ruby Client](https://github.com/cburnette/boxr)
+- Maintainer of [Boxr - Box Ruby Client](https://github.com/cburnette/boxr)
 - [GroceryGuru (Server) - Grocery Spending Tracking](https://github.com/xhocquet/groceryguru-server)
 - [DIYRSS - Turn any website into a trackable content feed](https://github.com/xhocquet/diyrss)
 - [Flutter - Anime tracking data visualizer](https://github.com/xhocquet/Flutter)
@@ -13,7 +13,9 @@ title: code
 
 - [Chiptasia - Rails/Godot](https://chiptasia.com)
 - [Glue Prince - Gamemaker Studio 2](https://github.com/xhocquet/glue-prince)
-  - Blog post: [Glue Prince](https://xhocquet.github.io/reflections/glue-prince-wrap-up/)
+  - Blog post: [Glue Prince](/reflections/glue-prince-wrap-up/)
+- [GD-Sync Implementation](/reflections/2025-12-15-reflections-gd-sync-implementation)
+- [Godot Waterways Library Upgrade](https://github.com/Arnklit/Waterways/pull/29#issuecomment-3663252192)
 
 ## Go Projects
 
