@@ -16,6 +16,7 @@ title: code
   - Blog post: [Glue Prince](/reflections/glue-prince-wrap-up/)
 - [GD-Sync Implementation](/reflections/2025-12-15-reflections-gd-sync-implementation)
 - [Godot Waterways Library Upgrade](https://github.com/Arnklit/Waterways/pull/29#issuecomment-3663252192)
+- [Godot 2D Platformer Enemy AI Demo](/reflections/2026-02-01-pathfinding) - [GitHub](https://github.com/xhocquet/2d-platformer-pathfinding-demo)
 
 ## Go Projects
 
