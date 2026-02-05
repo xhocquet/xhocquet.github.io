@@ -1,7 +1,7 @@
 ---
 title: Software as Gardening
 date: 2025-10-01 23:25 -0400
-tags: ["tech"]
+tags: ["tech", "pinned"]
 ---
 
 Lately some evenings I've been considering why I code, for fun, on the [boxr gem](https://github.com/cburnette/boxr).
