@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Pathfinding: An Essential Tool | xhocquet.info</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Pathfinding: An Essential Tool" />
+<meta name="author" content="Xavier Hocquet" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Finding a path" />
+<meta property="og:description" content="Finding a path" />
+<link rel="canonical" href="https://xhocquet.github.io/reflections/2026-02-01-pathfinding.html" />
+<meta property="og:url" content="https://xhocquet.github.io/reflections/2026-02-01-pathfinding.html" />
+<meta property="og:site_name" content="xhocquet.info" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2026-02-01T18:37:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Pathfinding: An Essential Tool" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Xavier Hocquet"},"dateModified":"2026-02-01T18:37:00-05:00","datePublished":"2026-02-01T18:37:00-05:00","description":"Finding a path","headline":"Pathfinding: An Essential Tool","mainEntityOfPage":{"@type":"WebPage","@id":"https://xhocquet.github.io/reflections/2026-02-01-pathfinding.html"},"url":"https://xhocquet.github.io/reflections/2026-02-01-pathfinding.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link id="main-stylesheet" rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://xhocquet.github.io/feed.xml" title="xhocquet.info" />
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper">
+    <a class="site-title" rel="author" href="/">xhocquet.info</a>
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon"></span>
+      </label>
+
+      <div class="nav-items">
+  <a class="nav-item" href="/code">code</a>
+  <a class="nav-item" href="/recipes">recipes</a>
+  <a class="nav-item" href="/reflections">reflections</a>
+  <a class="nav-item" href="/reviews">reviews</a>
+  <a class="nav-item" href="/e-pets">e-pets</a>
+  <!-- <a class="nav-item" href="/arcade">arcade</a> -->
+</div>
+
+    </nav>
+  </div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Pathfinding: An Essential Tool</h1>
+    <div class="post-meta">
+      <time class="dt-published" datetime="2026-02-01T18:37:00-05:00" itemprop="datePublished">
+        Feb 1, 2026
+      </time>
+    </div>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="finding-a-path">Finding a path</h2>
+
+<p>Game dev is a unique edge case of software development: the simplest games are made up of many interconnected systems of varying domains. Scratch the surface of any one and you’ll find decades of published science, oftentimes having nothing to do with video games!</p>
+
+<p>Recently, I witnessed a Discord argument about how to solve the following:</p>
+
+<blockquote>
+  <p>Given a 2D platformer and a player that can walk and jump, how can I build an enemy AI that intuitively follows the player to any point on the map?</p>
+</blockquote>
+
+<p>The OP was deep into their solution: tracing rays from the enemy to the player, calculating intersections, and deciding on movement based on the immediate surroundings.</p>
+
+<p>My nose crinkled and I smelled something off! It was trivial to come up with an example where non-recursive, immediate neighbor-type pathing solutions would fail:</p>
+
+<p style="text-align: center;"><img src="/reflections/pathfinding/naive-pathing.png" alt="Naive pathing" /></p>
+
+<p>I wanted to dig in and apply my knowledge of pathfinding to this problem.</p>
+
+<h2 id="pathfinding-for-dummies">Pathfinding for Dummies</h2>
+
+<p>Pathfinding is finding the path between two nodes. While it may feel intuitive at smaller scales like in the diagram below, at scale you need to apply algorithms and data structures to help you out. Luckily, pathfinding is well-studied and has decades of prior art to absorb.</p>
+
+<p>The important takeaway to remember is that pathfinding <strong>is the same as boring old graph/tree search and traversal</strong>. Dijkstra, A-star, and their cousins are all based on the mighty <a href="https://en.wikipedia.org/wiki/Breadth-first_search">BFS</a>.</p>
+
+<p>Note: I will be using the terms ‘graph’ and ‘directed tree’ interchangeably here for brevity.</p>
+
+<ul>
+  <li><strong>The graph/tree</strong>: all the nodes and edges.</li>
+  <li><strong>A node</strong>: each circle above. A state, a position, a point in time, etc.</li>
+  <li><strong>An edge</strong>: a line between two nodes. It can have a direction, or not.</li>
+</ul>
+
+<p style="text-align: center;"><img src="/reflections/pathfinding/Animated_BFS.gif" alt="Animated BFS" /></p>
+
+<p>Above, what you see is the algorithm iterating through the graph, one layer at a time. While simple, this is the foundation of all pathfinding algorithms (and many other types). Applied, this takes the shape of the aforementioned <a href="https://en.wikipedia.org/wiki/A*_search_algorithm">A-star algorithm</a>:</p>
+
+<p style="text-align: center;"><img src="/reflections/pathfinding/astar-pathing.png" alt="A-star Pathing" /></p>
+
+<p>Some traits that make A-star a good fit for pathfinding:</p>
+
+<ol>
+  <li>It’s a greedy algorithm - it chooses the shortest path</li>
+  <li>It has a heuristic to speed up the search (distance to the goal)</li>
+  <li>Edges have weights, so you can prioritize paths (e.g. avoid the lava!)</li>
+  <li>Extensible. Much like all algorithms, you can add additional variables to the equation to tailor the algorithm to your needs.</li>
+</ol>
+
+<h2 id="the-hypothesis">The Hypothesis</h2>
+
+<p>Given this understanding, my hypotheses are:</p>
+
+<p><strong>1. A 2D platformer’s map can be represented as a graph.</strong></p>
+
+<p>Nodes would be ‘zones’ or ‘waypoints’. Edges would contain information about travelling between points.</p>
+
+<p><strong>2. An enemy AI can use a graph as a basis for effectively following a player.</strong></p>
+
+<p>Once player positions are associated with a graph, finding paths between two points and applying them as movement should be manageable. Conveniently, deltas between nodes help inform AI decision-making for jumping vs. falling.</p>
+
+<p><strong>3. There is no cost barrier to calculating paths at runtime.</strong></p>
+
+<p>Based on intuition and prior experience, this is my belief given &lt;100 platforms and 2 (possibly more) characters. I would like to revisit this question at scale at a later time.</p>
+
+<h2 id="applying-fundamentals">Applying Fundamentals</h2>
+
+<p>To prove this out, my first goal was setting up my proof of concept. I reached for my trusty <a href="https://godotengine.org/">Godot</a> and scaffolded a project: some platforms, a player that can move and jump, and an enemy that wants to reach the player.</p>
+
+<p>The first version had a simple left/right movement while I put the graph into place:</p>
+
+<p style="text-align: center;"><img src="/reflections/pathfinding/enemychase.gif" alt="Enemy Chase" /></p>
+
+<p><strong>Graph Generation</strong></p>
+
+<p>In my opinion, this was the most labor-intensive part of the project and an area that I’m sure you could dedicate <em>tons</em> of time to. Thankfully my proof of concept was in 2D space and only had rectangular platforms, which made things much simpler to start out.</p>
+
+<p>The pseudocode:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">platforms</span> <span class="o">=</span> <span class="nf">gather_scene_data</span><span class="p">()</span>
+<span class="nf">create_platform_left_right_nodes</span><span class="p">()</span>
+<span class="nf">create_jump_nodes</span><span class="p">()</span> <span class="c1"># for L/R node, project downward to create jump nodes with offsets
+</span><span class="nf">sanitize_nodes</span><span class="p">()</span> <span class="c1"># de-dupe, merge nodes that overlap
+</span><span class="nf">create_edges</span><span class="p">()</span> <span class="c1"># a) build a set of edges for every platform's sections. b) build jump/fall edges
+</span></code></pre></div></div>
+
+<p>Soon, a semblance of a graph began to appear:</p>
+
+<p style="text-align: center;"><img src="/reflections/pathfinding/collapse-points.gif" alt="First Graph" /></p>
+
+<p>There’s an interesting balancing act at play where the graph generation is your chance to imbue your graph with information that will help your AI later. As I found myself writing overly complex logic in the AI controller, I would instead revisit my create/sanitize methods and make sure my graph was accurate and had the necessary information about the possibility of the jumps/falls.</p>
+
+<p>I got mildly carried away with Godot debug tooling so that I could tune the behavior, but the results were worth it:</p>
+
+<p style="text-align: center;"><img src="/reflections/pathfinding/final-editor.gif" alt="Final Editor" /></p>
+
+<p><strong>Pathfinding</strong></p>
+
+<p>One of my joys in life is that when you’re following fundamentals, things that should work <em>just work</em>. A* is not an algorithm anyone needs to write from scratch anymore, so once I applied it to my graph and added some helpers for the enemy movement inputs, we had liftoff!</p>
+
+<h2 id="results">Results</h2>
+
+<p style="text-align: center;"><img src="/reflections/pathfinding/follow1.gif" alt="Follow 1" /></p>
+
+<p>What we’re looking at is A* determining <em>where</em> to go, and then about 250 lines (including line breaks and boilerplate) for enemy AI! You may notice some fancy lead-in jumps which account for 100 lines on their own. Not being able to cross the platforms from the bottom made me need to add a bit of fancy behavior to the jumping to accommodate.</p>
+
+<p>In the below example you see the AI fail to jump to the top platform due to an edge case. Luckily, he finds his way!</p>
+
+<p style="text-align: center;"><img src="/reflections/pathfinding/follow2.gif" alt="Follow 2" /></p>
+
+<p>I think this is a clear victory for our good friend the directed graph! 🎉</p>
+
+<h2 id="pathing-beyond-movement">Pathing beyond movement</h2>
+
+<p>When learning fundamentals, I think a flexible understanding helps apply theory to real life. I mentioned earlier on that pathfinding is graphs with a veneer of geometry and movement. Here are some other examples to flex the mind:</p>
+
+<p><strong>Logic Puzzles</strong></p>
+
+<p>Imagine building a Rubik’s Cube solver. A naive approach would start inspecting a start state and building if statements. This is what the code ends up like:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">if </span><span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="n">A</span><span class="p">):</span>
+  <span class="nf">do_a</span><span class="p">()</span>
+<span class="nf">if </span><span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="n">B</span><span class="p">):</span>
+  <span class="nf">do_b</span><span class="p">()</span>
+<span class="nf">if </span><span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="n">C</span><span class="p">):</span>
+  <span class="nf">do_c</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Challenges:</p>
+
+<ul>
+  <li>Adding a new state anywhere but the end of this becomes a mess. Before you know it you end up with states 4.0, 4.1, 4.2 (hey coworkers!).</li>
+  <li>“Dropping in” to code like this is easier said than done. This code is not really reusable. In reality, <code class="language-plaintext highlighter-rouge">do_a()</code> modified data that you will not be able to reproduce perfectly from another source. If you do manage, auditing and logging starts to overlap and consume headspace that you don’t have as you drown in 4 levels of conditionals!</li>
+</ul>
+
+<p>Instead, we apply graphs and solve this the same way real Cubers (my term) do: finding the shortest path between the current state and the winning state.</p>
+
+<p><strong>Dialogue Trees</strong></p>
+
+<p>Another interesting application is dialogue trees in games. When moving away from linear stories, it can become complex to manage player state within a complex dialogue. By this I mean dialogue where:</p>
+
+<ul>
+  <li>Certain choices send the player back to a menu</li>
+  <li>Multiple sub-dialogues</li>
+  <li>One or more start/end states</li>
+</ul>
+
+<p>In these cases, the game isn’t necessarily using pathing at runtime to determine much (although it can - the negative/positive sentiment of a choice could be a property of a graph edge). What it is useful for is figuring out if your dialogue tree is complete, and if your player can get stuck anywhere.</p>
+
+<p>Some additional reading I found interesting here:</p>
+
+<ul>
+  <li><a href="https://philipphagenlocher.de/post/video-game-dialogues-and-graph-theory/">https://philipphagenlocher.de/post/video-game-dialogues-and-graph-theory/</a></li>
+  <li><a href="https://medium.com/@danielpontillo/dialogue-systems-using-git-graphs-in-space-part-1-4d651bcfb52">https://medium.com/@danielpontillo/dialogue-systems-using-git-graphs-in-space-part-1-4d651bcfb52</a> [<a href="https://web.archive.org/web/20211006154446/https://medium.com/@danielpontillo/dialogue-systems-using-git-graphs-in-space-part-1-4d651bcfb52">archive</a>]</li>
+</ul>
+
+<h2 id="thanks-️">Thanks ✌️</h2>
+
+<p>I hope you found this topic as interesting as I do! Drop me a line if you want to chat more about it.</p>
+
+<p>Project source: <a href="https://github.com/xhocquet/2d-platformer-pathfinding-demo">https://github.com/xhocquet/2d-platformer-pathfinding-demo</a></p>
+
+  </div>
+
+  <a class="u-url" href="/reflections/2026-02-01-pathfinding.html" hidden></a>
+</article>
+
+      </div>
+    </main><link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css">
+
+<footer class="site-footer h-card">
+  <data class="u-url" value="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <ul class="contact-list">
+          
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p></p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+    <a rel="me" href="https://github.com/xhocquet" target="_blank" title="GitHub">
+      <span class="grey fa-brands fa-github-alt fa-lg"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://linkedin.com/in/xhocquet" target="_blank" title="LinkedIn">
+      <span class="grey fa-brands fa-linkedin-in fa-lg"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://docs.google.com/document/d/1NkF057FcXJHJ0WFpiFlqJ3t80GODgBVdQNpsUFtZEBs/preview" target="_blank" title="CV">
+      <span class="grey fa-brands fa-readme fa-lg"></span>
+    </a>
+  </li><li>
+    <a rel="me" href="https://news.ycombinator.com/user?id=meesles" target="_blank" title="HackerNews">
+      <span class="grey fa-brands fa-hacker-news fa-lg"></span>
+    </a>
+  </li>
+  <li>
+    <a href="https://xhocquet.github.io/feed.xml" target="_blank" title="Subscribe to syndication feed">
+      <svg class="svg-icon grey" viewbox="0 0 16 16">
+        <path d="M12.8 16C12.8 8.978 7.022 3.2 0 3.2V0c8.777 0 16 7.223 16 16h-3.2zM2.194
+          11.61c1.21 0 2.195.985 2.195 2.196 0 1.21-.99 2.194-2.2 2.194C.98 16 0 15.017 0
+          13.806c0-1.21.983-2.195 2.194-2.195zM10.606
+          16h-3.11c0-4.113-3.383-7.497-7.496-7.497v-3.11c5.818 0 10.606 4.79 10.606 10.607z"
+        />
+      </svg>
+    </a>
+  </li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+
+</body>
+
+</html>
