@@ -26,6 +26,8 @@ collections:
     sort_by: title
   reflections:
     output: true
+  blogroll:
+    output: false
   reviews:
     output: true
 
