@@ -11,6 +11,10 @@ title: code
 
 ## Game Projects
 
+(recent to oldest)
+
+- [SandGit - s&box Editor Plugin](https://github.com/xhocquet/SandGit)
+  - s&box Link: [SandGit](https://sbox.game/meesles/sandgit)
 - [Chiptasia - Rails/Godot](https://chiptasia.com)
 - [Glue Prince - Gamemaker Studio 2](https://github.com/xhocquet/glue-prince)
   - Blog post: [Glue Prince](/reflections/glue-prince-wrap-up/)
