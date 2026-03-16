@@ -89,11 +89,13 @@ body {
   font-weight: 600;
   font-size: 0.875rem;
   text-decoration: none;
-  transition: background 0.15s, transform 0.1s;
+  transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
+  box-shadow: 0 2px 8px rgba(71, 151, 97, 0.3);
 }
 .btn-nav:hover {
   background: var(--green-dark);
   transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(71, 151, 97, 0.4);
 }
 /* ─── Shared section helpers ──────────────────────────── */
 .section {
@@ -639,8 +641,8 @@ h2 em {
 }
 /* ─── CTA band ────────────────────────────────────────── */
 .cta-band {
-  background: #0e0c0d;
-  padding: 80px 24px;
+  background: var(--surface);
+  padding: 64px 24px;
 }
 .cta-inner {
   max-width: 1000px;
@@ -669,7 +671,7 @@ h2 em {
 .cta-note {
   margin-top: 20px;
   font-size: 0.8125rem;
-  color: #6b7280;
+  color: var(--ink-light);
 }
 /* ─── Footer ──────────────────────────────────────────── */
 .site-footer {
