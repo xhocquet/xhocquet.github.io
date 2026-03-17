@@ -1,0 +1,179 @@
+<section class="section contact" id="contact">
+  <div class="section-inner">
+    <h2 class="section-heading">Get in Touch.</h2>
+    <p class="contact-sub">
+      No commitment. I'll reply within one business day.
+    </p>
+
+    <div class="contact-wrap">
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/mbdzznjl"
+        method="POST"
+        id="contact-form"
+      >
+        <div class="form-row">
+          <div class="form-field">
+            <label for="contact-name"
+              >Your name <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="contact-name"
+              name="name"
+              placeholder="Maria T."
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label
+            >What can I help you with? <span class="required">*</span></label
+          >
+          <div class="plan-options">
+            <label class="plan-option">
+              <input type="radio" name="plan" value="Starter Plan" required />
+              <span class="plan-label">
+                <strong>Starter Plan</strong>
+                <small>$499 + $25/mo</small>
+              </span>
+            </label>
+            <label class="plan-option">
+              <input type="radio" name="plan" value="Pro Plan" />
+              <span class="plan-label">
+                <strong>Pro Plan</strong>
+                <small>$999 + $50/mo</small>
+              </span>
+            </label>
+            <label class="plan-option">
+              <input type="radio" name="plan" value="Custom" />
+              <span class="plan-label">
+                <strong>Custom</strong>
+                <small>Let's figure it out</small>
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-row form-row--two">
+          <div class="form-field">
+            <label for="contact-email"
+              >Email <span class="required">*</span></label
+            >
+            <input
+              type="email"
+              id="contact-email"
+              name="email"
+              placeholder="you@example.com"
+              required
+            />
+          </div>
+          <div class="form-field">
+            <label for="contact-phone"
+              >Phone <span class="form-optional">(optional)</span></label
+            >
+            <input
+              type="tel"
+              id="contact-phone"
+              name="phone"
+              placeholder="555 555 5555"
+              inputmode="numeric"
+              pattern="[0-9]*"
+            />
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="contact-message"
+            >Anything you'd like to add?
+            <span class="form-optional">(optional)</span></label
+          >
+          <textarea id="contact-message" name="message" rows="4"></textarea>
+        </div>
+
+        <div class="form-row form-row--two">
+          <div class="form-field">
+            <label for="contact-website"
+              >Existing website
+              <span class="form-optional">(optional)</span></label
+            >
+            <input
+              type="url"
+              id="contact-website"
+              name="website"
+              placeholder="https://yourbusiness.com"
+            />
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary form-submit">
+            Send Message →
+          </button>
+        </div>
+      </form>
+
+      <div class="contact-success" id="contact-success" hidden>
+        <div class="success-icon">✓</div>
+        <h3>Message sent!</h3>
+        <p>Thanks for reaching out. I'll reply within one business day.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var form = document.getElementById("contact-form");
+    var success = document.getElementById("contact-success");
+    if (!form) return;
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (window.location.hostname === "127.0.0.1") {
+        alert("Form submissions are disabled on the local preview.");
+        return;
+      }
+      var btn = form.querySelector(".form-submit");
+      btn.textContent = "Sending…";
+      btn.disabled = true;
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      })
+        .then(function (res) {
+          if (res.ok) {
+            form.hidden = true;
+            if (success) {
+              success.hidden = false;
+              success.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+            btn.textContent = "Send Message →";
+            btn.disabled = false;
+          } else {
+            btn.textContent = "Send Message →";
+            btn.disabled = false;
+            alert(
+              "Something went wrong. Please try again or email hello@fiveboroughwebsites.com.",
+            );
+          }
+        })
+        .catch(function () {
+          btn.textContent = "Send Message →";
+          btn.disabled = false;
+          alert(
+            "Something went wrong. Please try again or email hello@fiveboroughwebsites.com.",
+          );
+        });
+    });
+
+    var planParam = new URLSearchParams(window.location.search).get("plan");
+    if (planParam) {
+      var match = form.querySelector(
+        'input[name="plan"][value="' + planParam + '"]',
+      );
+      if (match) match.checked = true;
+    }
+  })();
+</script>

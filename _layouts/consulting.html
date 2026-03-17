@@ -1,12 +1,16 @@
 ---
 layout: null
 ---
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ page.title | default: "Five Borough Websites — Let us handle the tech" }}</title>
+    <title>
+      {{ page.title | default: "Five Borough Websites — Hassle-free websites for
+      small businesses in NYC." }}
+    </title>
     <meta
       name="description"
       content="Five Borough Websites builds and hosts websites for Brooklyn small businesses. Let us handle the tech. If your site goes down, you get a month on us."
@@ -17,12 +21,19 @@ layout: null
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="{{ '/assets/css/consulting.css' | relative_url }}" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="{{ '/assets/logo.png' | relative_url }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/consulting.css' | relative_url }}"
+    />
   </head>
   <body>
     {% include consulting/header.html %}
-    {{ content }}
+    <main>{{ content }}</main>
     {% include consulting/footer.html %}
   </body>
 </html>
-

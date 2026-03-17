@@ -60,6 +60,13 @@ body {
   color: var(--ink);
   text-decoration: none;
   letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.wordmark-logo {
+  height: 1.75rem;
+  width: auto;
 }
 .wordmark span {
   color: var(--gold);
@@ -83,7 +90,7 @@ body {
   display: inline-flex;
   align-items: center;
   padding: 8px 18px;
-  background: var(--green);
+  background: var(--green-dark);
   color: var(--white) !important;
   border-radius: var(--radius);
   font-weight: 600;
@@ -93,7 +100,7 @@ body {
   box-shadow: 0 2px 8px rgba(71, 151, 97, 0.3);
 }
 .btn-nav:hover {
-  background: var(--green-dark);
+  background: var(--green);
   transform: translateY(-1px);
   box-shadow: 0 4px 16px rgba(71, 151, 97, 0.4);
 }
@@ -128,6 +135,23 @@ body {
   max-width: 560px;
   line-height: 1.7;
 }
+.section-sub a,
+.pricing-footer a[href^="tel:"],
+.pricing-footer a[href^="mailto:"],
+.cta-note a,
+.footer-copy a {
+  color: var(--green);
+  text-decoration: none;
+  font-weight: 600;
+}
+.section-sub a:hover,
+.pricing-footer a[href^="tel:"]:hover,
+.pricing-footer a[href^="mailto:"]:hover,
+.cta-note a:hover,
+.footer-copy a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 .section--bordered {
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
@@ -155,7 +179,7 @@ body {
   font-style: normal;
   color: var(--green);
 }
-h2 em {
+em {
   font-style: normal;
   color: var(--green);
 }
@@ -176,7 +200,7 @@ h2 em {
   display: inline-flex;
   align-items: center;
   padding: 14px 28px;
-  background: var(--green);
+  background: var(--green-dark);
   color: var(--white);
   border-radius: var(--radius);
   font-weight: 700;
@@ -186,7 +210,7 @@ h2 em {
   box-shadow: 0 2px 8px rgba(71, 151, 97, 0.3);
 }
 .btn-primary:hover {
-  background: var(--green-dark);
+  background: var(--green);
   transform: translateY(-1px);
   box-shadow: 0 4px 16px rgba(71, 151, 97, 0.4);
 }
@@ -196,7 +220,7 @@ h2 em {
   padding: 14px 24px;
   background: transparent;
   color: var(--ink-mid);
-  border: 1.5px solid var(--rule);
+  border: 1.5px solid var(--ink-light);
   border-radius: var(--radius);
   font-weight: 600;
   font-size: 1rem;
@@ -293,8 +317,8 @@ h2 em {
 .step-num {
   min-width: 44px;
   height: 44px;
-  background: var(--green-light);
-  color: var(--green);
+  background: var(--green-dark);
+  color: var(--white);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -303,7 +327,8 @@ h2 em {
   font-weight: 800;
   letter-spacing: 0.04em;
   flex-shrink: 0;
-  border: 1px solid rgba(71, 151, 97, 0.25);
+  border: none;
+  box-shadow: 0 0 0 4px rgba(71, 151, 97, 0.12);
 }
 .step-body h3 {
   font-size: 1rem;
@@ -315,6 +340,20 @@ h2 em {
   font-size: 0.875rem;
   color: var(--ink-mid);
   line-height: 1.65;
+}
+.process-cta {
+  margin-top: 48px;
+  font-size: 0.875rem;
+  color: var(--ink-mid);
+  line-height: 1.6;
+}
+.process-cta a {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+}
+.process-cta a:hover {
+  color: var(--green);
 }
 /* ─── Pricing ─────────────────────────────────────────── */
 .pricing {
@@ -375,7 +414,7 @@ h2 em {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--ink-light);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 .featured .card-plan {
   color: rgba(255, 255, 255, 0.7);
@@ -384,7 +423,7 @@ h2 em {
   display: flex;
   align-items: baseline;
   gap: 12px;
-  margin-bottom: 6px;
+  margin-bottom: 12px;
 }
 .price-amount {
   font-size: 2.5rem;
@@ -419,28 +458,20 @@ h2 em {
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--ink-mid);
-  margin-bottom: 6px;
+  margin-bottom: 20px;
 }
 .featured .card-monthly {
   color: rgba(255, 255, 255, 0.8);
-}
-.card-desc {
-  font-size: 0.85rem;
-  color: var(--ink-mid);
-  line-height: 1.55;
-  margin: 20px 0;
-  padding: 20px 0;
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-}
-.featured .card-desc {
-  color: rgba(255, 255, 255, 0.8);
-  border-color: rgba(255, 255, 255, 0.2);
 }
 .card-features {
   list-style: none;
   flex: 1;
   margin-bottom: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+}
+.featured .card-features {
+  border-color: rgba(255, 255, 255, 0.2);
 }
 .card-features li {
   display: flex;
@@ -448,7 +479,7 @@ h2 em {
   gap: 10px;
   font-size: 0.85rem;
   color: var(--ink-mid);
-  padding: 6px 0;
+  padding: 8px 0;
 }
 .featured .card-features li {
   color: rgba(255, 255, 255, 0.85);
@@ -639,6 +670,45 @@ h2 em {
     grid-template-columns: 1fr;
   }
 }
+/* ─── LinkedIn recommendations strip ─────────────────── */
+.linkedin-rec {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 44px;
+  padding: 18px 22px;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+}
+.linkedin-rec__icon {
+  width: 18px;
+  height: 18px;
+  color: var(--ink-light);
+  flex-shrink: 0;
+}
+.linkedin-rec__text {
+  color: var(--ink-mid);
+}
+.linkedin-rec__link {
+  color: var(--green);
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: auto;
+  white-space: nowrap;
+  transition: color 0.15s;
+}
+.linkedin-rec__link:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+@media (max-width: 640px) {
+  .linkedin-rec__link {
+    margin-left: 0;
+  }
+}
 /* ─── CTA band ────────────────────────────────────────── */
 .cta-band {
   background: var(--surface);
@@ -673,23 +743,203 @@ h2 em {
   font-size: 0.8125rem;
   color: var(--ink-light);
 }
+/* ─── Contact form ────────────────────────────────────── */
+.contact {
+  background: var(--surface);
+}
+.contact-sub {
+  font-size: 1rem;
+  color: var(--ink-mid);
+  margin-top: 4px;
+  margin-bottom: 48px;
+}
+.contact-wrap {
+  max-width: 680px;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+.form-row--two {
+  grid-template-columns: 1fr 1fr;
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form-field label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.form-field .required {
+  color: var(--green);
+}
+.form-field .form-optional {
+  font-weight: 400;
+  color: var(--ink-light);
+}
+.form-field input,
+.form-field textarea {
+  background: var(--card);
+  border: 1.5px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  font-family: inherit;
+  font-size: 0.9375rem;
+  color: var(--ink);
+  transition: border-color 0.15s, box-shadow 0.15s;
+  outline: none;
+  width: 100%;
+  -webkit-appearance: none;
+}
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+  color: var(--ink-faint);
+}
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: var(--green-dark);
+  box-shadow: 0 0 0 3px rgba(71, 151, 97, 0.15);
+}
+.form-field textarea {
+  resize: vertical;
+  min-height: 112px;
+  line-height: 1.6;
+}
+.plan-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.plan-option {
+  cursor: pointer;
+}
+.plan-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.plan-label {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 14px 16px;
+  background: var(--card);
+  border: 1.5px solid var(--rule);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.plan-label strong {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+.plan-label small {
+  font-size: 0.75rem;
+  color: var(--ink-light);
+  font-weight: 500;
+}
+.plan-option input[type="radio"]:checked+.plan-label {
+  border-color: var(--green-dark);
+  background: var(--green-light);
+  box-shadow: 0 0 0 3px rgba(71, 151, 97, 0.15);
+}
+.plan-option input[type="radio"]:checked+.plan-label strong {
+  color: var(--green);
+}
+.plan-option:hover .plan-label {
+  border-color: var(--ink-light);
+}
+.form-actions {
+  padding-top: 4px;
+}
+.form-submit {
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+.form-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+.contact-success {
+  text-align: center;
+  padding: 56px 32px;
+  background: var(--card);
+  border: 1.5px solid var(--rule);
+  border-radius: 14px;
+  max-width: 480px;
+}
+.success-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--green-light);
+  color: var(--green);
+  border: 1.5px solid rgba(71, 151, 97, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 auto 20px;
+}
+.contact-success h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.contact-success p {
+  font-size: 0.9375rem;
+  color: var(--ink-mid);
+  line-height: 1.6;
+}
+@media (max-width: 640px) {
+  .form-row--two {
+    grid-template-columns: 1fr;
+  }
+  .plan-options {
+    grid-template-columns: 1fr;
+  }
+}
 /* ─── Footer ──────────────────────────────────────────── */
 .site-footer {
   background: var(--card);
   border-top: 1px solid var(--rule);
-  padding: 32px 24px;
+  padding: 40px 24px;
 }
 .footer-inner {
   max-width: 1000px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 12px;
+  gap: 24px;
+}
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 .footer-brand {
-  font-size: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--ink);
   text-decoration: none;
@@ -697,22 +947,39 @@ h2 em {
 .footer-brand span {
   color: var(--gold);
 }
+.footer-logo {
+  height: 1.5rem;
+  width: auto;
+}
 .footer-copy {
   font-size: 0.8125rem;
   color: var(--ink-faint);
 }
-.footer-links {
-  display: flex;
-  gap: 20px;
+.footer-right {
+  text-align: right;
 }
-.footer-links a {
-  font-size: 0.8125rem;
-  color: var(--ink-light);
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.footer-contact a {
+  font-size: 0.875rem;
+  color: var(--ink-mid);
   text-decoration: none;
   transition: color 0.15s;
 }
-.footer-links a:hover {
+.footer-contact a:hover {
   color: var(--ink);
+}
+@media (max-width: 640px) {
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-right {
+    text-align: left;
+  }
 }
 /* ─── Responsive ──────────────────────────────────────── */
 @media (max-width: 640px) {
