@@ -463,40 +463,20 @@
               type="text"
               id="contact-name"
               name="name"
-              placeholder="Maria T."
+              placeholder="Alex T."
               required
             />
           </div>
         </div>
 
-        <div class="form-field">
-          <label
-            >What can I help you with? <span class="required">*</span></label
-          >
-          <div class="plan-options">
-            <label class="plan-option">
-              <input type="radio" name="plan" value="Starter Plan" required />
-              <span class="plan-label">
-                <strong>Starter Plan</strong>
-                <small>$499 + $25/mo</small>
-              </span>
-            </label>
-            <label class="plan-option">
-              <input type="radio" name="plan" value="Pro Plan" />
-              <span class="plan-label">
-                <strong>Pro Plan</strong>
-                <small>$999 + $50/mo</small>
-              </span>
-            </label>
-            <label class="plan-option">
-              <input type="radio" name="plan" value="Custom" />
-              <span class="plan-label">
-                <strong>Custom</strong>
-                <small>Let's figure it out</small>
-              </span>
-            </label>
-          </div>
-        </div>
+        <!-- Set by /consulting/?plan=... links from the pricing cards -->
+        <input
+          type="hidden"
+          id="contact-plan"
+          name="plan"
+          value="Custom"
+          required
+        />
 
         <div class="form-row form-row--two">
           <div class="form-field">
@@ -612,10 +592,11 @@
 
     var planParam = new URLSearchParams(window.location.search).get("plan");
     if (planParam) {
-      var match = form.querySelector(
-        'input[name="plan"][value="' + planParam + '"]',
-      );
-      if (match) match.checked = true;
+      var planInput = form.querySelector('input[name="plan"]');
+      var allowedPlans = ["Starter Plan", "Pro Plan", "Custom"];
+      if (planInput && allowedPlans.indexOf(planParam) !== -1) {
+        planInput.value = planParam;
+      }
     }
   })();
 </script>
