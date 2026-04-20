@@ -26,7 +26,7 @@ Site nav is defined in `_includes/nav-items.html` (hardcoded links, not auto-gen
 Four Jekyll collections configured in `_config.yml`:
 
 - **recipes** (`output: true`, `sort_by: title`) — frontmatter uses `layout: page` or `layout: post`
-- **reflections** (`output: true`) — blog posts with `date` and `tags` in frontmatter. The index page separates pinned (tagged `pinned`) from recent posts.
+- **reflections** (`output: true`) — blog posts with `layout: post`, `date`, and `tags` in frontmatter. New posts must use `layout: post` for correct styling. The index page separates pinned (tagged `pinned`) from recent posts.
 - **blogroll** (`output: false`) — external link entries with `title`, `link`, `date`, and `tags`. Not rendered as individual pages.
 - **reviews** (`output: true`) — subdirectory-based (e.g., `_reviews/civ6/`) with HTML index files and image assets alongside them.
 

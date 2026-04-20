@@ -51,6 +51,25 @@
   }
 }
 
+.scene-break {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 2em 0;
+  font-weight: bold;
+
+  &::before,
+  &::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid currentColor;
+    opacity: 0.4;
+  }
+
+  &::before { margin-right: 0.8em; }
+  &::after  { margin-left: 0.8em; }
+}
+
 /* Wikipedia-style TOC hint on reflections list */
 .reflections-ideas.toc-style {
   float: right;
